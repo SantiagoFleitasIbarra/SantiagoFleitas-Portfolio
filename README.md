@@ -19,6 +19,8 @@ Aquí algunos de los proyectos que puedes encontrar en mi portfolio:
 ### 🔹 IbaEduca
 📌 Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos. Desarrollado en colaboración para ofrecer educación accesible y de calidad. Dicha aplicación es adaptada a celulares.
 
+### 🔹 ENTRE OTROS!!!
+
 ## 📬 Contacto
 
 Si deseas ponerte en contacto conmigo, puedes encontrarme en:
