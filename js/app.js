@@ -75,15 +75,15 @@ const projects = [
     description: 'Plataforma educativa sencilla, la cual sirve para reservar clases tanto de manera virtual como presencial. Desarrollado con JavaScript, HTML5 y CSS3',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
     images: [
-      { src: 'images/Clases-Al-Cuadrado (2).png', thumb: 'images/Clases-Al-Cuadrado (2).png' },
-      { src: 'images/Clases-Al-Cuadrado (1).png', thumb: 'images/Clases-Al-Cuadrado (1).png' },
-      { src: 'images/Clases-Al-Cuadrado (3).png', thumb: 'images/Clases-Al-Cuadrado (3).png' },
-      { src: 'images/Clases-Al-Cuadrado (4).png', thumb: 'images/Clases-Al-Cuadrado (4).png' },
-      { src: 'images/Clases-Al-Cuadrado (5).png', thumb: 'images/Clases-Al-Cuadrado (5).png' },
-      { src: 'images/Clases-Al-Cuadrado (6).png', thumb: 'images/Clases-Al-Cuadrado (6).png' },
-      { src: 'images/Clases-Al-Cuadrado (7).png', thumb: 'images/Clases-Al-Cuadrado (7).png' },
-      { src: 'images/Clases-Al-Cuadrado (8).png', thumb: 'images/Clases-Al-Cuadrado (8).png' },
-      { src: 'images/Clases-Al-Cuadrado (9).png', thumb: 'images/Clases-Al-Cuadrado (9).png' }
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (2).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (2).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (1).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (1).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (3).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (3).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (4).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (4).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (5).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (5).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (6).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (6).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (7).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (7).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (8).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (8).png' },
+      { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (9).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (9).png' }
     ]
   },
   {
