@@ -1,0 +1,418 @@
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santiago Fleitas - Desarrollador Full Stack & ML Engineer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .header {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+    .nav-links a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+    }
+    .hero {
+        background-color: #f0f0f0;
+        padding: 100px 0 50px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    .subtitle {
+        font-size: 24px;
+        color: #666;
+        margin-bottom: 40px;
+    }
+    .cta-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+        background-color: #0056b3;
+    }
+    .features {
+        padding: 80px 0;
+    }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .feature-item {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .feature-item h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .feature-item p {
+        color: #666;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 0;
+        text-align: center;
+    }
+    /* Education section styles */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    .education-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .education-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .education-content {
+      padding: 20px;
+    }
+    .education-date {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <div class="logo">
+        <span class="dev-name">Santiago Fleitas</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class='bx bx-moon'></i>
+        </button>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+          <h1>Desarrollador Full Stack & ML Engineer</h1>
+          <p class="hero-subtitle">Graduado de Holberton School especializado en desarrollo web moderno y Machine Learning</p>
+          <div class="hero-cta">
+            <a href="#contacto" class="btn btn-primary">Contactame</a>
+            <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="estudios" class="education">
+      <div class="container">
+        <h2 data-aos="fade-up">Formación Académica</h2>
+        <div class="education-grid">
+          <div class="education-card" data-aos="fade-up">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>Holberton School Uruguay</h3>
+              <p class="education-date">2023 - 2024</p>
+              <p>Formación en desarrollo Full Stack y especialización en tecnologías web modernas.</p>
+              <a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="btn btn-primary" download>
+                <i class="fas fa-download"></i> Descargar Certificado
+              </a>
+            </div>
+          </div>
+          
+          <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+              <h3>Instituto de Profesores Artigas (IPA)</h3>
+              <p class="education-date">2022 - 2023</p>
+              <p>Estudios en profesorado de matemáticas (primer año completo). Pausado para dedicación exclusiva a Holberton School.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="about">
+      <div class="container">
+        <h2 data-aos="fade-up">Sobre Mí</h2>
+        <div class="about-content">
+          <div class="profile-section" data-aos="fade-right">
+            <img src="images/Santiago.jpg" alt="Santiago Fleitas speaking at podium" class="profile-image">
+            <img src="images/Santiago2.jpg" alt="Santiago Fleitas speaking at podium" class="profile-image">
+          </div>
+          <div class="about-text" data-aos="fade-right">
+            <p>Soy graduado de Holberton School, donde adquirí una amplia experiencia y habilidades tanto en desarrollo back-end como front-end. Actualmente, estoy cursando una especialización en Machine Learning en Holberton School, lo que me permite expandir aún más mis conocimientos y habilidades en áreas emergentes de la tecnología.</p>
+            <p>Mi pasión por las matemáticas me llevó a completar el primer año en el Instituto de Profesores Artigas (IPA). Actualmente, estoy involucrado en varios proyectos innovadores, incluyendo "Warded", una aplicación móvil enfocada en la seguridad comunitaria, donde lidero el desarrollo backend.</p>
+            <p>También "IbaEduca" una plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos.</p>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Proyectos Activos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Full Stack</span>
+                <span class="stat-label">Developer</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">ML</span>
+                <span class="stat-label">Specialist</span>
+              </div>
+            </div>
+            <div class="skills-highlight" data-aos="fade-up">
+              <h3>Habilidades Clave</h3>
+              <div class="key-skills">
+                <div class="key-skill">
+                  <i class="fas fa-comments"></i>
+                  <span>Comunicación Efectiva</span>
+                </div>
+                <div class="key-skill">
+                  <i class="fas fa-users"></i>
+                  <span>Gestión de Equipos</span>
+                </div>
+                <div class="key-skill">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>Resolución de Problemas</span>
+                </div>
+                <div class="key-skill">
+                  <i class="fas fa-brain"></i>
+                  <span>Pensamiento Matemático</span>
+                </div>
+                <div class="key-skill">
+                  <i class="fas fa-language"></i>
+                  <span>Inglés Técnico Intermedio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="skills">
+      <div class="container">
+        <h2 data-aos="fade-up">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3"></i>
+                <span>Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <span>Express.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3>Mobile & Otros</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-flutter"></i>
+                <span>Flutter</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-figma"></i>
+                <span>Figma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="projects">
+      <div class="container">
+        <h2 data-aos="fade-up">Proyectos Destacados</h2>
+        <div class="projects-grid">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2 data-aos="fade-up">Contacto</h2>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-up">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Canelones, Uruguay</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+59892564819">+598 92 564 819</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:santiagofle8@gmail.com"><span class="__cf_email__" data-cfemail="c0b3a1aeb4a9a1a7afada6aca5a9b4a1b380a7ada1a9aceea3afad">santiagofle8@gmail.com</span></a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/SantiagoFleitasIbarra" target="_blank">GitHub</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-instagram"></i>
+              <a href="https://instagram.com/sancolett_" target="_blank">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Santiago Fleitas. Todos los derechos reservados.</p>
+      <p class="tech-stack">Esta página fue creada con HTML5, CSS3 y JavaScript</p>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Animación suave para el scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Efecto de parallax simple para el hero
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.pageYOffset;
+      document.querySelector('.hero').style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+    });
+
+    // Animación de entrada para los elementos de características
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-item').forEach(item => {
+      item.style.opacity = 0;
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = 'opacity 0.5s, transform 0.5s';
+      observer.observe(item);
+    });
+  </script>
+</body>
+</html>
