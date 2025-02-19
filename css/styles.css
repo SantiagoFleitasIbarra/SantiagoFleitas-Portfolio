@@ -249,6 +249,29 @@ body {
   color: var(--bg-color);
 }
 
+
+/* Projects Section */
+.intro-video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: var(--bg-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#intro-video {
+  width: 100%;
+  display: block;
+  margin-bottom: 20%;
+}
+
+.video-demo p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
 /* About Section */
 .about {
   padding: 80px 0;
