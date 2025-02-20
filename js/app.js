@@ -71,6 +71,25 @@ const projects = [
     ]
   },
   {
+    title: 'Organiza tu Día con Alegría',
+    description: 'Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!',
+    technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    images: [
+      { src: 'images/Gestor-tareas/Tareas (1).png', thumb: 'images/Gestor-tareas/Tareas (1).png' },
+      { src: 'images/Gestor-tareas/Tareas (2).png', thumb: 'images/Gestor-tareas/Tareas (2).png' },
+      { src: 'images/Gestor-tareas/Tareas (3).png', thumb: 'images/Gestor-tareas/Tareas (3).png' },
+      { src: 'images/Gestor-tareas/Tareas (4).png', thumb: 'images/Gestor-tareas/Tareas (4).png' },
+      { src: 'images/Gestor-tareas/Tareas (5).png', thumb: 'images/Gestor-tareas/Tareas (5).png' },
+      { src: 'images/Gestor-tareas/Tareas (6).png', thumb: 'images/Gestor-tareas/Tareas (6).png' },
+      { src: 'images/Gestor-tareas/Tareas (7).png', thumb: 'images/Gestor-tareas/Tareas (7).png' },
+      { src: 'images/Gestor-tareas/Tareas (8).png', thumb: 'images/Gestor-tareas/Tareas (8).png' },
+      { src: 'images/Gestor-tareas/Tareas (12).png', thumb: 'images/Gestor-tareas/Tareas (12).png' },
+      { src: 'images/Gestor-tareas/Tareas (9).png', thumb: 'images/Gestor-tareas/Tareas (9).png' },
+      { src: 'images/Gestor-tareas/Tareas (10).png', thumb: 'images/Gestor-tareas/Tareas (10).png' },
+      { src: 'images/Gestor-tareas/Tareas (11).png', thumb: 'images/Gestor-tareas/Tareas (11).png' }
+    ]
+  },
+  {
     title: 'Clases Al Cuadrado',
     description: 'Plataforma educativa sencilla, la cual sirve para reservar clases tanto de manera virtual como presencial. Desarrollado con JavaScript, HTML5 y CSS3',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
