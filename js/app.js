@@ -44,8 +44,10 @@ window.addEventListener('resize', () => {
 const projects = [
   {
     title: 'IbaEduca',
-    description: 'Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos. Desarrollado en colaboración para ofrecer educación accesible y de calidad. Dicha aplicación es adaptada a celulares.',
+    description: 'Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos. Desarrollado en colaboración para ofrecer educación accesible y de calidad.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    links: {
+    },
     images: [
       { src: 'images/IbaEduca/IbaEduca (3).png', thumb: 'images/IbaEduca/IbaEduca (3).png' },
       { src: 'images/IbaEduca/IbaEduca (5).png', thumb: 'images/IbaEduca/IbaEduca (5).png' },
@@ -61,8 +63,12 @@ const projects = [
   },
   {
     title: 'CazaPalabras',
-    description: 'Juego estilo Wordle donde los usuarios deben encontrar palabras ocultas. Desarrollado con JavaScript vanilla, HTML5 y CSS3, implementando lógica de juego compleja y animaciones interactivas. Dicha aplicación es adaptada a celulares.',
+    description: 'Juego estilo Wordle donde los usuarios deben encontrar palabras ocultas. Desarrollado con JavaScript vanilla, HTML5 y CSS3, implementando lógica de juego compleja y animaciones interactivas.',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    links: {
+      github: 'https://github.com/SantiagoFleitasIbarra/CazaPalabras-Juego-2025',
+      live: 'https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/'
+    },
     images: [
       { src: 'images/CazaPalabras/CP (1).png', thumb: 'images/CazaPalabras/CP (1).png' },
       { src: 'images/CazaPalabras/CP (2).png', thumb: 'images/CazaPalabras/CP (2).png' },
@@ -74,6 +80,10 @@ const projects = [
     title: 'Organiza tu Día con Alegría',
     description: 'Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    links: {
+      github: 'https://github.com/SantiagoFleitasIbarra/Organiza-tu-dia',
+      live: 'https://santiagofleitasibarra.github.io/Organiza-tu-dia/'
+    },
     images: [
       { src: 'images/Gestor-tareas/Tareas (1).png', thumb: 'images/Gestor-tareas/Tareas (1).png' },
       { src: 'images/Gestor-tareas/Tareas (2).png', thumb: 'images/Gestor-tareas/Tareas (2).png' },
@@ -93,6 +103,10 @@ const projects = [
     title: 'Clases Al Cuadrado',
     description: 'Plataforma educativa sencilla, la cual sirve para reservar clases tanto de manera virtual como presencial. Desarrollado con JavaScript, HTML5 y CSS3',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    links: {
+      github: 'https://github.com/SantiagoFleitasIbarra/Clases-al-cuadrado',
+      live: 'https://santiagofleitasibarra.github.io/Clases-al-cuadrado/'
+    },
     images: [
       { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (2).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (2).png' },
       { src: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (1).png', thumb: 'images/Clases-Al-Cuadrado/Clases-Al-Cuadrado (1).png' },
@@ -107,8 +121,11 @@ const projects = [
   },
   {
     title: 'Warded - Community Safety App',
-    description: 'Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad. Dicha aplicación es adaptada a celulares.',
+    description: 'Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.',
     technologies: ['Flutter', 'Dart', 'Firebase'],
+    links: {
+      github: 'https://github.com/German1127/Warded',
+    },
     images: [
       { src: 'images/Warded/warded1.jpg', thumb: 'images/Warded/warded1.jpg' },
       { src: 'images/Warded/warded2.jpg', thumb: 'images/Warded/warded2.jpg' },
@@ -123,38 +140,69 @@ function createProjectCard(project) {
   card.className = 'project-card';
   card.setAttribute('data-aos', 'fade-up');
 
-  // Create carousel structure
-  const carouselHTML = `
-    <div class="project-carousel">
-      <div class="carousel-container">
-        <div class="carousel-track">
+  const projectHTML = `
+    <button class="project-header">
+      <h3>${project.title}</h3>
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="project-content">
+      <div class="project-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track">
+            ${project.images.map((image, index) => `
+              <div class="carousel-slide">
+                <img src="${image.thumb}" data-full="${image.src}" alt="${project.title} image ${index + 1}">
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+        <div class="thumbnails-track">
           ${project.images.map((image, index) => `
-            <div class="carousel-slide">
-              <img src="${image.thumb}" data-full="${image.src}" alt="${project.title} image ${index + 1}">
+            <div class="thumbnail ${index === 0 ? 'active' : ''}">
+              <img src="${image.thumb}" alt="Thumbnail ${index + 1}">
             </div>
           `).join('')}
         </div>
       </div>
-      <button class="carousel-btn prev">❮</button>
-      <button class="carousel-btn next">❯</button>
-      <div class="thumbnails-track">
-        ${project.images.map((image, index) => `
-          <div class="thumbnail ${index === 0 ? 'active' : ''}">
-            <img src="${image.thumb}" alt="Thumbnail ${index + 1}">
-          </div>
-        `).join('')}
-      </div>
-    </div>
-    <div class="project-info">
-      <h3 class="project-title">${project.title}</h3>
-      <p>${project.description}</p>
-      <div class="project-technologies">
-        ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+      <div class="project-info">
+        <p>${project.description}</p>
+        <div class="project-technologies">
+          ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+        </div>
+        <div class="project-links">
+          ${project.links.github ? `
+            <a href="${project.links.github}" target="_blank" class="btn btn-secondary">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+          ` : ''}
+          ${project.links.live ? `
+            <a href="${project.links.live}" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> Ver Proyecto
+            </a>
+          ` : ''}
+        </div>
       </div>
     </div>
   `;
 
-  card.innerHTML = carouselHTML;
+  card.innerHTML = projectHTML;
+
+  // Add click handler for expandable content
+  const header = card.querySelector('.project-header');
+  const content = card.querySelector('.project-content');
+  const chevron = card.querySelector('.fa-chevron-down');
+
+  header.addEventListener('click', () => {
+    content.classList.toggle('expanded');
+    chevron.classList.toggle('rotate');
+    
+    // Adjust AOS refresh
+    if (typeof AOS !== 'undefined') {
+      setTimeout(AOS.refresh, 300);
+    }
+  });
 
   // Add carousel functionality
   const track = card.querySelector('.carousel-track');
