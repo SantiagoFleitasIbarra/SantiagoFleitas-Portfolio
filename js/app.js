@@ -100,6 +100,39 @@ const projects = [
     ]
   },
   {
+    title: 'Librería Online',
+    description: 'Un espacio donde puedes publicar y descargar libros de forma gratuita. Explora una gran variedad de ebooks en múltiples categorías y contribuye compartiendo tus propios escritos con la comunidad.',
+    technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    links: {
+      github: 'https://github.com/SantiagoFleitasIbarra/Libreria-Online',
+      live: 'https://santiagofleitasibarra.github.io/Libreria-Online/'
+    },
+    images: [
+      { src: 'images/Libreria-online/Librería (1).png', thumb: 'images/Libreria-online/Librería (1).png' },
+      { src: 'images/Libreria-online/Librería (2).png', thumb: 'images/Libreria-online/Librería (2).png' },
+      { src: 'images/Libreria-online/Librería (3).png', thumb: 'images/Libreria-online/Librería (3).png' },
+      { src: 'images/Libreria-online/Librería (4).png', thumb: 'images/Libreria-online/Librería (4).png' },
+      { src: 'images/Libreria-online/Librería (5).png', thumb: 'images/Libreria-online/Librería (5).png' },
+      { src: 'images/Libreria-online/Librería (6).png', thumb: 'images/Libreria-online/Librería (6).png' }
+    ]
+  },
+  {
+    title: 'Calculadora científica',
+    description: 'Una herramienta avanzada diseñada para facilitar cálculos matemáticos complejos con una interfaz adaptable y multilingüe. Dicha página es adaptada a celulares',
+    technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    links: {
+      github: 'https://github.com/SantiagoFleitasIbarra/calculadora-cientifica',
+      live: 'https://santiagofleitasibarra.github.io/calculadora-cientifica/'
+    },
+    images: [
+      { src: 'images/Calculadora-cientifica/Calculadora (1).png', thumb: 'images/Calculadora-cientifica/Calculadora (1).png' },
+      { src: 'images/Calculadora-cientifica/Calculadora (2).png', thumb: 'images/Calculadora-cientifica/Calculadora (2).png' },
+      { src: 'images/Calculadora-cientifica/Calculadora (3).png', thumb: 'images/Calculadora-cientifica/Calculadora (3).png' },
+      { src: 'images/Calculadora-cientifica/Calculadora (4).png', thumb: 'images/Calculadora-cientifica/Calculadora (4).png' },
+      { src: 'images/Calculadora-cientifica/Calculadora (5).png', thumb: 'images/Calculadora-cientifica/Calculadora (5).png' }
+    ]
+  },
+  {
     title: 'Clases Al Cuadrado',
     description: 'Plataforma educativa sencilla, la cual sirve para reservar clases tanto de manera virtual como presencial. Desarrollado con JavaScript, HTML5 y CSS3',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
