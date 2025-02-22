@@ -77,6 +77,30 @@ const projects = [
     ]
   },
   {
+    title: 'Inglés Divertido',
+    description: 'Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo. Dicha plataforma es adaptada a celulares.',
+    technologies: ['JavaScript', 'HTML5', 'CSS3'],
+    links: {
+      github: 'https://github.com/SantiagoFleitasIbarra/ingles-divertido',
+      live: 'https://santiagofleitasibarra.github.io/ingles-divertido/'
+    },
+    images: [
+      { src: 'images/ingles-divertido/ingles (1).png', thumb: 'images/ingles-divertido/ingles (1).png' },
+      { src: 'images/ingles-divertido/ingles (2).png', thumb: 'images/ingles-divertido/ingles (2).png' },
+      { src: 'images/ingles-divertido/ingles (3).png', thumb: 'images/ingles-divertido/ingles (3).png' },
+      { src: 'images/ingles-divertido/ingles (4).png', thumb: 'images/ingles-divertido/ingles (4).png' },
+      { src: 'images/ingles-divertido/ingles (5).png', thumb: 'images/ingles-divertido/ingles (5).png' },
+      { src: 'images/ingles-divertido/ingles (6).png', thumb: 'images/ingles-divertido/ingles (6).png' },
+      { src: 'images/ingles-divertido/ingles (7).png', thumb: 'images/ingles-divertido/ingles (7).png' },
+      { src: 'images/ingles-divertido/ingles (8).png', thumb: 'images/ingles-divertido/ingles (8).png' },
+      { src: 'images/ingles-divertido/ingles (9).png', thumb: 'images/ingles-divertido/ingles (9).png' },
+      { src: 'images/ingles-divertido/ingles (10).png', thumb: 'images/ingles-divertido/ingles (10).png' },
+      { src: 'images/ingles-divertido/ingles (11).png', thumb: 'images/ingles-divertido/ingles (11).png' },
+      { src: 'images/ingles-divertido/ingles (12).png', thumb: 'images/ingles-divertido/ingles (12).png' },
+      { src: 'images/ingles-divertido/ingles (13).png', thumb: 'images/ingles-divertido/ingles (13).png' }
+    ]
+  },
+  {
     title: 'Organiza tu Día con Alegría',
     description: 'Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
