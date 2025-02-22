@@ -85,19 +85,19 @@ const projects = [
       live: 'https://santiagofleitasibarra.github.io/ingles-divertido/'
     },
     images: [
-      { src: 'images/ingles-divertido/ingles (1).png', thumb: 'images/ingles-divertido/ingles (1).png' },
-      { src: 'images/ingles-divertido/ingles (2).png', thumb: 'images/ingles-divertido/ingles (2).png' },
-      { src: 'images/ingles-divertido/ingles (3).png', thumb: 'images/ingles-divertido/ingles (3).png' },
-      { src: 'images/ingles-divertido/ingles (4).png', thumb: 'images/ingles-divertido/ingles (4).png' },
-      { src: 'images/ingles-divertido/ingles (5).png', thumb: 'images/ingles-divertido/ingles (5).png' },
-      { src: 'images/ingles-divertido/ingles (6).png', thumb: 'images/ingles-divertido/ingles (6).png' },
-      { src: 'images/ingles-divertido/ingles (7).png', thumb: 'images/ingles-divertido/ingles (7).png' },
-      { src: 'images/ingles-divertido/ingles (8).png', thumb: 'images/ingles-divertido/ingles (8).png' },
-      { src: 'images/ingles-divertido/ingles (9).png', thumb: 'images/ingles-divertido/ingles (9).png' },
-      { src: 'images/ingles-divertido/ingles (10).png', thumb: 'images/ingles-divertido/ingles (10).png' },
-      { src: 'images/ingles-divertido/ingles (11).png', thumb: 'images/ingles-divertido/ingles (11).png' },
-      { src: 'images/ingles-divertido/ingles (12).png', thumb: 'images/ingles-divertido/ingles (12).png' },
-      { src: 'images/ingles-divertido/ingles (13).png', thumb: 'images/ingles-divertido/ingles (13).png' }
+      { src: 'images/ingles-divertido/Ingles (1).png', thumb: 'images/ingles-divertido/Ingles (1).png' },
+      { src: 'images/ingles-divertido/Ingles (2).png', thumb: 'images/ingles-divertido/Ingles (2).png' },
+      { src: 'images/ingles-divertido/Ingles (3).png', thumb: 'images/ingles-divertido/Ingles (3).png' },
+      { src: 'images/ingles-divertido/Ingles (4).png', thumb: 'images/ingles-divertido/Ingles (4).png' },
+      { src: 'images/ingles-divertido/Ingles (5).png', thumb: 'images/ingles-divertido/Ingles (5).png' },
+      { src: 'images/ingles-divertido/Ingles (6).png', thumb: 'images/ingles-divertido/Ingles (6).png' },
+      { src: 'images/ingles-divertido/Ingles (7).png', thumb: 'images/ingles-divertido/Ingles (7).png' },
+      { src: 'images/ingles-divertido/Ingles (8).png', thumb: 'images/ingles-divertido/Ingles (8).png' },
+      { src: 'images/ingles-divertido/Ingles (9).png', thumb: 'images/ingles-divertido/Ingles (9).png' },
+      { src: 'images/ingles-divertido/Ingles (10).png', thumb: 'images/ingles-divertido/Ingles (10).png' },
+      { src: 'images/ingles-divertido/Ingles (11).png', thumb: 'images/ingles-divertido/Ingles (11).png' },
+      { src: 'images/ingles-divertido/Ingles (12).png', thumb: 'images/ingles-divertido/Ingles (12).png' },
+      { src: 'images/ingles-divertido/Ingles (13).png', thumb: 'images/ingles-divertido/Ingles (13).png' }
     ]
   },
   {
