@@ -45,7 +45,7 @@ const projects = [
   {
     title: 'IbaEduca',
     description: 'Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos. Desarrollado en colaboración para ofrecer educación accesible y de calidad.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    technologies: ['Actualmente trabajando'],
     links: {
     },
     images: [
