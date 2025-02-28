@@ -1,3 +1,71 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const mainButton = document.querySelector('.main-button');
+  const subButtons = document.querySelector('.sub-buttons');
+  const educationItems = document.querySelectorAll('.education-item');
+  const certificateBtn = document.querySelector('.certificate-btn');
+
+  // Add smooth animation when toggling main education section
+  mainButton.addEventListener('click', function() {
+      subButtons.classList.toggle('active');
+      if (subButtons.classList.contains('active')) {
+          subButtons.style.display = 'block';
+          setTimeout(() => {
+              subButtons.style.opacity = '1';
+              subButtons.style.transform = 'translateY(0)';
+          }, 10);
+      } else {
+          subButtons.style.opacity = '0';
+          subButtons.style.transform = 'translateY(-10px)';
+          setTimeout(() => {
+              subButtons.style.display = 'none';
+          }, 300);
+      }
+  });
+
+  // Toggle individual education items with smooth animation
+  educationItems.forEach(item => {
+      const button = item.querySelector('.sub-button');
+      const content = item.querySelector('.content');
+
+      button.addEventListener('click', function() {
+          educationItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                  const otherContent = otherItem.querySelector('.content');
+                  otherContent.classList.remove('active');
+                  otherContent.style.display = 'none';
+                  otherContent.style.opacity = '0';
+                  otherContent.style.transform = 'translateY(-10px)';
+              }
+          });
+          
+          content.classList.toggle('active');
+          if (content.classList.contains('active')) {
+              content.style.display = 'block';
+              setTimeout(() => {
+                  content.style.opacity = '1';
+                  content.style.transform = 'translateY(0)';
+              }, 10);
+          } else {
+              content.style.opacity = '0';
+              content.style.transform = 'translateY(-10px)';
+              setTimeout(() => {
+                  content.style.display = 'none';
+              }, 300);
+          }
+      });
+  });
+
+  // Certificate download handler with animation
+  if (certificateBtn) {
+      certificateBtn.addEventListener('click', function() {
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+              this.style.transform = 'translateY(-2px)';
+          }, 150);
+      });
+  }
+});
+
 // Initialize AOS (Animate on Scroll)
 AOS.init({
   duration: 800,
@@ -487,3 +555,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+

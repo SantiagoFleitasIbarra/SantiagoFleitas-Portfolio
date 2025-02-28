@@ -5,6 +5,13 @@
   --bg-color: #ffffff;
   --gray-light: #f3f4f6;
   --transition: all 0.3s ease;
+  --primary-bg: #1a1a2e;
+  --secondary-bg: #16213e;
+  --accent-color: #4d7bf3;
+  --text-color: #e6e6e6;
+  --card-bg: #222943;
+  --hover-color: #5d8af3;
+  --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 :root[data-theme="light"] {
@@ -45,6 +52,10 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--text-color);
   line-height: 1.6;
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] body {
   background-color: var(--bg-color);
 }
 
@@ -804,124 +815,183 @@ body {
 }
 
 /* Education Section Styles */
-.education {
+
+.estudios {
   padding: 80px 0;
+}
+
+.education-container {
   background: var(--bg-color);
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px var(--shadow-color);
 }
 
-[data-theme="dark"] .education {
-  background: var(--bg-color);
-}
-
-[data-theme="dark"] .education h2,
-[data-theme="dark"] .education h3,
-[data-theme="dark"] .education p,
-[data-theme="dark"] .education-date {
-  color: var(--text-color) !important;
-}
-
-[data-theme="dark"] .education-card {
-  background: var(--card-bg);
+.education-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
   color: var(--text-color);
 }
 
-[data-theme="dark"] .education-icon i {
+.main-button {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+[data-theme="dark"] .main-button {
+  background: var(--gray-light);
   color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
-[data-theme="dark"] .education-content p {
-  color: var(--description-text);
+.main-button svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent-color);
 }
 
-.education-card {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px var(--shadow-color);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.main-button:hover {
+  background-color: var(--accent-color);
+  color: white;
 }
 
-.education-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.main-button:hover svg {
+  fill: white;
 }
 
-.education-content h3 {
-  margin: 0;
-  font-size: 1.25rem;
+.sub-buttons {
+  display: none;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
-.education-content .education-date {
+.sub-buttons.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-item {
+  margin-bottom: 15px;
+}
+
+.sub-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--card-bg);
   color: var(--text-color);
-  opacity: 0.8;
-  font-size: 0.9rem;
-  margin: 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.education-content p {
-  margin: 0;
+.sub-button svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--accent-color);
 }
 
-.education-content .btn {
-  align-self: flex-start;
-  margin-top: 15px;
-  white-space: nowrap;
-  display: inline-flex;
+.sub-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.sub-button:hover svg {
+  fill: white;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  margin-top: 10px;
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.content.active {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.date {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.certificate-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+.certificate-btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.content h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.content ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.content li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.content li::before {
+  content: "•";
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 8px;
 }
 
 @media (max-width: 768px) {
-  .education-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 20px;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .education-card {
-    flex: 0 0 85%;
-    scroll-snap-align: center;
-    margin-right: 20px;
-  }
-
-  .education-card:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .education-card {
-    min-width: 280px;
-    height: auto;
-    padding: 20px;
-  }
-
-  .education-content .btn {
-    align-self: center;
-    width: auto;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .education-icon {
-    text-align: center;
-  }
-
-  .education-content {
-    text-align: center;
+  :root {
+    --accent-color: #4d7bf3;
+    --text-color: #2c3e50;
+    --hover-color: #3867e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
   }
 }
 
