@@ -1,482 +1,596 @@
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santiago Fleitas - Desarrollador Full Stack & ML Engineer</title>
-  <link rel="shortcut icon" href="images/Santiago2.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #f7f7f7;
-        color: #333;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    .header {
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-    }
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        text-decoration: none;
-    }
-    .nav-links a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: #333;
-    }
-    .hero {
-        background-color: #f0f0f0;
-        padding: 100px 0 50px;
-        text-align: center;
-    }
-    h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-    .subtitle {
-        font-size: 24px;
-        color: #666;
-        margin-bottom: 40px;
-    }
-    .cta-button {
-        background-color: #007bff;
-        color: #fff;
-        padding: 12px 24px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
-    .cta-button:hover {
-        background-color: #0056b3;
-    }
-    .features {
-        padding: 80px 0;
-    }
-    .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-    }
-    .feature-item {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .feature-item h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-    .feature-item p {
-        color: #666;
-    }
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 40px 0;
-        text-align: center;
-    }
-    /* Education section styles */
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-    }
-    .education-card {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .education-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    .education-content {
-      padding: 20px;
-    }
-    .education-date {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio - Desarrollador Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/index.js",
+                "ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/ScrollTrigger.js"
+            }
+        }
+    </script>
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar container">
-      <div class="logo">
-        <span class="dev-name">Santiago Fleitas</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre Mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="nav-controls">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <i class='bx bx-moon'></i>
-        </button>
-        <button class="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-  </header>
+    <div class="page-wrapper">
+        <!-- Barra lateral verde -->
+        <div class="side-bar"></div>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="container">
-        <div class="hero-content" data-aos="fade-up">
-          <h1>Desarrollador Full Stack</h1>
-          <a href="pdf/Santiago Fleitas - Curriculum.pdf" class="btn btn-secondary" download>
-            <i class="fas fa-download"></i> Descargar Curriculum
-          </a>
-          <p class="hero-subtitle">Bienvenido/a a mi Portfolio Profesional. Aquí encontrarás información acerca de mí, mis proyectos, mis habilidades y qué estoy estudiando.</p>
-          <div class="hero-cta">
-            <a href="#contacto" class="btn btn-secondary">Contactame</a>
-            <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="estudios" class="education">
-      <div class="education-container">
-        <h2 data-aos="fade-up">Formación Académica</h2>
-        <button class="main-button">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"/>
-            </svg>
-            Estudios
-        </button>
-        
-        <div class="sub-buttons" id="educationButtons">
-            <div class="education-item">
-                <button class="sub-button">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12,3L1,9L12,15L23,9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+        <!-- Navegación -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10 L90 30 L90 70 L50 90 L10 70 L10 30 Z" fill="none" stroke="#fff" stroke-width="4"/>
+                        <path d="M30 40 L70 40 L70 60 L30 60 Z" fill="none" stroke="#fff" stroke-width="4"/>
                     </svg>
-                    Universidad de la República (UdelaR)
-                </button>
-                <div class="content">
-                    <h3>Facultad de Ingeniería</h3>
-                    <p class="date">2025 - Actualidad</p>
-                    <p>Estudiante de Ingeniería en Computación</p>
-                    <p>Facultad de Ingeniería</p>
-                    <ul>
-                        <li>Programación y Desarrollo de Software</li>
-                        <li>Algoritmos y Estructuras de Datos</li>
-                        <li>Sistemas Operativos y Redes</li>
-                        <li>Matemática Aplicada a la Ingeniería</li>
-                    </ul>
+                </div>
+                <h1>PORTFOLIO</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="active" data-i18n="nav_home">INICIO</a></li>
+                    <li><a href="#sobre-mi" data-i18n="nav_about">SOBRE MÍ</a></li>
+                    <li><a href="#educacion" data-i18n="nav_education">EDUCACIÓN</a></li>
+                    <li><a href="#habilidades" data-i18n="nav_skills">HABILIDADES</a></li>
+                    <li><a href="#proyectos" data-i18n="nav_projects">PROYECTOS</a></li>
+                    <li><a href="#contacto" data-i18n="nav_contact">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="#" class="active" data-lang="es">ES</a>
+                <a href="#" data-lang="en">EN</a>
+            </div>
+        </header>
+
+        <!-- Sección Inicio -->
+        <section id="inicio" class="hero-section">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">Santiago Fleitas</h1>
+                <h2 data-i18n="hero_subtitle">Desarrollador Full Stack</h2>
+                <p data-i18n="hero_description">Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades técnicas y los proyectos en los que he trabajado. Te invito a conocer más sobre mi perfil y explorar cómo puedo contribuir a tu equipo o proyecto.</p>
+                <a href="#proyectos" class="cta-button" data-i18n="hero_button">Ver Proyectos</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="section">
+            <div class="section-header">
+                <h2 data-i18n="about_title">SOBRE MÍ</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about_p1">Soy graduado de Holberton School con experiencia en desarrollo backend y frontend. Completé el primer año de la formación en Matemáticas en el Instituto de Profesores Artigas (IPA), aunque actualmente está pausada.</p>
+                    <p data-i18n="about_p2">Actualmente estudio Ingeniería en Computación en la UdelaR y participo en varios proyectos. Me siento preparado para asumir nuevos desafíos profesionales, aportando habilidades técnicas sólidas y una gran pasión por la tecnología.</p>
+                    <a href="pdf/Santiago Fleitas - Curriculum.pdf" class="cv-download-button"><i class="fas fa-download"></i> <span data-i18n="cv_button">Descargar CV</span></a>
+                </div>
+                <div class="about-photos">
+                    <div class="about-photo">
+                        <img src="images/Santiago.jpg" alt="Foto de perfil 1">
+                    </div>
+                    <div class="about-photo">
+                        <img src="images/Santiago2.jpg" alt="Foto de perfil 2">
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 data-i18n="card_title1">Comunicación Efectiva</h3>
+                        <p data-i18n="card_desc1">Habilidad para transmitir ideas técnicas de forma clara y accesible a diferentes audiencias.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3 data-i18n="card_title2">Gestión de Equipos</h3>
+                        <p data-i18n="card_desc2">Experiencia coordinando equipos técnicos y fomentando un ambiente colaborativo.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 data-i18n="card_title3">Resolución de Problemas</h3>
+                        <p data-i18n="card_desc3">Enfoque analítico para identificar soluciones eficientes ante desafíos complejos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 data-i18n="card_title4">Pensamiento Matemático</h3>
+                        <p data-i18n="card_desc4">Aplicación de conceptos matemáticos para modelar y resolver problemas de programación.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 data-i18n="card_title5">Inglés Técnico Intermedio</h3>
+                        <p data-i18n="card_desc5">Capacidad para comunicarme en inglés en contextos técnicos y profesionales.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="education-item">
-                <button class="sub-button">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M14,18L12,17L10,18V14H14M14,3H10V8.4L12,7.4L14,8.4M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.477 17.523,2 12,2Z"/>
-                    </svg>
-                    Holberton School
-                </button>
-                <div class="content">
-                    <h3>Holberton School</h3>
-                    <p class="date">2023 - 2024</p>
-                    <p>Desarrollo Full Stack</p>
-                    <p>Especialización en:</p>
-                    <ul>
-                        <li>Desarrollo Frontend (HTML, CSS, JavaScript)</li>
-                        <li>Desarrollo Backend (Python, SQL)</li>
-                        <li>DevOps y Control de Versiones</li>
-                    </ul>
-                    <a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" download>
-                      <button class="certificate-btn">
-                        <svg viewBox="0 0 24 24" width="18" height="18">
-                            <path fill="currentColor" d="M14,2L20,8V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H14M18,20V9H13V4H6V20H18M12,12L16,16H13.5V19H10.5V16H8L12,12Z"/>
+        <!-- Sección Educación -->
+        <section id="educacion" class="section dark-section">
+            <div class="section-header">
+                <h2 data-i18n="education_title">EDUCACIÓN</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date" data-i18n="education_year">2025 - Actualidad</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="education_item1_title">Ingeniería en Computación</h3>
+                        <h4 data-i18n="education_item1_school">Facultad de Ingeniería - UdelaR</h4>
+                        <p data-i18n="education_item1_desc">Estudiante activo en la carrera de Ingeniería en Computación, desarrollando conocimientos en:</p>
+                        <ul class="education-list">
+                            <li data-i18n="education_item1_list1">Programación y Desarrollo de Software</li>
+                            <li data-i18n="education_item1_list2">Algoritmos y Estructuras de Datos</li>
+                            <li data-i18n="education_item1_list3">Sistemas Operativos y Redes</li>
+                            <li data-i18n="education_item1_list4">Matemática Aplicada a la Ingeniería</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="education_item2_title">Desarrollo Full Stack</h3>
+                        <h4 data-i18n="education_item2_school">Holberton School</h4>
+                        <p data-i18n="education_item2_desc">Formación intensiva en desarrollo de software con especialización en:</p>
+                        <ul class="education-list">
+                            <li data-i18n="education_item2_list1">Desarrollo Frontend (HTML, CSS, JavaScript)</li>
+                            <li data-i18n="education_item2_list2">Desarrollo Backend (Python, SQL)</li>
+                            <li data-i18n="education_item2_list3">DevOps y Control de Versiones</li>
+                        </ul>
+                        <a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="certificate-button" data-i18n="education_item2_button">Descargar Certificado <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2022</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="education_item3_title">Especialización en Matemática</h3>
+                        <h4 data-i18n="education_item3_school">Instituto de Profesores de Artigas (IPA)</h4>
+                        <p data-i18n="education_item3_desc">Formación en pedagogía y didáctica de la matemática:</p>
+                        <ul class="education-list">
+                            <li data-i18n="education_item3_list1">Pedagogía y Didáctica Matemática</li>
+                            <li data-i18n="education_item3_list2">Análisis Matemático</li>
+                            <li data-i18n="education_item3_list3">Álgebra y Geometría</li>
+                            <li data-i18n="education_item3_list4">Prácticas Docentes en Matemática</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="section">
+            <div class="section-header">
+                <h2 data-i18n="skills_title">HABILIDADES</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 data-i18n="skills_frontend">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <div class="skill-name" data-i18n="skill_frontend1_name">React.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <div class="skill-name" data-i18n="skill_frontend2_name">HTML5</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-name" data-i18n="skill_frontend3_name">CSS3</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <div class="skill-name" data-i18n="skill_frontend4_name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-tailwind"></i></div>
+                            <div class="skill-name" data-i18n="skill_frontend5_name">Tailwind CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 data-i18n="skills_backend">Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <div class="skill-name" data-i18n="skill_backend1_name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <div class="skill-name" data-i18n="skill_backend2_name">Node.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <div class="skill-name" data-i18n="skill_backend3_name">Express.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <div class="skill-name" data-i18n="skill_backend4_name">MySQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <div class="skill-name" data-i18n="skill_backend5_name">MongoDB</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 data-i18n="skills_mobile">Mobile & Otros</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-flutter"></i></div>
+                            <div class="skill-name" data-i18n="skill_mobile1_name">Flutter</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <div class="skill-name" data-i18n="skill_mobile2_name">Git</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <div class="skill-name" data-i18n="skill_mobile3_name">Docker</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                            <div class="skill-name" data-i18n="skill_mobile4_name">Figma</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-jira"></i></div>
+                            <div class="skill-name" data-i18n="skill_mobile5_name">Jira</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="section dark-section">
+            <div class="section-header">
+                <h2 data-i18n="projects_title">PROYECTOS</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <!-- Video Demo Section -->
+            <div class="video-demo-container">
+                <div class="video-demo-content">
+                    <h3 data-i18n="projects_highlighted">IbaEduca - Proyecto Destacado</h3>
+                    <p data-i18n="projects_highlighted_desc">Una plataforma educativa innovadora diseñada para transformar la manera en que los estudiantes interactúan con el contenido educativo.</p>
+                    <div class="video-wrapper">
+                        <div class="video-placeholder" id="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p data-i18n="video_demo">Video Demo</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span data-i18n="project_tag10">Actualmente trabajando</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/IbaEduca/IbaEduca (3).png" alt="">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project1_title">IbaEduca Página Principal</h3>
+                        <p data-i18n="project1_desc">Plataforma completa de comercio electrónico con carrito de compras, pasarela de pagos y panel de administración.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project1_tag1">Acualmente trabajando</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image3">
+                        <img src="images/CazaPalabras/CP (1).png" alt="">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/" class="project-link"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/SantiagoFleitasIbarra/CazaPalabras-Juego-2025" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project2_title">CazaPalabras</h3>
+                        <p data-i18n="project2_desc">Juego estilo Wordle donde los usuarios deben encontrar palabras ocultas. Desarrollado con JavaScript vanilla, HTML5 y CSS3, implementando lógica de juego compleja y animaciones interactivas.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project2_tag1">JavaScript</span>
+                            <span data-i18n="project2_tag2">HTML5</span>
+                            <span data-i18n="project2_tag3">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ingles-divertido/Ingles (1).png" alt="">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://santiagofleitasibarra.github.io/ingles-divertido/" class="project-link"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/SantiagoFleitasIbarra/ingles-divertido" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project3_title">Inglés Divertido</h3>
+                        <p data-i18n="project3_desc">Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo. Dicha plataforma es adaptada a celulares.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project3_tag1">JavaScript</span>
+                            <span data-i18n="project3_tag2">HTML5</span>
+                            <span data-i18n="project3_tag3">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-grid hidden-projects">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Gestor-tareas/Tareas (2).png" alt="">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://santiagofleitasibarra.github.io/Organiza-tu-dia/" class="project-link"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/SantiagoFleitasIbarra/Organiza-tu-dia" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project4_title">Organiza tu Día con Alegría</h3>
+                        <p data-i18n="project4_desc">Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!</p>
+                        <div class="project-tags">
+                            <span data-i18n="project4_tag1">JavaScript</span>
+                            <span data-i18n="project4_tag2">HTML5</span>
+                            <span data-i18n="project4_tag3">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image2">
+                        <img src="images/Warded/warded2.jpg" alt="">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/German1127/Warded" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project5_title">Warded</h3>
+                        <p data-i18n="project5_desc">Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project5_tag1">Flutter</span>
+                            <span data-i18n="project5_tag2">Firebase</span>
+                            <span data-i18n="project5_tag3">Dart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image4">
+                        <img src="images/Calculadora-cientifica/Calculadora (1).png" alt="">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://santiagofleitasibarra.github.io/calculadora-cientifica/" class="project-link"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/SantiagoFleitasIbarra/calculadora-cientifica" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project6_title">Calculadora Científica</h3>
+                        <p data-i18n="project6_desc">Una herramienta avanzada diseñada para facilitar cálculos matemáticos complejos con una interfaz adaptable y multilingüe. Dicha página es adaptada a celulares</p>
+                        <div class="project-tags">
+                            <span data-i18n="project6_tag1">JavaScript</span>
+                            <span data-i18n="project6_tag2">HTML5</span>
+                            <span data-i18n="project6_tag3">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Libreria-online/Librería (1).png" alt="">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-globe"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project7_title">Librería Online</h3>
+                        <p data-i18n="project7_desc">Un espacio donde puedes publicar y descargar libros de forma gratuita. Explora una gran variedad de ebooks en múltiples categorías y contribuye compartiendo tus propios escritos con la comunidad.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project7_tag1">JavaScript</span>
+                            <span data-i18n="project7_tag2">CSS3</span>
+                            <span data-i18n="project7_tag3">HTML5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-globe"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="project8_title">Próximamente</h3>
+                        <p data-i18n="project8_desc"></p>
+                        <div class="project-tags">
+                            <span data-i18n="project8_tag1"></span>
+                            <span data-i18n="project8_tag2"></span>
+                            <span data-i18n="project8_tag3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="center-button">
+                <button id="toggle-projects" class="cta-button" data-i18n="more_projects">Ver más proyectos</button>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="section">
+            <div class="section-header">
+                <h2 data-i18n="contact_title">CONTACTO</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-i18n="contact_interest">¿Interesado en trabajar juntos?</h3>
+                    <p data-i18n="contact_availability">Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales a tiempo completo.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p data-i18n="contact_location">Barros Blancos, Canelones, Uruguay</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p data-i18n="contact_phone">+598 92 564 819</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p data-i18n="contact_email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbd8d4d5cfdad8cfd4fbd6d2cbd4c9cfddd4d7d2d495d8d4d6">santiagofle8@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/SantiagoFleitasIbarra" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/sancolett_" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 10 L90 30 L90 70 L50 90 L10 70 L10 30 Z" fill="none" stroke="#fff" stroke-width="4"/>
+                            <path d="M30 40 L70 40 L70 60 L30 60 Z" fill="none" stroke="#fff" stroke-width="4"/>
                         </svg>
-                        Descargar Certificado
-                      </button>
-                    </a>
+                    </div>
+                    <h2>PORTFOLIO</h2>
                 </div>
-            </div>
-
-            <div class="education-item">
-                <button class="sub-button">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12,5A7,7 0 0,1 19,12A7,7 0 0,1 12,19C8.13,19 5,15.87 5,12C5,8.13 8.13,5 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7L13.5,10.5L17,11.5L14.5,14L15,17.5L12,15.5L9,17.5L9.5,14L7,11.5L10.5,10.5L12,7Z"/>
-                    </svg>
-                    Instituto de Profesores de Artigas (IPA)
-                </button>
-                <div class="content">
-                    <h3>Instituto de Profesores de Artigas (IPA)</h3>
-                    <p class="date">2021 - 2022</p>
-                    <p>Especialización en Matemática</p>
-                    <p>Formación en pedagogía y didáctica de la matemática</p>
+                <div class="footer-links">
+                    <h3 data-i18n="footer_quick_links">Enlaces rápidos</h3>
                     <ul>
-                        <li>Pedagogía y Didáctica Matemática</li>
-                        <li>Análisis Matemático</li>
-                        <li>Álgebra y Geometría</li>
-                        <li>Prácticas Docentes en Matemática</li>
+                        <li><a href="#inicio" data-i18n="footer_link1">Inicio</a></li>
+                        <li><a href="#sobre-mi" data-i18n="footer_link2">Sobre mí</a></li>
+                        <li><a href="#educacion" data-i18n="footer_link3">Educación</a></li>
+                        <li><a href="#habilidades" data-i18n="footer_link4">Habilidades</a></li>
+                        <li><a href="#proyectos" data-i18n="footer_link5">Proyectos</a></li>
                     </ul>
                 </div>
+                <div class="footer-contact">
+                    <h3 data-i18n="footer_contact">Contacto</h3>
+                    <p data-i18n="footer_contact_location">Barros Blancos, Canelones, Uruguay</p>
+                    <p data-i18n="footer_contact_email">Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="076468697366647368476a6e7768757361686b6e682964686a">santiagofle8@gmail.com</a></p>
+                    <p data-i18n="footer_contact_phone">Tel: +598 92 564 819</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> © <span data-i18n="footer_rights">Mi Portfolio. Todos los derechos reservados.</span></p>
+            </div>
+        </footer>
+
+        <!-- Botón de volver arriba -->
+        <a href="#inicio" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <div class="video-modal" id="video-modal">
+            <div class="video-modal-content">
+                <span class="close-video">&times;</span>
+                <div class="modal-video-container">
+                    <video id="demo-video" controls>
+                        <source src="videos/Video-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </div>
-    </section>
 
-    <section id="sobre-mi" class="about">
-      <div class="container">
-        <h2 data-aos="fade-up">Sobre Mí</h2>
-        <div class="about-content">
-          <div class="profile-section" data-aos="fade-right">
-            <img src="images/Santiago.jpg" alt="Santiago Fleitas speaking at podium" class="profile-image">
-            <img src="images/Santiago2.jpg" alt="Santiago Fleitas speaking at podium" class="profile-image">
-          </div>
-          <div class="about-text" data-aos="fade-right">
-            <p>Soy graduado de Holberton School con experiencia en desarrollo backend y frontend. Completé el primer año de la formación en Matemáticas en el Instituto de Profesores Artigas (IPA), aunque actualmente está pausada.</p>
-            <p> Actualmente estudio Ingeniería en Computación en la UdelaR y participo en varios proyectos. Me siento preparado para asumir nuevos desafíos profesionales, aportando habilidades técnicas sólidas y una gran pasión por la tecnología.</p>
-            <div class="stats">
-              <div class="stat-item">
-                <span class="stat-number">8+</span>
-                <span class="stat-label">Proyectos Activos</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">Full Stack</span>
-                <span class="stat-label">Developer</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">ML</span>
-                <span class="stat-label">Specialist</span>
-              </div>
-            </div>
-            <div class="skills-highlight" data-aos="fade-up">
-              <h3>Habilidades Clave</h3>
-              <div class="key-skills">
-                <div class="key-skill">
-                  <i class="fas fa-comments"></i>
-                  <span>Comunicación Efectiva</span>
-                </div>
-                <div class="key-skill">
-                  <i class="fas fa-users"></i>
-                  <span>Gestión de Equipos</span>
-                </div>
-                <div class="key-skill">
-                  <i class="fas fa-lightbulb"></i>
-                  <span>Resolución de Problemas</span>
-                </div>
-                <div class="key-skill">
-                  <i class="fas fa-brain"></i>
-                  <span>Pensamiento Matemático</span>
-                </div>
-                <div class="key-skill">
-                  <i class="fas fa-language"></i>
-                  <span>Inglés Técnico Intermedio</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="habilidades" class="skills">
-      <div class="container">
-        <h2 data-aos="fade-up">Habilidades Técnicas</h2>
-        <div class="skills-grid">
-          <div class="skill-category" data-aos="fade-up">
-            <h3>Frontend</h3>
-            <div class="skill-items">
-              <div class="skill-item">
-                <i class="fab fa-react"></i>
-                <span>React.js</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-html5"></i>
-                <span>HTML5</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-css3-alt"></i>
-                <span>CSS3</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-js"></i>
-                <span>JavaScript</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-css3"></i>
-                <span>Tailwind CSS</span>
-              </div>
-            </div>
-          </div>
-          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-            <h3>Backend</h3>
-            <div class="skill-items">
-              <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-node-js"></i>
-                <span>Node.js</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-server"></i>
-                <span>Express.js</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <span>MySQL</span>
-              </div>
-            </div>
-          </div>
-          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-            <h3>Mobile & Otros</h3>
-            <div class="skill-items">
-              <div class="skill-item">
-                <i class="fab fa-flutter-alt"></i>
-                <span>Flutter</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-git-alt"></i>
-                <span>Git</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-docker"></i>
-                <span>Docker</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-figma"></i>
-                <span>Figma</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-jira"></i>
-                <span>Jira</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="proyectos" class="projects">
-      <div class="container">
-        <h2 data-aos="fade-up">Proyectos Destacados</h2>
-        <div class="video-demo">
-          <p>Aquí les dejo un vídeo de un proyecto que sigo realizando que viene de la mano de IbaEduca. Donde encontrarán los materiales, vídeos grabados, desafíos interactivos, entre otros. Adaptado a dispositivos móviles.</p>
-          <p>Dicha página se encuentra con falta de contenido como pueden visualizar, pero será agregado pronto.</p>
-          <div class="intro-video-container">
-            <video id="intro-video" controls loop>
-              <source src="videos/Video-demo.mp4" type="video/mp4">
-              Tu navegador no soporta el elemento de video.
-            </video>
-          </div>
-        </div>
-        <div class="projects-grid">
-          <!-- Projects will be populated by JavaScript -->
-      </div>
-    </section>
-
-    <section id="contacto" class="contact">
-      <div class="container">
-        <h2 data-aos="fade-up">Contacto</h2>
-        <div class="contact-grid">
-          <div class="contact-info" data-aos="fade-up">
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Canelones, Uruguay</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <a href="tel:+59892564819">+598 92 564 819</a>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:santiagofle8@gmail.com"><span class="__cf_email__" data-cfemail="c0b3a1aeb4a9a1a7afada6aca5a9b4a1b380a7ada1a9aceea3afad">santiagofle8@gmail.com</span></a>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank">LinkedIn</a>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/SantiagoFleitasIbarra" target="_blank">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Santiago Fleitas. Todos los derechos reservados.</p>
-      <p class="tech-stack">Esta página fue creada con HTML5, CSS3 y JavaScript</p>
-    </div>
-  </footer>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-    // Animación suave para el scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Efecto de parallax simple para el hero
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.pageYOffset;
-      document.querySelector('.hero').style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-    });
-
-    // Animación de entrada para los elementos de características
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.feature-item').forEach(item => {
-      item.style.opacity = 0;
-      item.style.transform = 'translateY(20px)';
-      item.style.transition = 'opacity 0.5s, transform 0.5s';
-      observer.observe(item);
-    });
-  </script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="js/app.js"></script>
 </body>
 </html>
