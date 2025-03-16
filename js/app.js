@@ -196,11 +196,31 @@ skillTags.forEach(tag => {
     });
 });
 
+// Contact form submission
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    
+    // Here you would typically send this data to a server
+    console.log(`Form submitted: ${name}, ${email}, ${subject}, ${message}`);
+    
+    // Show success message
+    alert('¡Gracias por tu mensaje! Te responderé pronto.');
+    
+    // Reset form
+    contactForm.reset();
+});
+
 // Typed text effect
 const typedTextElement = document.querySelector('.typed-text');
 let textArray = currentLang === 'es' 
-    ? ['Desarrollador Frontend', 'Desarrollador Backend', 'Ingeniero en Computación', 'Freelance'] 
-    : ['Developer Frontend', 'Developer Backend', 'Computer Engineer', 'Freelance'];
+    ? ['Frontend', 'Backend', 'Web', 'Ingeniero en Computación', 'Freelance'] 
+    : ['Frontend', 'Backend', 'Web', 'Computer Engineer', 'Freelance'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -254,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         videoThumbnail.addEventListener('click', () => {
             videoModal.classList.add('active');
             // Set the iframe src when opening to prevent autoplay when page loads
-            videoIframe.setAttribute('src', 'videos/Video-demo.mp4');
+            videoIframe.setAttribute('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ');
         });
         
         closeModal.addEventListener('click', () => {
@@ -511,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (windowId === 'video-window') {
                         const videoIframe = document.getElementById('videoIframe');
                         if (videoIframe) {
-                            videoIframe.setAttribute('src', 'videos/Video-demo.mp4');
+                            videoIframe.setAttribute('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ');
                         }
                     }
                     
