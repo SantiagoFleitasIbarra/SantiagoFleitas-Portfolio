@@ -227,8 +227,8 @@ contactForm.addEventListener('submit', (e) => {
 // Typed text effect
 const typedTextElement = document.querySelector('.typed-text');
 let textArray = currentLang === 'es' 
-    ? ['Frontend', 'Backend', 'Web', 'Ingeniero en Computación', 'Freelance'] 
-    : ['Frontend', 'Backend', 'Web', 'Computer Engineer', 'Freelance'];
+    ? ['Desarrollador Frontend', 'Desarrollador Backend', 'Desarrollador Web', 'Ingeniero en Computación', 'Desarrollador Freelance'] 
+    : ['Desarrollador Frontend', 'Desarrollador Backend', 'Desarrollador Web', 'Computer Engineer', 'Desarrollador Freelance'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
