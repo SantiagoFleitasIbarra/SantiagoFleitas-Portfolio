@@ -27,8 +27,14 @@ if (currentTheme === 'dark') {
 
 // Apply saved language on load
 function updateLanguage(lang) {
+    localStorage.setItem('language', lang); // Ensure language is saved immediately
     fetch(`/lang/${lang}.json`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load language file: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
@@ -60,6 +66,9 @@ function updateLanguage(lang) {
                 // Reset typing effect with new language
                 resetTypingEffect();
             }
+
+            // Update mobile button text immediately after language change
+            updateMobileDesktopButtonText();
         })
         .catch(error => console.error('Error loading language file:', error));
 }
@@ -81,7 +90,6 @@ languageToggles.forEach(btn => {
     btn.addEventListener('click', () => {
         const lang = btn.getAttribute('data-lang');
         currentLang = lang;
-        localStorage.setItem('language', lang);
         
         // Update UI
         languageToggles.forEach(b => {
@@ -444,8 +452,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Initialize Windows 98 Desktop
-    initWindows98Desktop();
-    
     function initWindows98Desktop() {
         const desktopIcons = document.querySelectorAll('.desktop-icon');
         const windows = document.querySelectorAll('.win98-window');
@@ -521,6 +527,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetWindow = document.getElementById(windowId);
                 
                 if (targetWindow) {
+                    // On mobile, adjust window position to be centered
+                    if (window.innerWidth <= 768) {
+                        targetWindow.style.top = '50px';
+                        targetWindow.style.left = '2.5%';
+                        targetWindow.style.width = '95%';
+                    }
+                    
                     // Hide all windows
                     windows.forEach(w => w.classList.remove('active'));
                     
@@ -564,6 +577,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 const iconSelector = `.desktop-icon[data-window="${windowElement.id}"]`;
                 const icon = document.querySelector(iconSelector);
                 if (icon) icon.classList.remove('active');
+                
+                // On mobile, also close the desktop if we're in mobile view
+                if (window.innerWidth <= 768) {
+                    const desktop = document.getElementById('win98Desktop');
+                    if (desktop) desktop.classList.remove('mobile-active');
+                    
+                    // Update button text
+                    const mobileBtn = document.getElementById('mobileDesktopBtn');
+                    if (mobileBtn) {
+                        const buttonText = mobileBtn.querySelector('span');
+                        if (currentLang === 'es') {
+                            buttonText.textContent = 'Abrir Escritorio de Windows 98';
+                        } else {
+                            buttonText.textContent = 'Open Windows 98 Desktop';
+                        }
+                        mobileBtn.innerHTML = '<i class="fas fa-desktop"></i> ' + buttonText.outerHTML;
+                    }
+                }
             });
         });
         
@@ -595,32 +626,36 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    initWindows98Desktop();
     
     // Mobile desktop button
     const mobileDesktopBtn = document.getElementById('mobileDesktopBtn');
     const win98Desktop = document.getElementById('win98Desktop');
     
+    function updateMobileDesktopButtonText() {
+        if (mobileDesktopBtn) {
+            const buttonText = mobileDesktopBtn.querySelector('span');
+            const key = win98Desktop && win98Desktop.classList.contains('mobile-active') ? 'close_desktop' : 'open_desktop';
+
+            fetch(`/lang/${currentLang}.json`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data[key]) {
+                        buttonText.textContent = data[key];
+                        mobileDesktopBtn.innerHTML = (win98Desktop && win98Desktop.classList.contains('mobile-active') ? '<i class="fas fa-times"></i> ' : '<i class="fas fa-desktop"></i> ') + buttonText.outerHTML;
+                    }
+                })
+                .catch(error => console.error('Error updating button text:', error));
+        }
+    }
+
     if (mobileDesktopBtn && win98Desktop) {
         mobileDesktopBtn.addEventListener('click', function() {
             win98Desktop.classList.toggle('mobile-active');
-            
-            // Change button text based on desktop visibility
-            const buttonText = mobileDesktopBtn.querySelector('span');
-            if (win98Desktop.classList.contains('mobile-active')) {
-                if (currentLang === 'es') {
-                    buttonText.textContent = 'Cerrar Escritorio de Windows 98';
-                } else {
-                    buttonText.textContent = 'Close Windows 98 Desktop';
-                }
-                mobileDesktopBtn.innerHTML = '<i class="fas fa-times"></i> ' + buttonText.outerHTML;
-            } else {
-                if (currentLang === 'es') {
-                    buttonText.textContent = 'Abrir Escritorio de Windows 98';
-                } else {
-                    buttonText.textContent = 'Open Windows 98 Desktop';
-                }
-                mobileDesktopBtn.innerHTML = '<i class="fas fa-desktop"></i> ' + buttonText.outerHTML;
-            }
+            updateMobileDesktopButtonText();
         });
+
+        // Initial button text update
+        updateMobileDesktopButtonText();
     }
 });

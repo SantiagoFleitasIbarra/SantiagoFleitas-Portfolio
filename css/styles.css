@@ -1338,34 +1338,294 @@ input:checked + .toggle-slider:before {
     }
     
     .win98-window {
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-        top: 50px !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: calc(100% - 30px) !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
         max-width: none;
-        height: auto !important;
-        max-height: 80vh;
+        max-height: none;
         overflow-y: auto;
+        z-index: 200;
+        margin: 0;
+        border-radius: 0;
     }
     
     .window-content {
-        max-height: 60vh;
+        max-height: none;
+        height: calc(100vh - 120px);
         overflow-y: auto;
+    }
+    
+    .window-titlebar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    
+    .win98-desktop.mobile-active {
+        display: block;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        overflow: hidden;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--card-bg);
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding-top: 100px;
+        justify-content: flex-start;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .toggle-wrapper {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .toggle-container, .lang-selector {
+        margin: 5px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        margin: 5px 0;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .skills-grid, 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-bottom: 30px;
+    }
+    
+    .about-text {
+        padding-left: 0;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        height: 350px;
+    }
+
+    .project-info h3 {
+        font-size: 16px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+    }
+
+    .project-tags span {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    .project-back h3 {
+        font-size: 16px;
+    }
+
+    .project-back p {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .code-editor-body {
+        min-height: 400px;
+        overflow-x: auto;
+    }
+
+    .code-content {
+        font-size: 12px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Education timeline mobile style */
+    .timeline-center-line {
+        display: none;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before,
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        display: none;
+    }
+    
+    .timeline-content {
+        border-left: 4px solid var(--primary-color);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+    
+    .timeline-date {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-title {
+        font-size: 18px;
+    }
+    
+    .timeline-subtitle {
+        font-size: 14px;
+    }
+    
+    .timeline-list li {
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .desktop-icons {
-        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-        gap: 8px;
+    .hero-text h1 {
+        font-size: 28px;
     }
-    
-    .desktop-icon {
-        width: 60px;
+
+    .hero-text h2 {
+        font-size: 20px;
     }
-    
-    .icon-label {
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .hero-buttons .btn {
+        margin-bottom: 10px;
+    }
+
+    .about-image {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 150px;
+    }
+
+    .about-photo:first-child,
+    .about-photo:last-child {
+        transform: none;
+    }
+
+    .code-editor-container {
+        font-size: 12px;
+    }
+
+    .code-editor-header {
+        padding: 5px 10px;
+    }
+
+    .code-editor-tab {
+        padding: 3px 8px;
         font-size: 10px;
+    }
+
+    .line-numbers {
+        padding: 0 5px;
+        font-size: 14px;
+    }
+
+    .project-video-container .project-video-overlay h3 {
+        font-size: 18px;
+    }
+
+    .play-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .play-button i {
+        font-size: 20px;
     }
     
     .project-actions {
@@ -1384,6 +1644,21 @@ input:checked + .toggle-slider:before {
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 200px;
+    }
+    
+    .project-header {
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+    
+    .project-description {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .project-tags {
+        margin-top: 8px;
+        margin-bottom: 12px;
     }
 }
 
@@ -1828,259 +2103,4 @@ footer {
 
 [data-theme="dark"] .code-editor-container {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        z-index: 1001;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        background-color: var(--card-bg);
-        width: 100%;
-        height: 100vh;
-        z-index: 1000;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding-top: 100px;
-        justify-content: flex-start;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        margin: 10px 0;
-    }
-
-    .menu-toggle.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .toggle-wrapper {
-        margin-top: 15px;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .toggle-container, .lang-selector {
-        margin: 5px 0;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 15px;
-    }
-
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-
-    .hero-image {
-        width: 250px;
-        height: 250px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        margin: 5px 0;
-        width: 100%;
-        max-width: 250px;
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .skills-grid, 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-image {
-        margin-bottom: 30px;
-    }
-    
-    .about-text {
-        padding-left: 0;
-    }
-
-    .about-details {
-        grid-template-columns: 1fr;
-    }
-
-    .project-item {
-        height: 350px;
-    }
-
-    .project-info h3 {
-        font-size: 16px;
-    }
-
-    .project-info p {
-        font-size: 12px;
-        -webkit-line-clamp: 2;
-    }
-
-    .project-tags span {
-        font-size: 10px;
-        padding: 2px 6px;
-    }
-
-    .project-back h3 {
-        font-size: 16px;
-    }
-
-    .project-back p {
-        font-size: 12px;
-        margin-bottom: 15px;
-    }
-
-    .code-editor-body {
-        min-height: 400px;
-        overflow-x: auto;
-    }
-
-    .code-content {
-        font-size: 12px;
-    }
-
-    .contact-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    /* Education timeline mobile style */
-    .timeline-center-line {
-        display: none;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-    
-    .timeline-item:nth-child(odd)::before,
-    .timeline-item:nth-child(even)::before,
-    .timeline-item:nth-child(odd)::after,
-    .timeline-item:nth-child(even)::after {
-        display: none;
-    }
-    
-    .timeline-content {
-        border-left: 4px solid var(--primary-color);
-        border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    }
-    
-    .timeline-date {
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-    
-    .timeline-title {
-        font-size: 18px;
-    }
-    
-    .timeline-subtitle {
-        font-size: 14px;
-    }
-    
-    .timeline-list li {
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .hero-text h1 {
-        font-size: 28px;
-    }
-
-    .hero-text h2 {
-        font-size: 20px;
-    }
-
-    .section-header h2 {
-        font-size: 24px;
-    }
-
-    .hero-buttons .btn {
-        margin-bottom: 10px;
-    }
-
-    .about-image {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-    }
-
-    .about-photo {
-        width: 200px;
-        height: 150px;
-    }
-
-    .about-photo:first-child,
-    .about-photo:last-child {
-        transform: none;
-    }
-
-    .code-editor-container {
-        font-size: 12px;
-    }
-
-    .code-editor-header {
-        padding: 5px 10px;
-    }
-
-    .code-editor-tab {
-        padding: 3px 8px;
-        font-size: 10px;
-    }
-
-    .line-numbers {
-        padding: 0 5px;
-        font-size: 14px;
-    }
-
-    .project-video-container .project-video-overlay h3 {
-        font-size: 18px;
-    }
-
-    .play-button {
-        width: 50px;
-        height: 50px;
-    }
-
-    .play-button i {
-        font-size: 20px;
-    }
 }
