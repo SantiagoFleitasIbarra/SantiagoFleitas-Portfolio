@@ -199,8 +199,8 @@ skillTags.forEach(tag => {
 // Typed text effect
 const typedTextElement = document.querySelector('.typed-text');
 let textArray = currentLang === 'es' 
-    ? ['Frontend', 'Backend', 'Web', 'Ingeniero en Computación', 'Freelance'] 
-    : ['Frontend', 'Backend', 'Web', 'Computer Engineer', 'Freelance'];
+    ? ['Frontend', 'Backend', 'Freelance'] 
+    : ['Frontend', 'Backend', 'Freelance'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
