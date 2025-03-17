@@ -569,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (windowElement.id === 'video-window') {
                     const videoIframe = document.getElementById('videoIframe');
                     if (videoIframe) {
-                        videoIframe.setAttribute('src', '');
+                        videoIframe.setAttribute('src', 'videos/Video-demo.mp4');
                     }
                 }
                 
