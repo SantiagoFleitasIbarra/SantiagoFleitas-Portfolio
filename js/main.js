@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         videoThumbnail.addEventListener('click', () => {
             videoModal.classList.add('active');
             // Set the iframe src when opening to prevent autoplay when page loads
-            videoIframe.setAttribute('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+            videoIframe.setAttribute('src', 'videos/Video-demo.mp4');
         });
         
         closeModal.addEventListener('click', () => {
@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (windowId === 'video-window') {
                         const videoIframe = document.getElementById('videoIframe');
                         if (videoIframe) {
-                            videoIframe.setAttribute('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+                            videoIframe.setAttribute('src', 'videos/Video-demo.mp4');
                         }
                     }
                     
