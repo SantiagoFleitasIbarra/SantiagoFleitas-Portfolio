@@ -2,703 +2,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pageTitle">Mi Portfolio Profesional</title>
+    <title>Santiago Fleitas - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="importmap">
-        {
-          "imports": {
-            "gsap": "https://cdn.skypack.dev/gsap",
-            "gsap/ScrollTrigger.js": "https://cdn.skypack.dev/gsap/ScrollTrigger"
-          }
-        }
-    </script>
 </head>
-<body>
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="#home" data-i18n="logo">Portfolio</a>
-                </div>
-                <div class="menu-toggle" id="menuToggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active" data-i18n="nav_home">Inicio</a></li>
-                    <li><a href="#about" class="nav-link" data-i18n="nav_about">Sobre mí</a></li>
-                    <li><a href="#education" class="nav-link" data-i18n="nav_education">Educación</a></li>
-                    <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Habilidades</a></li>
-                    <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Proyectos</a></li>
-                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
-                    
-                    <li class="toggle-wrapper">
-                        <div class="toggle-container">
-                            <span class="toggle-icon"><i class="fas fa-moon"></i></span>
-                            <label class="toggle-switch">
-                                <input type="checkbox" id="themeToggle">
-                                <span class="toggle-slider"></span>
-                            </label>
-                            <span class="toggle-icon"><i class="fas fa-sun"></i></span>
-                        </div>
-                        
-                        <div class="lang-selector">
-                            <button class="lang-btn active" data-lang="es">ES</button>
-                            <span class="lang-separator">|</span>
-                            <button class="lang-btn" data-lang="en">EN</button>
-                        </div>
-                    </li>
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <div class="nav-toggles">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active" data-key="inicio">Inicio</a></li>
+                    <li><a href="#acerca" data-key="acerca">Acerca de Mí</a></li>
+                    <li><a href="#educacion" data-key="educacion">Educación</a></li>
+                    <li><a href="#habilidades" data-key="habilidades">Habilidades</a></li>
+                    <li><a href="#proyectos" data-key="proyectos">Proyectos</a></li>
+                    <li><a href="#contacto" data-key="contacto">Contacto</a></li>
                 </ul>
-            </nav>
+                <button id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="language-selector">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Español" id="es-flag">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English" id="en-flag">
+                </div>
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main>
-        <!-- Home Section -->
-        <section id="home" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 data-i18n="hero_greeting">Hola, soy <span class="highlight">Santiago Fleitas</span></h1>
-                        <h2 data-i18n="hero_title"><span class="typed-text"></span></h2>
-                        <p data-i18n="hero_description">Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades técnicas y los proyectos en los que he trabajado. Te invito a conocer más sobre mi perfil y explorar cómo puedo contribuir a tu equipo o proyecto.</p>
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn primary-btn" data-i18n="hero_btn_contact">Contáctame</a>
-                            <a href="#projects" class="btn secondary-btn" data-i18n="hero_btn_projects">Ver Proyectos</a>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://github.com/SantiagoFleitasIbarra/" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob-animation">
-                            <path fill="#4831D4" d="M43.2,-59.1C55.9,-49.3,66.2,-36.5,71.1,-22C76,-7.4,75.5,8.8,70.2,23.5C64.8,38.2,54.6,51.4,41.3,60.2C28.1,69,11.9,73.5,-3.9,78.4C-19.7,83.3,-39.5,88.7,-53.7,80.9C-67.9,73.1,-76.5,52.2,-77.9,32.9C-79.2,13.5,-73.3,-4.3,-65.8,-19.2C-58.2,-34.1,-49,-46.2,-37.4,-56.2C-25.8,-66.2,-12.9,-74.1,1.3,-75.9C15.5,-77.8,30.5,-68.8,43.2,-59.1Z" transform="translate(100 100)" />
-                        </svg>
-                    </div>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Hola, soy <span class="highlight">Santiago Fleitas</span></h1>
+                <div class="typing-container">
+                    <span id="typed-text"></span>
+                    <span class="cursor"></span>
                 </div>
+                <p class="description">
+                    Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades técnicas y los proyectos en los que he trabajado. Te invito a conocer más sobre mi perfil y explorar cómo puedo contribuir a tu equipo o proyecto.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#proyectos" class="btn primary">Ver Proyectos</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/SantiagoFleitasIbarra/" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blob-container">
+                <div class="blob"></div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-i18n="about_title">Sobre mí</h2>
-                    <div class="section-line"></div>
-                </div>
+        <section id="acerca">
+            <div class="section-title" data-section="about">
+                <h2>Acerca de Mí</h2>
+            </div>
+            <div class="about-container">
                 <div class="about-content">
-                    <div class="about-image">
-                        <img src="images/Santiago.jpg" alt="Santiago Fleitas" class="about-photo">
-                        <img src="images/Santiago2.jpg" alt="Santiago Fleitas" class="about-photo">
-                    </div>
                     <div class="about-text">
-                        <p data-i18n="about_description">Soy un desarrollador web con experiencia en la creación de aplicaciones web modernas y responsivas. Me especializo en JavaScript y sus frameworks como React, junto con HTML y CSS para crear experiencias de usuario excepcionales.</p>
-                        <p data-i18n="about_description2">Disfruto resolviendo problemas complejos y convirtiendo ideas en productos digitales funcionales. Siempre estoy aprendiendo nuevas tecnologías para mantenerme actualizado con las tendencias del sector.</p>
-                        <div class="about-details">
-                            <div class="detail">
-                                <i class="fas fa-comments"></i>
-                                <div>
-                                    <h4 data-i18n="about_communication">Comunicación Efectiva</h4>
-                                    <p data-i18n="about_communication_desc">Habilidad para transmitir ideas técnicas de forma clara y accesible a diferentes audiencias.</p>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-users"></i>
-                                <div>
-                                    <h4 data-i18n="about_team">Gestión de Equipos</h4>
-                                    <p data-i18n="about_team_desc">Experiencia coordinando equipos técnicos y fomentando un ambiente colaborativo.</p>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-puzzle-piece"></i>
-                                <div>
-                                    <h4 data-i18n="about_problem">Resolución de Problemas</h4>
-                                    <p data-i18n="about_problem_desc">Enfoque analítico para identificar soluciones eficientes ante desafíos complejos.</p>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-calculator"></i>
-                                <div>
-                                    <h4 data-i18n="about_math">Pensamiento Matemático</h4>
-                                    <p data-i18n="about_math_desc">Aplicación de conceptos matemáticos para modelar y resolver problemas de programación.</p>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-language"></i>
-                                <div>
-                                    <h4 data-i18n="about_english">Inglés Técnico Intermedio</h4>
-                                    <p data-i18n="about_english_desc">Capacidad para comunicarme en inglés en contextos técnicos y profesionales.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="pdf/Santiago Fleitas - Curriculum.pdf" class="btn primary-btn" download data-i18n="about_resume">Descargar CV</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-i18n="education_title">Educación</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="education-content">
-                    <div class="education-timeline">
-                        <div class="timeline-center-line"></div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date" data-i18n="education_fing_year">2025 - Actualidad</div>
-                                <h3 class="timeline-title" data-i18n="education_fing_title">Ingeniería en Computación</h3>
-                                <h4 class="timeline-subtitle" data-i18n="education_fing_subtitle">Facultad de Ingeniería - UdelaR</h4>
-                                <p class="timeline-text" data-i18n="education_fing_desc">Estudiante activo en la carrera de Ingeniería en Computación, desarrollando conocimientos en:</p>
-                                <ul class="timeline-list">
-                                    <li data-i18n="education_fing_item1">Programación y Desarrollo de Software</li>
-                                    <li data-i18n="education_fing_item2">Algoritmos y Estructuras de Datos</li>
-                                    <li data-i18n="education_fing_item3">Sistemas Operativos y Redes</li>
-                                    <li data-i18n="education_fing_item4">Matemática Aplicada a la Ingeniería</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date" data-i18n="education_holberton_year">2023 - 2024</div>
-                                <h3 class="timeline-title" data-i18n="education_holberton_title">Desarrollo Full Stack</h3>
-                                <h4 class="timeline-subtitle" data-i18n="education_holberton_subtitle">Holberton School</h4>
-                                <p class="timeline-text" data-i18n="education_holberton_desc">Formación intensiva en desarrollo de software con especialización en:</p>
-                                <ul class="timeline-list">
-                                    <li data-i18n="education_holberton_item1">Desarrollo Frontend (HTML, CSS, JavaScript)</li>
-                                    <li data-i18n="education_holberton_item2">Desarrollo Backend (Python, SQL)</li>
-                                    <li data-i18n="education_holberton_item3">DevOps y Control de Versiones</li>
-                                </ul>
-                                <a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="education-btn" data-i18n="education_holberton_btn">Descargar Certificado</a>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date" data-i18n="education_ipa_year">2021 - 2022</div>
-                                <h3 class="timeline-title" data-i18n="education_ipa_title">Especialización en Matemática</h3>
-                                <h4 class="timeline-subtitle" data-i18n="education_ipa_subtitle">Instituto de Profesores de Artigas (IPA)</h4>
-                                <p class="timeline-text" data-i18n="education_ipa_desc">Formación en pedagogía y didáctica de la matemática:</p>
-                                <ul class="timeline-list">
-                                    <li data-i18n="education_ipa_item1">Pedagogía y Didáctica Matemática</li>
-                                    <li data-i18n="education_ipa_item2">Análisis Matemático</li>
-                                    <li data-i18n="education_ipa_item3">Álgebra y Geometría</li>
-                                    <li data-i18n="education_ipa_item4">Prácticas Docentes en Matemática</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-i18n="skills_title">Mis Habilidades</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="code-editor-container">
-                    <div class="code-editor-header">
-                        <div class="code-editor-tabs">
-                            <div class="code-editor-tab active">skills.py</div>
-                        </div>
-                        <div class="code-editor-actions">
-                            <span><i class="fas fa-minus"></i></span>
-                            <span><i class="fas fa-square"></i></span>
-                            <span><i class="fas fa-times"></i></span>
-                        </div>
-                    </div>
-                    <div class="code-editor-body">
-                        <div class="line-numbers" id="skillsLineNumbers">
-                            <span>1</span>
-                            <span>2</span>
-                            <span>3</span>
-                            <span>4</span>
-                            <span>5</span>
-                            <span>6</span>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
-                            <span>11</span>
-                            <span>12</span>
-                            <span>13</span>
-                            <span>14</span>
-                            <span>15</span>
-                            <span>16</span>
-                            <span>17</span>
-                            <span>18</span>
-                            <span>19</span>
-                            <span>20</span>
-                            <span>21</span>
-                            <span>22</span>
-                            <span>23</span>
-                            <span>24</span>
-                            <span>25</span>
-                            <span>26</span>
-                            <span>27</span>
-                            <span>28</span>
-                            <span>29</span>
-                            <span>30</span>
-                            <span>31</span>
-                            <span>32</span>
-                            <span>33</span>
-                            <span>34</span>
-                            <span>35</span>
-                            <span>36</span>
-                            <span>37</span>
-                            <span>38</span>
-                            <span>39</span>
-                            <span>40</span>
-                            <span>41</span>
-                            <span>42</span>
-                        </div>
-                        <div class="code-content">
-                            <div class="code-line"><span class="keyword">class</span> <span class="class-name">DeveloperSkills</span>:</div>
-                            <div class="code-line indent-1"><span class="keyword">def</span> <span class="function-name">__init__</span>(self):</div>
-                            <div class="code-line indent-2"><span class="comment"># Initialize skills categories</span></div>
-                            <div class="code-line indent-2">self.skills = {}</div>
-                            <div class="code-line indent-2">self.<span class="function-call">load_skills</span>()</div>
-                            <div class="code-line">&nbsp;</div>
+                        <p class="about-description">
+                            Soy graduado de Holberton School con experiencia en desarrollo backend y frontend. Completé el primer año de la formación en Matemáticas en el Instituto de Profesores Artigas (IPA), aunque actualmente está pausada.
                             
-                            <div class="code-block">
-                                <div class="code-line code-collapsible" data-target="frontend-block"><span class="keyword">def</span> <span class="function-name">frontend</span>(self):</div>
-                                <div id="frontend-block" class="collapsible-content">
-                                    <div class="code-line indent-1"><span class="keyword">return</span> {</div>
-                                    <div class="code-line indent-2"><span class="string">"React.js"</span>: <span class="number">90</span>, <span class="comment"># Advanced component architecture, hooks, context API</span></div>
-                                    <div class="code-line indent-2"><span class="string">"HTML5"</span>: <span class="number">95</span>, <span class="comment"># Semantic markup, accessibility, SVG</span></div>
-                                    <div class="code-line indent-2"><span class="string">"CSS3"</span>: <span class="number">92</span>, <span class="comment"># Flexbox, Grid, Animations, Media queries</span></div>
-                                    <div class="code-line indent-2"><span class="string">"JavaScript"</span>: <span class="number">88</span>, <span class="comment"># ES6+, async/await, DOM manipulation</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Tailwind CSS"</span>: <span class="number">85</span>, <span class="comment"># Utility-first workflow, custom themes</span></div>
-                                    <div class="code-line indent-1">}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="code-block">
-                                <div class="code-line code-collapsible" data-target="backend-block"><span class="keyword">def</span> <span class="function-name">backend</span>(self):</div>
-                                <div id="backend-block" class="collapsible-content">
-                                    <div class="code-line indent-1"><span class="keyword">return</span> {</div>
-                                    <div class="code-line indent-2"><span class="string">"Python"</span>: <span class="number">80</span>, <span class="comment"># Flask, Django, Data processing</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Node.js"</span>: <span class="number">85</span>, <span class="comment"># Server-side applications, API development</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Express.js"</span>: <span class="number">82</span>, <span class="comment"># RESTful APIs, middleware architecture</span></div>
-                                    <div class="code-line indent-2"><span class="string">"MySQL"</span>: <span class="number">78</span>, <span class="comment"># Query optimization, database design</span></div>
-                                    <div class="code-line indent-2"><span class="string">"MongoDB"</span>: <span class="number">75</span>, <span class="comment"># NoSQL schema design, aggregation pipeline</span></div>
-                                    <div class="code-line indent-1">}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="code-block">
-                                <div class="code-line code-collapsible" data-target="other-block"><span class="keyword">def</span> <span class="function-name">other_skills</span>(self):</div>
-                                <div id="other-block" class="collapsible-content">
-                                    <div class="code-line indent-1"><span class="keyword">return</span> {</div>
-                                    <div class="code-line indent-2"><span class="string">"Flutter"</span>: <span class="number">70</span>, <span class="comment"># Cross-platform mobile development</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Git"</span>: <span class="number">88</span>, <span class="comment"># Version control, collaboration workflows</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Docker"</span>: <span class="number">75</span>, <span class="comment"># Containerization, deployment</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Figma"</span>: <span class="number">80</span>, <span class="comment"># UI design, prototyping</span></div>
-                                    <div class="code-line indent-2"><span class="string">"Jira"</span>: <span class="number">85</span>, <span class="comment"># Agile project management</span></div>
-                                    <div class="code-line indent-1">}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="code-line indent-1"><span class="keyword">def</span> <span class="function-name">load_skills</span>(self):</div>
-                            <div class="code-line indent-2">self.skills[<span class="string">"frontend"</span>] = self.<span class="function-call">frontend</span>()</div>
-                            <div class="code-line indent-2">self.skills[<span class="string">"backend"</span>] = self.<span class="function-call">backend</span>()</div>
-                            <div class="code-line indent-2">self.skills[<span class="string">"other"</span>] = self.<span class="function-call">other_skills</span>()</div>
-                        </div>
+                            Actualmente estudio Ingeniería en Computación en la UdelaR y participo en varios proyectos. Me siento preparado para asumir nuevos desafíos profesionales, aportando habilidades técnicas sólidas y una gran pasión por la tecnología.
+                        </p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section with Windows 98 Style -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-i18n="projects_title">Mis Proyectos</h2>
-                    <div class="section-line"></div>
-                    <p data-i18n="projects_subtitle">Trabajos destacados</p>
+                    <div class="about-images">
+                        <img class="about-image" src="images/Santiago.jpg" alt="Santiago Fleitas">
+                        <img class="about-image" src="images/Santiago2.jpg" alt="Santiago Fleitas">
+                    </div>
                 </div>
                 
-                <button class="mobile-desktop-btn" id="mobileDesktopBtn">
-                    <i class="fas fa-desktop"></i> <span data-i18n="open_desktop">Abrir Escritorio de Windows 98</span>
-                </button>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-comments"></i>
+                            <h3>Comunicación Efectiva</h3>
+                        </div>
+                        <div class="skill-content">
+                            <p>Habilidad para transmitir ideas técnicas de forma clara y accesible a diferentes audiencias.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-users-gear"></i>
+                            <h3>Gestión de Equipos</h3>
+                        </div>
+                        <div class="skill-content">
+                            <p>Experiencia coordinando equipos técnicos y fomentando un ambiente colaborativo.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <h3>Resolución de Problemas</h3>
+                        </div>
+                        <div class="skill-content">
+                            <p>Enfoque analítico para identificar soluciones eficientes ante desafíos complejos.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-square-root-variable"></i>
+                            <h3>Pensamiento Matemático</h3>
+                        </div>
+                        <div class="skill-content">
+                            <p>Aplicación de conceptos matemáticos para modelar y resolver problemas de programación.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-language"></i>
+                            <h3>Inglés Técnico Intermedio</h3>
+                        </div>
+                        <div class="skill-content">
+                            <p>Capacidad para comunicarme en inglés en contextos técnicos y profesionales.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="win98-desktop" id="win98Desktop">
+                <a href="pdf/Santiago Fleitas - Curriculum.pdf" class="download-cv">Ver Curriculum</a>
+            </div>
+        </section>
+
+        <section id="educacion">
+            <div class="section-title" data-section="education">
+                <h2>Educación</h2>
+                <p>Mi trayectoria académica refleja mi compromiso con el aprendizaje continuo y el desarrollo profesional. Aquí encontrarás los detalles de mi formación en ingeniería, desarrollo de software y matemáticas.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 - Actualidad</span>
+                        <h3 class="timeline-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Ingeniería en Computación
+                        </h3>
+                        <h4 class="timeline-subtitle">Facultad de Ingeniería - UdelaR</h4>
+                        <p>Estudiante activo en la carrera de Ingeniería en Computación, desarrollando conocimientos en:</p>
+                        <ul class="timeline-list">
+                            <li>Programación y Desarrollo de Software</li>
+                            <li>Algoritmos y Estructuras de Datos</li>
+                            <li>Sistemas Operativos y Redes</li>
+                            <li>Matemática Aplicada a la Ingeniería</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - 2024</span>
+                        <h3 class="timeline-title">
+                            <i class="fas fa-laptop-code"></i>
+                            Desarrollo Full Stack
+                        </h3>
+                        <h4 class="timeline-subtitle">Holberton School</h4>
+                        <p>Formación intensiva en desarrollo de software con especialización en:</p>
+                        <ul class="timeline-list">
+                            <li>Desarrollo Frontend (HTML, CSS, JavaScript)</li>
+                            <li>Desarrollo Backend (Python, SQL)</li>
+                            <li>DevOps y Control de Versiones</li>
+                        </ul>
+                        <a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="certificate-btn">Ver Certificado</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2022</span>
+                        <h3 class="timeline-title">
+                            <i class="fas fa-square-root-variable"></i>
+                            Especialización en Matemática
+                        </h3>
+                        <h4 class="timeline-subtitle">Instituto de Profesores de Artigas (IPA)</h4>
+                        <p>Formación en pedagogía y didáctica de la matemática:</p>
+                        <ul class="timeline-list">
+                            <li>Pedagogía y Didáctica Matemática</li>
+                            <li>Análisis Matemático</li>
+                            <li>Álgebra y Geometría</li>
+                            <li>Prácticas Docentes en Matemática</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <div class="section-title" data-section="skills">
+                <h2>Technical Skills</h2>
+                <p>A comprehensive overview of my technical expertise and tools I work with regularly in software development.</p>
+            </div>
+            <div class="skills-container">
+                <div class="vscode-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="file-tab">
+                            <i class="fab fa-js"></i>
+                            skills.js
+                        </div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line">
+                            <span class="line-number">1</span>
+                            <span class="code-text">
+                                <span class="comment">// Technical Skills Configuration</span>
+                            </span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">2</span>
+                            <span class="code-text">
+                                <span class="keyword">const</span> <span class="property">skills</span> <span class="bracket">=</span> <span class="bracket">{</span>
+                            </span>
+                        </div>
+                        <div class="skill-category">
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text">
+                                    <span class="property">frontEnd</span>: <span class="bracket">[</span>
+                                    <span class="string">'React.js', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'</span>
+                                    <span class="bracket">],</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <span class="code-text">
+                                    <span class="property">backEnd</span>: <span class="bracket">[</span>
+                                    <span class="string">'Python', 'Node.js', 'Express.js', 'MySQL', 'MongoDB'</span>
+                                    <span class="bracket">],</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <span class="code-text">
+                                    <span class="property">tools</span>: <span class="bracket">[</span>
+                                    <span class="string">'Flutter', 'Git', 'Docker', 'Figma', 'Jira'</span>
+                                    <span class="bracket">],</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">6</span>
+                            <span class="code-text"><span class="bracket">}</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects-section">
+            <div class="section-title" data-section="projects">
+                <h2>Projects</h2>
+                <p>A showcase of the most significant projects I've worked on, demonstrating my technical skills and problem-solving abilities.</p>
+            </div>
+            
+            <div class="win98-container">
+                <div class="boot-screen" id="bootScreen">
+                    <h3>Press any key to start...</h3>
+                </div>
+                
+                <div class="desktop" id="desktop">
                     <div class="desktop-icons">
-                        <div class="desktop-icon" data-window="video-window">
-                            <img src="images/logos-iconos/wm-2.png" alt="Video" class="icon-image">
-                            <div class="icon-label" data-i18n="project_ibaeducavideo">Video Demo</div>
+                        <div class="desktop-icon" data-project="ibaeduca">
+                            <img src="images/logos-iconos/template_world-0.png" alt="IbaEduca">
+                            <span>IbaEduca</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project1-window">
-                            <img src="images/logos-iconos/template_world-0.png" alt="IbaEduca" class="icon-image">
-                            <div class="icon-label" data-i18n="">IbaEduca</div>
+                        <div class="desktop-icon" data-project="cazapalabras">
+                            <img src="images/logos-iconos/joystick-2.png" alt="CazaPalabras">
+                            <span>CazaPalabras</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project2-window">
-                            <img src="images/logos-iconos/joystick-2.png" alt="CazaPalabras" class="icon-image">
-                            <div class="icon-label" data-i18n="">CazaPalabras</div>
+                        <div class="desktop-icon" data-project="ingles">
+                            <img src="images/logos-iconos/accessibility_stopwatch.png" alt="Inglés Divertido">
+                            <span>Inglés Divertido</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project3-window">
-                            <img src="images/logos-iconos/accessibility_stopwatch.png" alt="Inglés Divertido" class="icon-image">
-                            <div class="icon-label" data-i18n="">Inglés Divertido</div>
+                        <div class="desktop-icon" data-project="tareas">
+                            <img src="images/logos-iconos/template_empty-0.png" alt="Organiza tu día">
+                            <span>Organiza tu día</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project4-window">
-                            <img src="images/logos-iconos/template_empty-0.png" alt="Organiza tu día" class="icon-image">
-                            <div class="icon-label" data-i18n="">Organiza tu día</div>
+                        <div class="desktop-icon" data-project="warded">
+                            <img src="images/logos-iconos/msagent-2.png" alt="Warded">
+                            <span>Warded</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project5-window">
-                            <img src="images/logos-iconos/msagent-2.png" alt="Warded" class="icon-image">
-                            <div class="icon-label" data-i18n="">Warded</div>
+                        <div class="desktop-icon" data-project="calculadora">
+                            <img src="images/logos-iconos/charmap_w2k-0.png" alt="Calculadora">
+                            <span>Calculadora</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project6-window">
-                            <img src="images/logos-iconos/charmap_w2k-0.png" alt="Calculadora" class="icon-image">
-                            <div class="icon-label" data-i18n="">Calculadora</div>
+                        <div class="desktop-icon" data-project="libreria">
+                            <img src="images/logos-iconos/paint_file-2.png" alt="Librería">
+                            <span>Librería</span>
                         </div>
-                        
-                        <div class="desktop-icon" data-window="project7-window">
-                            <img src="images/logos-iconos/paint_file-2.png" alt="Librería" class="icon-image">
-                            <div class="icon-label" data-i18n="">Librería Online</div>
+                        <div class="desktop-icon" data-project="images">
+                            <img src="images/logos-iconos/folder-icon.png" alt="Images">
+                            <span>Images</span>
                         </div>
                     </div>
-                    
-                    <!-- Video Window -->
-                    <div id="video-window" class="win98-window video-player-window" style="top: 50px; left: 100px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="project_ibaeducavideo">Video Demo de IbaEduca</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="window-content">
-                                    <iframe id="videoIframe" class="win98-video" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 1 Window -->
-                    <div id="project1-window" class="win98-window" style="top: 80px; left: 150px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">IbaEduca Página Principal</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/IbaEduca/IbaEduca (3).png" alt="IbaEduca" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">IbaEduca Página Principal</div>
-                                        <div class="project-status" data-i18n="project1_status">Actualmente Trabajando</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project1_desc">Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos. Desarrollado en colaboración para ofrecer educación accesible y de calidad.</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project1_tag1">React</span>
-                                    <span class="project-tag" data-i18n="project1_tag2">Node.js</span>
-                                    <span class="project-tag" data-i18n="project1_tag3">MongoDB</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 Window -->
-                    <div id="project2-window" class="win98-window" style="top: 100px; left: 200px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">CazaPalabras</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/CazaPalabras/CP (1).png" alt="CazaPalabras" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">CazaPalabras</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project2_desc">Juego estilo Wordle donde los usuarios deben encontrar palabras ocultas. Desarrollado con JavaScript vanilla, HTML5 y CSS3, implementando lógica de juego compleja y animaciones interactivas.</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project2_tag1">JavaScript</span>
-                                    <span class="project-tag" data-i18n="project2_tag2">HTML5</span>
-                                    <span class="project-tag" data-i18n="project2_tag3">CSS3</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="" class="win98-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="view_live">Ver Proyecto</span></a>
-                                    <a href="" class="win98-btn"><i class="fab fa-github"></i> <span data-i18n="view_repo">Ver Repositorio</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 Window -->
-                    <div id="project3-window" class="win98-window" style="top: 120px; left: 250px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">Inglés Divertido</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/ingles-divertido/Ingles (1).png" alt="Inglés Divertido" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">Inglés Divertido</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project3_desc">Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo. Dicha plataforma es adaptada a celulares.</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project3_tag1">JavaScript</span>
-                                    <span class="project-tag" data-i18n="project3_tag2">HTML5</span>
-                                    <span class="project-tag" data-i18n="project3_tag3">CSS3</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="" class="win98-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="view_live">Ver Proyecto</span></a>
-                                    <a href="" class="win98-btn"><i class="fab fa-github"></i> <span data-i18n="view_repo">Ver Repositorio</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 Window -->
-                    <div id="project4-window" class="win98-window" style="top: 140px; left: 300px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">Organiza tu día con alegría</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/Gestor-tareas/Tareas (2).png" alt="Organiza tu día" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">Organiza tu día con alegría</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project4_desc">Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project4_tag1">JavaScript</span>
-                                    <span class="project-tag" data-i18n="project4_tag2">HTML5</span>
-                                    <span class="project-tag" data-i18n="project4_tag3">CSS3</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="" class="win98-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="view_live">Ver Proyecto</span></a>
-                                    <a href="" class="win98-btn"><i class="fab fa-github"></i> <span data-i18n="view_repo">Ver Repositorio</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 5 Window -->
-                    <div id="project5-window" class="win98-window" style="top: 160px; left: 350px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">Warded</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/Warded/warded2.jpg" alt="Warded" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">Warded</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project5_desc">Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project5_tag1">Flutter</span>
-                                    <span class="project-tag" data-i18n="project5_tag2">Firebase</span>
-                                    <span class="project-tag" data-i18n="project5_tag3">Dart</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="" class="win98-btn"><i class="fas fa-play"></i> <span data-i18n="view_demo">Ver Demo</span></a>
-                                    <a href="" class="win98-btn"><i class="fab fa-github"></i> <span data-i18n="view_repo">Ver Repositorio</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 6 Window -->
-                    <div id="project6-window" class="win98-window" style="top: 180px; left: 400px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">Calculadora Científica</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/Calculadora-cientifica/Calculadora (1).png" alt="Calculadora" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">Calculadora Científica</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project6_desc">Una herramienta avanzada diseñada para facilitar cálculos matemáticos complejos con una interfaz adaptable y multilingüe. Dicha página es adaptada a celulares.</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project6_tag1">JavaScript</span>
-                                    <span class="project-tag" data-i18n="project6_tag2">HTML5</span>
-                                    <span class="project-tag" data-i18n="project6_tag3">CSS3</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="" class="win98-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="view_live">Ver Proyecto</span></a>
-                                    <a href="" class="win98-btn"><i class="fab fa-github"></i> <span data-i18n="view_repo">Ver Repositorio</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 7 Window -->
-                    <div id="project7-window" class="win98-window" style="top: 200px; left: 450px;">
-                        <div class="window-titlebar">
-                            <div class="window-title" data-i18n="">Librería Online</div>
-                            <div class="window-controls">
-                                <div class="window-control window-minimize">_</div>
-                                <div class="window-control window-maximize">□</div>
-                                <div class="window-control window-close">✕</div>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                            <div class="window-content">
-                                <div class="project-header">
-                                    <img src="images/Libreria-online/Librería (1).png" alt="Librería" class="project-icon">
-                                    <div>
-                                        <div class="project-title" data-i18n="">Librería Online</div>
-                                    </div>
-                                </div>
-                                <div class="project-description" data-i18n="project7_desc">Un espacio donde puedes publicar y descargar libros de forma gratuita. Explora una gran variedad de ebooks en múltiples categorías y contribuye compartiendo tus propios escritos con la comunidad.</div>
-                                <div class="project-tags">
-                                    <span class="project-tag" data-i18n="project7_tag1">JavaScript</span>
-                                    <span class="project-tag" data-i18n="project7_tag2">HTML5</span>
-                                    <span class="project-tag" data-i18n="project7_tag3">CSS3</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="" class="win98-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="view_live">Ver Proyecto</span></a>
-                                    <a href="" class="win98-btn"><i class="fab fa-github"></i> <span data-i18n="view_repo">Ver Repositorio</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="taskbar">
-                        <div class="start-button">
-                            <img src="/a/5140deaa-a201-42fe-83b9-54c2878ce467" alt="Start">
-                            <span>Start</span>
-                        </div>
-                        <div class="taskbar-time">4:20 PM</div>
+                        <button class="start-button">
+                            <img src="images/logos-iconos/windows-0.png" alt="Start" style="width: 16px; height: 16px;">
+                            Start
+                        </button>
+                        <div class="taskbar-items"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-i18n="contact_title">Contacto</h2>
-                    <div class="section-line"></div>
+        <section id="contacto">
+            <div class="contact-container">
+                <div class="contact-intro">
+                    <h2>¿Interesado en trabajar juntos?</h2>
+                    <p>Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales a tiempo completo.</p>
                 </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3 data-i18n="contact_subtitle">¿Interesado en trabajar juntos?</h3>
-                        <p data-i18n="contact_description">Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales a tiempo completo.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4 data-i18n="contact_email">Email</h4>
-                                    <p data-i18n="contact_email_value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b6f6e5b7e767a727735787476">santiagofle8@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <h4 data-i18n="contact_phone">Teléfono</h4>
-                                    <p data-i18n="">+598 92 564 819</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4 data-i18n="contact_location">Ubicación</h4>
-                                    <p data-i18n="">Barros Blancos, Canelones, Uruguay</p>
-                                </div>
-                            </div>
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <a href="/cdn-cgi/l/email-protection#81f2e0eff5e8e0e6eee7ede4b9c1e6ece0e8edafe2eeec"><span class="__cf_email__" data-cfemail="a1d2c0cfd5c8c0c6cec7cdc499e1c6ccc0c8cd8fc2cecc">santiagofle8@gmail.com</span></a>
                         </div>
-                        <div class="social-icons">
-                            <a href="https://github.com/SantiagoFleitasIbarra/" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://instagram.com/sancolett_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <h3>Teléfono</h3>
+                            <a href="tel:+59892564819">+598 92 564 819</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Ubicación</h3>
+                            <p>Barros Blancos, Canelones, Uruguay</p>
                         </div>
                     </div>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Tu nombre" required data-i18n-placeholder="contact_name_placeholder">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Tu email" required data-i18n-placeholder="contact_email_placeholder">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Asunto" required data-i18n-placeholder="contact_subject_placeholder">
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Tu mensaje" required data-i18n-placeholder="contact_message_placeholder"></textarea>
-                            </div>
-                            <button type="submit" class="btn primary-btn" data-i18n="contact_submit">Enviar Mensaje</button>
-                        </form>
+                    <div class="contact-image">
+                        <img src="images/logo.jpg" alt="Technology" style="max-width: 100%; height: auto; border-radius: 10px;">
                     </div>
+                </div>
+                <div class="social-links-footer">
+                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/SantiagoFleitasIbarra/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/sancolett_/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </section>
+
+        <footer class="footer">
+            <p> 2025 Santiago Fleitas | Portfolio Profesional</p>
+        </footer>
+
+        <button class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p data-i18n="footer_copyright">&copy; 2025 Santiago Fleitas | Portfolio Profesional</p>
-                <div class="back-to-top">
-                    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="js/main.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
