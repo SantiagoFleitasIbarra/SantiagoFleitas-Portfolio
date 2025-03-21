@@ -4,376 +4,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Fleitas - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/contact-styles.css">
+    <link rel="stylesheet" href="css/new-effects.css">
+    <link rel="stylesheet" href="css/responsive-styles.css">
+    <script src="js/mobile-menu.js"></script>
 </head>
-<body class="light-mode">
-    <nav class="navbar">
+<body>
+    <nav>
         <div class="nav-content">
             <div class="logo">Portfolio</div>
-            <div class="nav-toggles">
-                <ul class="nav-links">
-                    <li><a href="#inicio" class="active" data-key="inicio">Inicio</a></li>
-                    <li><a href="#acerca" data-key="acerca">Acerca de Mí</a></li>
-                    <li><a href="#educacion" data-key="educacion">Educación</a></li>
-                    <li><a href="#habilidades" data-key="habilidades">Habilidades</a></li>
-                    <li><a href="#proyectos" data-key="proyectos">Proyectos</a></li>
-                    <li><a href="#contacto" data-key="contacto">Contacto</a></li>
-                </ul>
-                <button id="themeToggle">
-                    <i class="fas fa-sun"></i>
-                </button>
-                <div class="language-selector">
-                    <img src="https://flagcdn.com/w40/es.png" alt="Español" id="es-flag">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="English" id="en-flag">
-                </div>
-                <div class="menu-toggle">
-                    <div class="hamburger"></div>
-                </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <div class="nav-links">
+                <a href="#home" class="active" data-lang-key="nav-home">Inicio</a>
+                <a href="#about" data-lang-key="nav-about">Acerca de Mí</a>
+                <a href="#education" data-lang-key="nav-education">Educación</a>
+                <a href="#skills" data-lang-key="nav-skills">Habilidades</a>
+                <a href="#projects" data-lang-key="nav-projects">Proyectos</a>
+                <a href="#contact" data-lang-key="nav-contact">Contacto</a>
+            </div>
+            <button id="languageToggle">ES/EN</button>
         </div>
     </nav>
 
     <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Hola, soy <span class="highlight">Santiago Fleitas</span></h1>
-                <div class="typing-container">
-                    <span id="typed-text"></span>
-                    <span class="cursor"></span>
+        <section id="home" class="active">
+            <div class="space-background">
+                <div class="stars"></div>
+                <div class="twinkling"></div>
+                <div class="content-wrapper">
+                    <div class="space-illustration">
+                        <div class="orbit">
+                            <div class="satellite"></div>
+                        </div>
+                        <div class="planet"></div>
+                    </div>
+                    <div class="content-side">
+                        <h1>Santiago Fleitas</h1>
+                        <div class="typing-container">
+                            <span class="typing-text"></span>
+                        </div>
+                        <p class="welcome-text" data-lang-key="welcome-message">
+                            Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades técnicas y los proyectos en los que he trabajado. Te invito a conocer más sobre mi perfil y explorar cómo puedo contribuir a tu equipo o proyecto.
+                        </p>
+                        <div class="action-buttons">
+                            <a href="#projects" class="action-button" data-lang-key="nav-projects">Proyectos</a>
+                            <a href="#contact" class="action-button" data-lang-key="nav-contact">Contacto</a>
+                        </div>
+                    </div>
                 </div>
-                <p class="description">
-                    Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades técnicas y los proyectos en los que he trabajado. Te invito a conocer más sobre mi perfil y explorar cómo puedo contribuir a tu equipo o proyecto.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#proyectos" class="btn primary">Ver Proyectos</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/SantiagoFleitasIbarra/" target="_blank" class="social-btn">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank" class="social-btn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="blob-container">
-                <div class="blob"></div>
             </div>
         </section>
-
-        <section id="acerca">
-            <div class="section-title" data-section="about">
-                <h2>Acerca de Mí</h2>
-            </div>
+        
+        <section id="about">
             <div class="about-container">
+                <div class="about-header">
+                    <h2 data-lang-key="nav-about">Acerca de Mí</h2>
+                </div>
                 <div class="about-content">
-                    <div class="about-text">
-                        <p class="about-description">
+                    <div>
+                        <p class="about-text" data-lang-key="about-description">
                             Soy graduado de Holberton School con experiencia en desarrollo backend y frontend. Completé el primer año de la formación en Matemáticas en el Instituto de Profesores Artigas (IPA), aunque actualmente está pausada.
-                            
+
                             Actualmente estudio Ingeniería en Computación en la UdelaR y participo en varios proyectos. Me siento preparado para asumir nuevos desafíos profesionales, aportando habilidades técnicas sólidas y una gran pasión por la tecnología.
                         </p>
+                        <a href="pdf/Santiago Fleitas - Curriculum.pdf" class="cv-button" download data-lang-key="download-cv">Descargar CV</a>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h3 data-lang-key="skill-1-title">Comunicación Efectiva</h3>
+                                <p data-lang-key="skill-1-description">Habilidad para transmitir ideas técnicas de forma clara y accesible a diferentes audiencias.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3 data-lang-key="skill-2-title">Gestión de Equipos</h3>
+                                <p data-lang-key="skill-2-description">Experiencia coordinando equipos técnicos y fomentando un ambiente colaborativo.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3 data-lang-key="skill-3-title">Resolución de Problemas</h3>
+                                <p data-lang-key="skill-3-description">Enfoque analítico para identificar soluciones eficientes ante desafíos complejos.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3 data-lang-key="skill-4-title">Pensamiento Matemático</h3>
+                                <p data-lang-key="skill-4-description">Aplicación de conceptos matemáticos para modelar y resolver problemas de programación.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3 data-lang-key="skill-5-title">Inglés Técnico Intermedio</h3>
+                                <p data-lang-key="skill-5-description">Capacidad para comunicarme en inglés en contextos técnicos y profesionales.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="about-images">
-                        <img class="about-image" src="images/Santiago.jpg" alt="Santiago Fleitas">
-                        <img class="about-image" src="images/Santiago2.jpg" alt="Santiago Fleitas">
+                        <img src="images/Santiago.jpg" alt="Santiago Fleitas" class="about-image">
+                        <img src="images/Santiago2.jpg" alt="Santiago Fleitas" class="about-image">
                     </div>
                 </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-comments"></i>
-                            <h3>Comunicación Efectiva</h3>
-                        </div>
-                        <div class="skill-content">
-                            <p>Habilidad para transmitir ideas técnicas de forma clara y accesible a diferentes audiencias.</p>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-users-gear"></i>
-                            <h3>Gestión de Equipos</h3>
-                        </div>
-                        <div class="skill-content">
-                            <p>Experiencia coordinando equipos técnicos y fomentando un ambiente colaborativo.</p>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-puzzle-piece"></i>
-                            <h3>Resolución de Problemas</h3>
-                        </div>
-                        <div class="skill-content">
-                            <p>Enfoque analítico para identificar soluciones eficientes ante desafíos complejos.</p>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-square-root-variable"></i>
-                            <h3>Pensamiento Matemático</h3>
-                        </div>
-                        <div class="skill-content">
-                            <p>Aplicación de conceptos matemáticos para modelar y resolver problemas de programación.</p>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-language"></i>
-                            <h3>Inglés Técnico Intermedio</h3>
-                        </div>
-                        <div class="skill-content">
-                            <p>Capacidad para comunicarme en inglés en contextos técnicos y profesionales.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="pdf/Santiago Fleitas - Curriculum.pdf" class="download-cv">Ver Curriculum</a>
+            </div>
+            <div class="floating-astronaut">
+                <svg class="astronaut-svg" viewBox="0 0 100 100">
+                    <!-- Simple astronaut SVG -->
+                    <circle cx="50" cy="40" r="20" fill="currentColor"/>
+                    <rect x="30" y="60" width="40" height="30" rx="10" fill="currentColor"/>
+                    <circle cx="35" cy="35" r="5" fill="#0a192f"/>
+                </svg>
             </div>
         </section>
 
-        <section id="educacion">
-            <div class="section-title" data-section="education">
-                <h2>Educación</h2>
-                <p>Mi trayectoria académica refleja mi compromiso con el aprendizaje continuo y el desarrollo profesional. Aquí encontrarás los detalles de mi formación en ingeniería, desarrollo de software y matemáticas.</p>
-            </div>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2025 - Actualidad</span>
-                        <h3 class="timeline-title">
-                            <i class="fas fa-graduation-cap"></i>
-                            Ingeniería en Computación
-                        </h3>
-                        <h4 class="timeline-subtitle">Facultad de Ingeniería - UdelaR</h4>
-                        <p>Estudiante activo en la carrera de Ingeniería en Computación, desarrollando conocimientos en:</p>
-                        <ul class="timeline-list">
-                            <li>Programación y Desarrollo de Software</li>
-                            <li>Algoritmos y Estructuras de Datos</li>
-                            <li>Sistemas Operativos y Redes</li>
-                            <li>Matemática Aplicada a la Ingeniería</li>
-                        </ul>
-                    </div>
+        <section id="education">
+            <div class="moon-surface"></div>
+            <div class="moon-base"></div>
+            <div class="education-container">
+                <div class="education-header">
+                    <h2 data-lang-key="education-title">Educación</h2>
+                    <p class="education-intro" data-lang-key="education-intro">
+                        Mi trayectoria académica refleja mi compromiso con el aprendizaje continuo y el desarrollo profesional. Aquí encontrarás los detalles de mi formación en ingeniería, desarrollo de software y matemáticas.
+                    </p>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023 - 2024</span>
-                        <h3 class="timeline-title">
-                            <i class="fas fa-laptop-code"></i>
-                            Desarrollo Full Stack
-                        </h3>
-                        <h4 class="timeline-subtitle">Holberton School</h4>
-                        <p>Formación intensiva en desarrollo de software con especialización en:</p>
-                        <ul class="timeline-list">
-                            <li>Desarrollo Frontend (HTML, CSS, JavaScript)</li>
-                            <li>Desarrollo Backend (Python, SQL)</li>
-                            <li>DevOps y Control de Versiones</li>
-                        </ul>
-                        <a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="certificate-btn">Ver Certificado</a>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-date-key="education-date-1">2025 - Actualidad</div>
+                        <h3 class="timeline-title" data-title-key="education-title-1">Ingeniería en Computación</h3>
+                        <div class="timeline-institution" data-institution-key="education-institution-1">Facultad de Ingeniería - UdelaR</div>
+                        <div class="timeline-details" data-details-key="education-details-1">
+                            Estudiante activo en la carrera de Ingeniería en Computación, desarrollando conocimientos en:
+                            <ul>
+                                <li>Programación y Desarrollo de Software</li>
+                                <li>Algoritmos y Estructuras de Datos</li>
+                                <li>Sistemas Operativos y Redes</li>
+                                <li>Matemática Aplicada a la Ingeniería</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2021 - 2022</span>
-                        <h3 class="timeline-title">
-                            <i class="fas fa-square-root-variable"></i>
-                            Especialización en Matemática
-                        </h3>
-                        <h4 class="timeline-subtitle">Instituto de Profesores de Artigas (IPA)</h4>
-                        <p>Formación en pedagogía y didáctica de la matemática:</p>
-                        <ul class="timeline-list">
-                            <li>Pedagogía y Didáctica Matemática</li>
-                            <li>Análisis Matemático</li>
-                            <li>Álgebra y Geometría</li>
-                            <li>Prácticas Docentes en Matemática</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-date-key="education-date-2">2023 - 2024</div>
+                        <h3 class="timeline-title" data-title-key="education-title-2">Desarrollo Full Stack</h3>
+                        <div class="timeline-institution" data-institution-key="education-institution-2">Holberton School</div>
+                        <div class="timeline-details" data-details-key="education-details-2">
+                            Formación intensiva en desarrollo de software con especialización en:
+                            <ul>
+                                <li>Desarrollo Frontend (HTML, CSS, JavaScript)</li>
+                                <li>Desarrollo Backend (Python, SQL)</li>
+                                <li>DevOps y Control de Versiones</li>
+                            </ul>
+                            <p><a href="pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="certificate-button" download data-lang-key="view-certificate">Ver Certificado</a></p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="habilidades">
-            <div class="section-title" data-section="skills">
-                <h2>Technical Skills</h2>
-                <p>A comprehensive overview of my technical expertise and tools I work with regularly in software development.</p>
-            </div>
-            <div class="skills-container">
-                <div class="vscode-window">
-                    <div class="window-header">
-                        <div class="window-controls">
-                            <div class="control close"></div>
-                            <div class="control minimize"></div>
-                            <div class="control maximize"></div>
-                        </div>
-                        <div class="file-tab">
-                            <i class="fab fa-js"></i>
-                            skills.js
-                        </div>
-                    </div>
-                    <div class="code-content">
-                        <div class="code-line">
-                            <span class="line-number">1</span>
-                            <span class="code-text">
-                                <span class="comment">// Technical Skills Configuration</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">2</span>
-                            <span class="code-text">
-                                <span class="keyword">const</span> <span class="property">skills</span> <span class="bracket">=</span> <span class="bracket">{</span>
-                            </span>
-                        </div>
-                        <div class="skill-category">
-                            <div class="code-line">
-                                <span class="line-number">3</span>
-                                <span class="code-text">
-                                    <span class="property">frontEnd</span>: <span class="bracket">[</span>
-                                    <span class="string">'React.js', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'</span>
-                                    <span class="bracket">],</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <div class="code-line">
-                                <span class="line-number">4</span>
-                                <span class="code-text">
-                                    <span class="property">backEnd</span>: <span class="bracket">[</span>
-                                    <span class="string">'Python', 'Node.js', 'Express.js', 'MySQL', 'MongoDB'</span>
-                                    <span class="bracket">],</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <div class="code-line">
-                                <span class="line-number">5</span>
-                                <span class="code-text">
-                                    <span class="property">tools</span>: <span class="bracket">[</span>
-                                    <span class="string">'Flutter', 'Git', 'Docker', 'Figma', 'Jira'</span>
-                                    <span class="bracket">],</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">6</span>
-                            <span class="code-text"><span class="bracket">}</span></span>
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-date-key="education-date-3">2021 - 2022</div>
+                        <h3 class="timeline-title" data-title-key="education-title-3">Especialización en Matemática</h3>
+                        <div class="timeline-institution" data-institution-key="education-institution-3">Instituto de Profesores de Artigas (IPA)</div>
+                        <div class="timeline-details" data-details-key="education-details-3">
+                            Formación en pedagogía y didáctica de la matemática:
+                            <ul>
+                                <li>Pedagogía y Didáctica Matemática</li>
+                                <li>Análisis Matemático</li>
+                                <li>Álgebra y Geometría</li>
+                                <li>Prácticas Docentes en Matemática</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="proyectos" class="projects-section">
-            <div class="section-title" data-section="projects">
-                <h2>Projects</h2>
-                <p>A showcase of the most significant projects I've worked on, demonstrating my technical skills and problem-solving abilities.</p>
             </div>
             
-            <div class="win98-container">
-                <div class="boot-screen" id="bootScreen">
-                    <h3>Press any key to start...</h3>
+            <div class="education-decoration">
+                <svg viewBox="0 0 100 100">
+                    <!-- Simple rocket ship SVG -->
+                    <path d="M50 10 L60 40 L50 90 L40 40 Z" fill="var(--secondary-color)"/>
+                    <circle cx="50" cy="40" r="10" fill="var(--primary-color)"/>
+                    <path d="M40 40 L30 50 L40 60 L60 60 L70 50 L60 40 Z" fill="var(--secondary-color)"/>
+                </svg>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="skills-container">
+                <div class="skills-header">
+                    <h2 data-lang-key="skills-title">Habilidades Técnicas</h2>
+                    <p class="skills-intro" data-lang-key="skills-intro">Un resumen completo de mi experiencia técnica y las herramientas con las que trabajo regularmente en el desarrollo de software.</p>
                 </div>
-                
-                <div class="desktop" id="desktop">
-                    <div class="desktop-icons">
-                        <div class="desktop-icon" data-project="ibaeduca">
-                            <img src="images/logos-iconos/template_world-0.png" alt="IbaEduca">
-                            <span>IbaEduca</span>
-                        </div>
-                        <div class="desktop-icon" data-project="cazapalabras">
-                            <img src="images/logos-iconos/joystick-2.png" alt="CazaPalabras">
-                            <span>CazaPalabras</span>
-                        </div>
-                        <div class="desktop-icon" data-project="ingles">
-                            <img src="images/logos-iconos/accessibility_stopwatch.png" alt="Inglés Divertido">
-                            <span>Inglés Divertido</span>
-                        </div>
-                        <div class="desktop-icon" data-project="tareas">
-                            <img src="images/logos-iconos/template_empty-0.png" alt="Organiza tu día">
-                            <span>Organiza tu día</span>
-                        </div>
-                        <div class="desktop-icon" data-project="warded">
-                            <img src="images/logos-iconos/msagent-2.png" alt="Warded">
-                            <span>Warded</span>
-                        </div>
-                        <div class="desktop-icon" data-project="calculadora">
-                            <img src="images/logos-iconos/charmap_w2k-0.png" alt="Calculadora">
-                            <span>Calculadora</span>
-                        </div>
-                        <div class="desktop-icon" data-project="libreria">
-                            <img src="images/logos-iconos/paint_file-2.png" alt="Librería">
-                            <span>Librería</span>
-                        </div>
-                        <div class="desktop-icon" data-project="images">
-                            <img src="images/logos-iconos/folder-icon.png" alt="Images">
-                            <span>Images</span>
-                        </div>
-                    </div>
-                    <div class="taskbar">
-                        <button class="start-button">
-                            <img src="images/logos-iconos/windows-0.png" alt="Start" style="width: 16px; height: 16px;">
-                            Start
-                        </button>
-                        <div class="taskbar-items"></div>
-                    </div>
+
+            <div class="rocket-decoration">
+                <svg viewBox="0 0 100 100">
+                    <path d="M50,10 L65,60 L50,90 L35,60 Z" fill="var(--secondary-color)"/>
+                    <circle cx="50" cy="45" r="10" fill="var(--primary-color)"/>
+                    <path d="M35,45 L25,55 L35,65 L65,65 L75,55 L65,45 Z" fill="var(--secondary-color)"/>
+                    <circle cx="50" cy="45" r="5" fill="var(--background)"/>
+                </svg>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="projects-container">
+                <div class="projects-header">
+                    <h2 data-lang-key="nav-projects">Proyectos</h2>
+                    <p class="projects-intro" data-lang-key="projects-intro">
+                        Una muestra de los proyectos más significativos en los que he trabajado, demostrando mis habilidades técnicas y capacidad de resolución de problemas.
+                    </p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Projects will be dynamically inserted here -->
                 </div>
             </div>
         </section>
 
-        <section id="contacto">
+        <section id="contact" class="contact-section">
+            <div class="mars-surface"></div>
             <div class="contact-container">
-                <div class="contact-intro">
-                    <h2>¿Interesado en trabajar juntos?</h2>
-                    <p>Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales a tiempo completo.</p>
+                <div class="contact-header">
+                    <h2 data-lang-key="contact-title">¿Interesado en trabajar juntos?</h2>
+                    <p data-lang-key="contact-subtitle">Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales a tiempo completo.</p>
                 </div>
-                <div class="contact-info">
-                    <div class="contact-details">
+                <div class="contact-content">
+                    <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <a href="/cdn-cgi/l/email-protection#81f2e0eff5e8e0e6eee7ede4b9c1e6ece0e8edafe2eeec"><span class="__cf_email__" data-cfemail="a1d2c0cfd5c8c0c6cec7cdc499e1c6ccc0c8cd8fc2cecc">santiagofle8@gmail.com</span></a>
+                            <h3 data-lang-key="contact-email">Email</h3>
+                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fc8f9d9288959d9b939a9099c4bc9b919d9590d29f9391">santiagofle8@gmail.com</a>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <h3>Teléfono</h3>
-                            <a href="tel:+59892564819">+598 92 564 819</a>
+                            <h3 data-lang-key="contact-phone">Teléfono</h3>
+                            <p>+598 92 564 819</p>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Ubicación</h3>
+                            <h3 data-lang-key="contact-location">Ubicación</h3>
                             <p>Barros Blancos, Canelones, Uruguay</p>
                         </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/SantiagoFleitasIbarra/" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://instagram.com/sancolett_" class="social-link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="contact-image">
-                        <img src="images/logo.jpg" alt="Technology" style="max-width: 100%; height: auto; border-radius: 10px;">
+                    <div class="mars-base">
+                        <div class="base-structure">
+                            <div class="base-windows">
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="social-links-footer">
-                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/SantiagoFleitasIbarra/" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://instagram.com/sancolett_/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
             </div>
         </section>
 
         <footer class="footer">
-            <p> 2025 Santiago Fleitas | Portfolio Profesional</p>
+            <div class="footer-content">
+                <p>2025 Santiago Fleitas | Portfolio Profesional</p>
+            </div>
+            <button class="back-to-top" title="Empieza otra vez tu viaje">
+                <i class="fas fa-rocket"></i>
+            </button>
         </footer>
-
-        <button class="scroll-top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-
     </main>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="js/script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

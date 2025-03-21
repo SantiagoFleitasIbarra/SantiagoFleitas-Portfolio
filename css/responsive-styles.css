@@ -1,0 +1,177 @@
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .nav-content {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(2, 6, 23, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--secondary-color);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .space-illustration {
+        order: 2;
+        height: 300px;
+    }
+
+    .content-side {
+        order: 1;
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-images {
+        display: none;
+    }
+
+    .tech-skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding: 0 1rem;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        margin-left: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .mars-base {
+        order: 1;
+        height: 200px;
+    }
+
+    .base-structure {
+        width: 100%;
+        height: 100%;
+    }
+
+    .moon-base {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .typing-text {
+        font-size: 1.2rem;
+    }
+
+    .welcome-text {
+        font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vscode-container {
+        margin: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .action-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tech-category {
+        padding: 1rem;
+    }
+
+    .tech-items {
+        gap: 0.5rem;
+    }
+
+    .tech-item {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .project-card {
+        margin: 0 1rem;
+    }
+}
