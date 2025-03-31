@@ -1,34 +1,83 @@
-# 🖥️ Mi Portfolio
+# 👨‍💻 Santiago Fleitas - Professional Portfolio
 
-![Captura de mi portfolio](images/Santiago.jpg)
+<p align="center">
+  <img src="./images/Santiago.jpg" alt="Santiago Fleitas" width="300" style="border-radius: 10px;" />
+</p>
 
-Bienvenido/a a mi portfolio personal. Aquí podrás encontrar información sobre mis proyectos, habilidades y experiencia en desarrollo de software.
+## 👋 About Me
 
-## 📌 Sobre mi portfolio
+I am a Computer Engineering student at UdelaR and a Holberton School graduate with experience in full-stack development. My passion lies in creating robust and user-friendly applications that solve real-world problems. I previously studied Mathematics at Instituto de Profesores Artigas (IPA), which has enhanced my analytical and problem-solving skills.
 
-En este espacio muestro algunos de mis trabajos, experiencias y conocimientos en el mundo del desarrollo. Mi objetivo es crear soluciones innovadoras y mejorar mis habilidades constantemente.
+## 🎓 Education
 
-## 🚀 Proyectos destacados
+- **Computer Engineering** - Faculty of Engineering, UdelaR (2025 - Present)
+- **Full Stack Development** - Holberton School (2023 - 2024)
+- **Mathematics Specialization** - Instituto de Profesores Artigas (IPA) (2021 - 2022)
 
-Aquí algunos de los proyectos que puedes encontrar en mi portfolio:
+## 💻 Technical Skills
 
-### 🔹 CazaPalabras
-📌 Juego estilo Wordle donde los usuarios deben encontrar palabras ocultas. Desarrollado con JavaScript vanilla, HTML5 y CSS3, implementando lógica de juego compleja y animaciones interactivas. Dicha aplicación es adaptada a celulares.
-🔗 [Enlace al proyecto](https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/)
+### Frontend
+- HTML5, CSS3, JavaScript
+- React.js, Tailwind CSS
 
-### 🔹 IbaEduca
-📌 Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos. Desarrollado en colaboración para ofrecer educación accesible y de calidad. Dicha aplicación es adaptada a celulares.
+### Backend
+- Node.js, Python
 
-### 🔹 ENTRE OTROS!!!
+### Databases
+- MySQL, MongoDB
 
-## 📬 Contacto
+### Tools
+- Git, Docker, Figma, Jira
 
-Si deseas ponerte en contacto conmigo, puedes encontrarme en:
+### Mobile
+- Flutter
 
-- 📧 Email: santiagofle8@gmail.com
-- 🔗 LinkedIn: Santiago Mauricio Fleitas Ibarra 
-- 💻 GitHub: SantiagoFleitasIbarra
+## 🚀 Projects
 
----
+This portfolio showcases some of my most significant projects:
 
-✨ ¡Gracias por visitar mi portfolio! ✨
+### [IbaEduca]() 🎓
+Educational platform for selling online courses with content management system, video playback, and payment processing.
+- **Status:** Currently working
+
+### [WordHunter (CazaPalabras)](https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/) 🎮
+Wordle-style game where users must find hidden words.
+- **Technologies:** JavaScript, HTML5, CSS3
+- **[Demo](https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/CazaPalabras-Juego-2025)**
+
+### [Fun English (Inglés Divertido)](https://santiagofleitasibarra.github.io/ingles-divertido/) 📚
+Interactive platform designed to make learning English more enjoyable and effective.
+- **Technologies:** HTML5, CSS3, JavaScript
+- **[Demo](https://santiagofleitasibarra.github.io/ingles-divertido/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/ingles-divertido)**
+
+### [Organize Your Day with Joy](https://santiagofleitasibarra.github.io/Organiza-tu-dia/) 📝
+Task management application with a pleasant and intuitive interface.
+- **Technologies:** HTML5, CSS3, JavaScript
+- **[Demo](https://santiagofleitasibarra.github.io/Organiza-tu-dia/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/Organiza-tu-dia)**
+
+### [Warded](https://www.youtube.com/watch?v=Lfbt74-kG8c) 🔒
+Mobile application that creates safe communities through private groups. Developed the complete backend including notification system and database management.
+- **Technologies:** Flutter, Jira, Figma, Firebase
+- **[Demo Day Presentation](https://www.youtube.com/watch?v=Lfbt74-kG8c)**
+
+### [Scientific Calculator](https://santiagofleitasibarra.github.io/calculadora-cientifica/) 🧮
+Advanced tool for complex mathematical calculations with adaptable and multilingual interface.
+- **Technologies:** JavaScript, HTML5, CSS3
+- **[Demo](https://santiagofleitasibarra.github.io/calculadora-cientifica/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/calculadora-cientifica)**
+
+### [Online Library](https://santiagofleitasibarra.github.io/Libreria-Online/) 📚
+Platform for publishing and downloading free ebooks across multiple categories.
+- **Technologies:** HTML5, CSS3, JavaScript
+- **[Demo](https://santiagofleitasibarra.github.io/Libreria-Online/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/Libreria-Online)**
+
+## 📬 Contact Me
+
+Feel free to reach out to me through any of these channels:
+
+- 📧 **Email**: [santiagofle8@gmail.com](mailto:santiagofle8@gmail.com)
+- 📱 **Phone**: +598 92 564 819
+- 🔗 **LinkedIn**: [linkedin.com/in/santiagofleitas](https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/)
+- 🐙 **GitHub**: [github.com/santiagofleitas](https://github.com/SantiagoFleitasIbarra)
+- 📄 **Resume**: [Download my CV](./pdf/Santiago%20Fleitas%20-%20Curriculum.pdf)
+
+> "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle." — Steve Jobs
