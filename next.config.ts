@@ -1,7 +1,6 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -20,10 +19,9 @@ const nextConfig: NextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // Fix for 'async_hooks' error often seen with OpenTelemetry/Genkit
       config.resolve.fallback = {
-        ...config.resolve.fallback,
-        async_hooks: false,
+        ...config.resolve.fallback, // Preserves existing fallbacks
+        async_hooks: false, // Tells Webpack to provide an empty module for async_hooks on the client
       };
     }
     return config;
