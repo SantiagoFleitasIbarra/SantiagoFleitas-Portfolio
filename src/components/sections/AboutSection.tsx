@@ -63,7 +63,7 @@ export function AboutSection() {
         <div className="md:col-span-1 space-y-6">
           <div className="aspect-square relative rounded-lg overflow-hidden shadow-2xl border-2 border-accent/50">
             <Image 
-              src="https://placehold.co/600x600.png" 
+              src="/images/santiago-1.jpg" 
               alt="Santiago Fleitas Portrait 1" 
               layout="fill" 
               objectFit="cover"
@@ -73,7 +73,7 @@ export function AboutSection() {
           </div>
            <div className="aspect-square relative rounded-lg overflow-hidden shadow-2xl border-2 border-accent/50">
             <Image 
-              src="https://placehold.co/600x600.png" 
+              src="/images/santiago-2.jpg" 
               alt="Santiago Fleitas Portrait 2" 
               layout="fill" 
               objectFit="cover" 

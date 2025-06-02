@@ -269,7 +269,87 @@ export const translations = {
   close: {
     es: "Cerrar",
     en: "Close",
-  }
+  },
+  projectsTitle: {
+    es: "Proyectos Destacados",
+    en: "Featured Projects",
+  },
+  projectsDescription: {
+    es: "Una muestra de los proyectos más significativos en los que he trabajado, demostrando mis habilidades técnicas y capacidad de resolución de problemas. Cada tarjeta es un portal a una solución innovadora.",
+    en: "A showcase of the most significant projects I've worked on, demonstrating my technical skills and problem-solving abilities. Each card is a portal to an innovative solution.",
+  },
+  projectClickForDetails: {
+    es: "Click para ver detalles",
+    en: "Click for details",
+  },
+  projectTechStack: {
+    es: "Tecnologías:",
+    en: "Tech Stack:",
+  },
+  projectViewRepo: {
+    es: "Ver Repositorio",
+    en: "View Repository",
+  },
+  projectViewDemo: {
+    es: "Ver Demo",
+    en: "View Demo",
+  },
+  projectDemoDay: {
+    es: "Demo Day",
+    en: "Demo Day",
+  },
+  projectStatusWorking: {
+    es: "Actualmente trabajando",
+    en: "Currently working",
+  },
+  projectIbaEducaTitle: {
+    es: "IbaEduca",
+    en: "IbaEduca",
+  },
+  projectIbaEducaDescription: {
+    es: "Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos.",
+    en: "Educational platform for selling online courses. Includes content management system, video playback, and payment processing.",
+  },
+  projectCazaPalabrasTitle: {
+    es: "CazaPalabras",
+    en: "CazaPalabras",
+  },
+  projectCazaPalabrasDescription: {
+    es: "CazaPalabra es un juego en el que tienes que adivinar una palabra misteriosa, pero lo emocionante es que la longitud de las palabras varía. Puedes enfrentarte a una palabra de 3, 4, 5, 6 letras o más, y tendrás 6 intentos para adivinarla. Con cada intento, te daremos pistas visuales para que puedas acercarte a la respuesta. ¡Entre más rápido lo logres, mejor!",
+    en: "CazaPalabras is a game where you have to guess a mystery word, but the exciting part is that the length of the words varies. You can face a word of 3, 4, 5, 6 letters or more, and you will have 6 attempts to guess it. With each attempt, we will give you visual clues so you can get closer to the answer. The faster you do it, the better!",
+  },
+  projectInglesDivertidoTitle: {
+    es: "Inglés Divertido",
+    en: "Fun English",
+  },
+  projectInglesDivertidoDescription: {
+    es: "Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo.",
+    en: "An interactive platform designed to make learning English more enjoyable and effective.",
+  },
+  projectOrganizaTuDiaTitle: {
+    es: "Organiza tu día con alegría",
+    en: "Organize your day with joy",
+  },
+  projectOrganizaTuDiaDescription: {
+    es: "Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!",
+    en: "It's your space to organize your daily tasks in an easy and entertaining way. With our manager, you can add, complete, edit, and delete tasks. Start organizing your day with a smile!",
+  },
+  projectWardedTitle: {
+    es: "Warded",
+    en: "Warded",
+  },
+  projectWardedDescription: {
+    es: "Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.",
+    en: "Mobile application that creates safe communities through private groups. I developed the entire backend, including notification system and database management. The app allows sharing locations, sending real-time alerts, and assisting people with disabilities.",
+  },
+  projectCalculadoraTitle: {
+    es: "Calculadora Científica",
+    en: "Scientific Calculator",
+  },
+  projectCalculadoraDescription: {
+    es: "Una herramienta avanzada diseñada para facilitar cálculos matemáticos complejos con una interfaz adaptable y multilingüe. Dicha página es adaptada a celulares.",
+    en: "An advanced tool designed to facilitate complex mathematical calculations with an adaptable and multilingual interface. This page is adapted for mobile phones.",
+  },
 };
 
 export const educationDataRaw = {
@@ -290,3 +370,5 @@ export const educationDataRaw = {
     en: "Training in pedagogy and didactics of mathematics at the Artigas Teachers' Institute (IPA), covering: Pedagogy and Didactics of Mathematics, Mathematical Analysis, Algebra and Geometry, Mathematics Teaching Practices."
   }
 };
+
+    

@@ -21,7 +21,7 @@ export function Navbar() {
     { href: '#about', labelKey: 'navAbout' },
     { href: '#education', labelKey: 'navEducation' },
     { href: '#technical-skills', labelKey: 'navSkills' },
-    // { href: '#projects', labelKey: 'navProjects' }, // Placeholder for future
+    { href: '#projects', labelKey: 'navProjects' }, // Added Projects link
     // { href: '#contact', labelKey: 'navContact' }, // Placeholder for future
   ] as const;
 
@@ -70,3 +70,5 @@ export function Navbar() {
     </nav>
   );
 }
+
+    

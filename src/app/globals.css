@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -193,3 +194,49 @@
 .skill-item-name {
   @apply text-sm font-medium text-foreground/90;
 }
+
+/* Project Card Flip Animation */
+.flip-card-container {
+  @apply w-full aspect-[3/4] cursor-pointer; /* Adjust aspect ratio as needed, e.g. aspect-video */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  @apply relative w-full h-full text-center transition-transform duration-700;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  @apply absolute w-full h-full rounded-lg shadow-xl border border-border/50;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  @apply bg-card text-card-foreground flex flex-col justify-between p-4 items-center;
+}
+
+.flip-card-back {
+  @apply bg-card text-card-foreground p-4 flex flex-col justify-between items-start text-left overflow-y-auto;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back::-webkit-scrollbar {
+  width: 6px;
+}
+.flip-card-back::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.flip-card-back::-webkit-scrollbar-thumb {
+  @apply bg-accent/50 rounded-full;
+}
+.flip-card-back::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+
+    
