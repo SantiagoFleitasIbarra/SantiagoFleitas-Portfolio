@@ -1,4 +1,5 @@
-// use server'
+
+'use server';
 
 /**
  * @fileOverview Summarizes credentials (certifications, degrees, etc.) to quickly assess a candidate's suitability.

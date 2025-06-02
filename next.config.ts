@@ -1,3 +1,4 @@
+
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -19,10 +20,11 @@ const nextConfig: NextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback, // Preserves existing fallbacks
-        async_hooks: false, // Tells Webpack to provide an empty module for async_hooks on the client
-      };
+      // Ensure resolve and fallback objects exist before assigning
+      config.resolve = config.resolve || {};
+      config.resolve.fallback = config.resolve.fallback || {};
+      // Provide an empty module for async_hooks on the client
+      config.resolve.fallback.async_hooks = false;
     }
     return config;
   },
