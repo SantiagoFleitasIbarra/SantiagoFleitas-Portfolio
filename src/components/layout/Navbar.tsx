@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -19,6 +20,7 @@ export function Navbar() {
     { href: '#home', labelKey: 'navHome' },
     { href: '#about', labelKey: 'navAbout' },
     { href: '#education', labelKey: 'navEducation' },
+    { href: '#technical-skills', labelKey: 'navSkills' },
     // { href: '#projects', labelKey: 'navProjects' }, // Placeholder for future
     // { href: '#contact', labelKey: 'navContact' }, // Placeholder for future
   ] as const;

@@ -50,6 +50,10 @@
     --chart-3: 180 70% 50%; /* Cyan */
     --chart-4: 50 90% 55%;  /* Yellow/Gold */
     --chart-5: 0 70% 60%;   /* Red/Orange */
+
+    /* Planet Surface colors for Technical Skills section */
+    --planet-surface-start-hsl: 0 30% 10%; /* Dark desaturated red */
+    --planet-surface-mid-hsl: 270 30% 8%; /* Dark purple, close to background */
   }
 
   /* Remove .dark class overrides if the app is always dark, or ensure they are consistent */
@@ -86,6 +90,8 @@
     --chart-3: 180 70% 50%;
     --chart-4: 50 90% 55%;
     --chart-5: 0 70% 60%;
+    --planet-surface-start-hsl: 0 30% 10%;
+    --planet-surface-mid-hsl: 270 30% 8%;
   }
 }
 
@@ -170,4 +176,20 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   }
+}
+
+/* Planetary surface background for Technical Skills section */
+.bg-planet-surface {
+  background: linear-gradient(180deg, hsl(var(--planet-surface-start-hsl)) 0%, hsl(var(--planet-surface-mid-hsl)) 50%, hsl(var(--background)) 100%);
+}
+
+/* Skill item styling */
+.skill-item {
+  @apply flex items-center gap-3 p-3 bg-card/60 backdrop-blur-sm rounded-md border border-border/30 hover:border-accent/70 hover:bg-accent/10 transition-all duration-300;
+}
+.skill-item-icon {
+  @apply w-6 h-6 text-accent;
+}
+.skill-item-name {
+  @apply text-sm font-medium text-foreground/90;
 }

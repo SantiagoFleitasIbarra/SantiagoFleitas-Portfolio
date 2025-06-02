@@ -26,6 +26,10 @@ export const translations = {
     es: "Contacto",
     en: "Contact",
   },
+  navSkills: {
+    es: "Habilidades",
+    en: "Skills",
+  },
   heroName: {
     es: "Santiago Fleitas",
     en: "Santiago Fleitas",
@@ -51,8 +55,8 @@ export const translations = {
     en: "Contact",
   },
   heroSpaceImageAlt: {
-    es: "Imagen abstracta del espacio con planetas y nebulosas",
-    en: "Abstract space image with planets and nebulas",
+    es: "Animación abstracta de una nebulosa o mancha espacial colorida y en movimiento.",
+    en: "Abstract animation of a colorful, moving nebula or space blob.",
   },
   aboutMeTitle: {
     es: "Sobre Mí",
@@ -218,6 +222,34 @@ export const translations = {
     es: "Prácticas de Enseñanza de Matemáticas",
     en: "Mathematics Teaching Practices",
   },
+  skillsTechTitle: {
+    es: "Habilidades Técnicas",
+    en: "Technical Skills",
+  },
+  skillsTechDescription: {
+    es: "Un resumen completo de mi experiencia técnica y las herramientas con las que trabajo regularmente en el desarrollo de software. Aterriza en el planeta del conocimiento y explora mis capacidades.",
+    en: "A comprehensive overview of my technical expertise and the tools I regularly work with in software development. Land on the planet of knowledge and explore my capabilities.",
+  },
+  skillsFrontendTitle: {
+    es: "Frontend",
+    en: "Frontend",
+  },
+  skillsBackendTitle: {
+    es: "Backend",
+    en: "Backend",
+  },
+  skillsDatabasesTitle: {
+    es: "Bases de Datos",
+    en: "Databases",
+  },
+  skillsToolsTitle: {
+    es: "Herramientas y Plataformas",
+    en: "Tools & Platforms",
+  },
+  skillsMobileTitle: {
+    es: "Móvil",
+    en: "Mobile",
+  },
   aiSummaryButton: {
     es: "Ver Resumen IA",
     en: "View AI Summary",
@@ -258,5 +290,3 @@ export const educationDataRaw = {
     en: "Training in pedagogy and didactics of mathematics at the Artigas Teachers' Institute (IPA), covering: Pedagogy and Didactics of Mathematics, Mathematical Analysis, Algebra and Geometry, Mathematics Teaching Practices."
   }
 };
-
-    
