@@ -1,3 +1,4 @@
+
 "use client";
 
 import { SectionWrapper } from '@/components/common/SectionWrapper';
@@ -60,7 +61,7 @@ const EducationItem = ({
           {pointsKeys.map(pointKey => <li key={pointKey.toString()}>{t(pointKey)}</li>)}
         </ul>
       )}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 items-center"> {/* Added items-center here */}
         {certificateLink && (
           <Button variant="outline" size="sm" asChild className="bg-primary/10 border-primary text-primary hover:bg-primary/20">
             <a href={certificateLink} target="_blank" rel="noopener noreferrer">
@@ -133,3 +134,5 @@ export function EducationSection() {
     </SectionWrapper>
   );
 }
+
+    

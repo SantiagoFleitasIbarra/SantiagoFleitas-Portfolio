@@ -1,3 +1,4 @@
+
 export type Locale = 'es' | 'en';
 
 export const translations = {
@@ -48,6 +49,10 @@ export const translations = {
   heroContact: {
     es: "Contacto",
     en: "Contact",
+  },
+  heroSpaceImageAlt: {
+    es: "Imagen abstracta del espacio con planetas y nebulosas",
+    en: "Abstract space image with planets and nebulas",
   },
   aboutMeTitle: {
     es: "Sobre Mí",
@@ -253,3 +258,5 @@ export const educationDataRaw = {
     en: "Training in pedagogy and didactics of mathematics at the Artigas Teachers' Institute (IPA), covering: Pedagogy and Didactics of Mathematics, Mathematical Analysis, Algebra and Geometry, Mathematics Teaching Practices."
   }
 };
+
+    
