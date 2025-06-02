@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Fix for 'async_hooks' error often seen with OpenTelemetry/Genkit
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        async_hooks: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
