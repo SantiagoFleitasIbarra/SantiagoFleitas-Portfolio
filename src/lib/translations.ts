@@ -350,6 +350,70 @@ export const translations = {
     es: "Una herramienta avanzada diseñada para facilitar cálculos matemáticos complejos con una interfaz adaptable y multilingüe. Dicha página es adaptada a celulares.",
     en: "An advanced tool designed to facilitate complex mathematical calculations with an adaptable and multilingual interface. This page is adapted for mobile phones.",
   },
+  contactTitle: {
+    es: "Contacto",
+    en: "Contact",
+  },
+  contactIntroQuestion: {
+    es: "¿Interesado en trabajar juntos?",
+    en: "Interested in working together?",
+  },
+  contactIntroAvailability: {
+    es: "Estoy disponible para colaboraciones y oportunidades laborales.",
+    en: "I'm available for collaborations and job opportunities.",
+  },
+  contactEmailLabel: {
+    es: "Email",
+    en: "Email",
+  },
+  contactPhoneLabel: {
+    es: "Teléfono",
+    en: "Phone",
+  },
+  contactLocationLabel: {
+    es: "Ubicación",
+    en: "Location",
+  },
+  contactSocialMediaLabel: {
+    es: "Redes Sociales",
+    en: "Social Media",
+  },
+  contactMotivationalQuote: {
+    es: "Intenta no volverte un hombre de éxito, sino volverte un hombre de valor.",
+    en: "Try not to become a man of success, but rather try to become a man of value.",
+  },
+  contactMotivationalQuoteAuthor: {
+    es: "Albert Einstein",
+    en: "Albert Einstein",
+  },
+  contactEmailValue: {
+    es: "santiagofle8@gmail.com",
+    en: "santiagofle8@gmail.com",
+  },
+  contactPhoneValue: {
+    es: "+598 92 564 819",
+    en: "+598 92 564 819",
+  },
+  contactLocationValue: {
+    es: "Barros Blancos, Canelones, Uruguay",
+    en: "Barros Blancos, Canelones, Uruguay",
+  },
+  contactGithubLink: {
+    es: "https://github.com/santiagofleitas", // Replace with actual
+    en: "https://github.com/santiagofleitas", // Replace with actual
+  },
+  contactLinkedInLink: {
+    es: "https://linkedin.com/in/santiago-fleitas-a05454239", // Replace with actual
+    en: "https://linkedin.com/in/santiago-fleitas-a05454239", // Replace with actual
+  },
+  contactInstagramLink: {
+    es: "https://instagram.com/santi.fleitas_", // Replace with actual
+    en: "https://instagram.com/santi.fleitas_", // Replace with actual
+  },
+  footerBackToTop: {
+    es: "Volver Arriba",
+    en: "Back to Top",
+  },
 };
 
 export const educationDataRaw = {
