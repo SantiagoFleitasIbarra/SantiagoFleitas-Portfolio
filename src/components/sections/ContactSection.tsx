@@ -44,9 +44,9 @@ export function ContactSection() {
   const { t } = useLanguage();
 
   const socialLinks = [
-    { Icon: Github, hrefKey: 'contactGithubLink', label: 'GitHub' },
-    { Icon: Linkedin, hrefKey: 'contactLinkedInLink', label: 'LinkedIn' },
-    { Icon: Instagram, hrefKey: 'contactInstagramLink', label: 'Instagram' },
+    { Icon: Github, hrefKey: 'https://github.com/SantiagoFleitasIbarra', label: 'GitHub' },
+    { Icon: Linkedin, hrefKey: 'https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/', label: 'LinkedIn' },
+    { Icon: Instagram, hrefKey: 'https://www.instagram.com/sancolett_', label: 'Instagram' },
   ] as const;
 
   return (

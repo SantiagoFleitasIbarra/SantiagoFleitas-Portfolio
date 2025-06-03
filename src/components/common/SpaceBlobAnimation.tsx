@@ -8,18 +8,16 @@ interface SpaceBlobProps {
   className?: string;
 }
 
-// Generate a random number within a range
 const random = (min: number, max: number) => Math.random() * (max - min) + min;
 
 export function SpaceBlobAnimation({ className }: SpaceBlobProps) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true); // Ensure animations run only on client
+    setIsMounted(true);
   }, []);
 
   if (!isMounted) {
-    // Placeholder for SSR to avoid layout shifts and hydration errors
     return <div className={cn("relative w-full aspect-square", className)} />;
   }
 

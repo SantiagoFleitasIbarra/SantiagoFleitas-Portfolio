@@ -4,10 +4,10 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ParticleBackground } from '@/components/layout/ParticleBackground';
-import { Toaster } from "@/components/ui/toaster" // For AI summary notifications
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Cosmic Portfolio - Santiago Fleitas',
+  title: 'Portfolio - Santiago Fleitas',
   description: 'Portfolio profesional de Santiago Fleitas - Desarrollador Full Stack e Ingeniero en Computación.',
 };
 

@@ -9,26 +9,26 @@ export function ParticleBackground() {
     const container = particleContainerRef.current;
     if (!container) return;
 
-    const numParticles = 50; // Adjust for density
+    const numParticles = 50;
     for (let i = 0; i < numParticles; i++) {
       const particle = document.createElement('div');
       particle.classList.add('particle');
       
-      const size = Math.random() * 3 + 1; // Particle size 1px to 4px
+      const size = Math.random() * 3 + 1;
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
       
-      particle.style.left = `${Math.random() * 100}%`; // Random horizontal start
-      particle.style.top = `${Math.random() * 100}%`; // Random vertical start to distribute initially
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
       
-      const duration = Math.random() * 20 + 10; // Animation duration 10s to 30s
+      const duration = Math.random() * 20 + 10;
       particle.style.animationDuration = `${duration}s`;
       
-      const delay = Math.random() * duration; // Stagger animations
+      const delay = Math.random() * duration;
       particle.style.animationDelay = `-${delay}s`;
 
       // Custom property for drift animation
-      particle.style.setProperty('--drift-x', `${Math.random() * 200 - 100}px`); // Horizontal drift between -100px and 100px
+      particle.style.setProperty('--drift-x', `${Math.random() * 200 - 100}px`);
 
       container.appendChild(particle);
     }

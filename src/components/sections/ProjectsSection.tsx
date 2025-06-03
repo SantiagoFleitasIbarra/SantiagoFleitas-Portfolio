@@ -4,7 +4,7 @@
 import { SectionWrapper } from '@/components/common/SectionWrapper';
 import { ProjectCard } from '@/components/cards/ProjectCard';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { projects } from '@/lib/projectsData'; // We'll create this file
+import { projects } from '@/lib/projectsData';
 
 export function ProjectsSection() {
   const { t } = useLanguage();

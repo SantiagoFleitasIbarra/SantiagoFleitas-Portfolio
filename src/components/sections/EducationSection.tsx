@@ -103,7 +103,7 @@ export function EducationSection() {
       institutionKey: 'educationHolbertonInstitution',
       descriptionKey: 'educationHolbertonDesc',
       pointsKeys: ['educationHolbertonPoint1', 'educationHolbertonPoint2', 'educationHolbertonPoint3'],
-      certificateLink: "#", // Placeholder
+      certificateLink: "/pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf", // Placeholder
       aiSummaryCredentialKey: 'holberton',
       icon: School,
     },

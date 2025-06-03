@@ -21,8 +21,8 @@ export const projects: Project[] = [
     id: 'ibaeduca',
     titleKey: 'projectIbaEducaTitle',
     longDescriptionKey: 'projectIbaEducaDescription',
-    techStackRaw: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'], // Assumed tech
-    imageUrl: 'https://placehold.co/600x400.png',
+    techStackRaw: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    imageUrl: '/images/projects/ibaeduca.png',
     imageAiHint: 'online course platform',
     statusKey: 'projectStatusWorking',
   },
@@ -31,49 +31,39 @@ export const projects: Project[] = [
     titleKey: 'projectCazaPalabrasTitle',
     longDescriptionKey: 'projectCazaPalabrasDescription',
     techStackRaw: ['JavaScript', 'HTML5', 'CSS3'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/cazapalabras.png',
     imageAiHint: 'word game interface',
-    repoUrl: '#', // Replace with actual URL
-    liveUrl: '#', // Replace with actual URL
+    repoUrl: 'https://github.com/SantiagoFleitasIbarra/CazaPalabras-Juego-2025',
+    liveUrl: 'https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/',
   },
   {
     id: 'inglesdivertido',
     titleKey: 'projectInglesDivertidoTitle',
     longDescriptionKey: 'projectInglesDivertidoDescription',
     techStackRaw: ['HTML5', 'CSS3', 'JavaScript'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/ingles-divertido.png',
     imageAiHint: 'language learning app',
-    repoUrl: '#', // Replace with actual URL
-    liveUrl: '#', // Replace with actual URL
+    repoUrl: 'https://github.com/SantiagoFleitasIbarra/ingles-divertido',
+    liveUrl: 'https://santiagofleitasibarra.github.io/ingles-divertido/',
   },
   {
     id: 'organizatudia',
     titleKey: 'projectOrganizaTuDiaTitle',
     longDescriptionKey: 'projectOrganizaTuDiaDescription',
     techStackRaw: ['HTML5', 'CSS3', 'JavaScript'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/gestor-tareas.png',
     imageAiHint: 'to-do list app',
-    repoUrl: '#', // Replace with actual URL
-    liveUrl: '#', // Replace with actual URL
+    repoUrl: 'https://github.com/SantiagoFleitasIbarra/Organiza-tu-dia',
+    liveUrl: 'https://santiagofleitasibarra.github.io/Organiza-tu-dia/',
   },
   {
     id: 'warded',
     titleKey: 'projectWardedTitle',
     longDescriptionKey: 'projectWardedDescription',
     techStackRaw: ['Flutter', 'Firebase', 'Jira', 'Figma'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/warded.png',
     imageAiHint: 'mobile community safety',
-    demoDayUrl: '#', // Replace with actual YouTube URL
-  },
-  {
-    id: 'calculadora',
-    titleKey: 'projectCalculadoraTitle',
-    longDescriptionKey: 'projectCalculadoraDescription',
-    techStackRaw: ['JavaScript', 'HTML5', 'CSS3'],
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageAiHint: 'calculator interface',
-    repoUrl: '#', // Replace with actual URL
-    liveUrl: '#', // Replace with actual URL
+    demoDayUrl: 'https://www.youtube.com/watch?v=Lfbt74-kG8c',
   },
 ];
 

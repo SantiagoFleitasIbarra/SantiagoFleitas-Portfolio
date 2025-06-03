@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Globe, Moon, Sun, Orbit } from 'lucide-react'; // Orbit for logo
+import { Globe, Moon, Sun, Orbit } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
