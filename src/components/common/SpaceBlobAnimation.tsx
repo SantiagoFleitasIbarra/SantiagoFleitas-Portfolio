@@ -44,7 +44,7 @@ export function SpaceBlobAnimation({ className }: SpaceBlobProps) {
        <div
         className="absolute w-[100%] h-[100%] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] opacity-60 animate-space-blob-pulse-drift"
         style={{
-          background: 'linear-gradient(45deg, hsl(var(--accent) / 0.7), hsl(var(--primary) / 0.6))',
+          background: 'linear-gradient(45deg, hsl(var(--accent) / 0.7) 0%, hsl(var(--primary) / 0.6) 50%, hsl(var(--background) / 0) 90%)',
           animationDelay: `${random(0.5, 2.5)}s`,
           animationDuration: `${random(15, 25)}s`,
         }}
