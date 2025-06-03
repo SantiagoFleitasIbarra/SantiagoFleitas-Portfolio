@@ -100,8 +100,17 @@ Aquí tienes los pasos básicos para subir este proyecto a un nuevo repositorio 
     ```bash
     git commit -m "Initial commit del portafolio cósmico"
     ```
+    (Nota: Si la salida de este comando indica que estás en la rama `master` en lugar de `main`, por ejemplo `[master abc1234] ...`, sigue el siguiente paso para renombrarla.)
 
-6.  **Sube (push) tus archivos a GitHub:**
+6.  **Asegura que tu rama local sea `main`:**
+    Si tu rama actual con los cambios es `master` (ver nota anterior), y deseas que tu rama principal se llame `main`, renómbrala con el siguiente comando:
+    ```bash
+    git branch -m master main
+    ```
+    Si tu rama actual ya se llama `main`, puedes omitir este paso.
+
+7.  **Sube (push) tus archivos a GitHub:**
+    Ahora puedes empujar tu rama `main` local a la rama `main` remota:
     ```bash
     git push -u origin main
     ```
