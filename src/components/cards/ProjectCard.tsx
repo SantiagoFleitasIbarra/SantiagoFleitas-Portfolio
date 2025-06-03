@@ -25,7 +25,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   };
 
   return (
-    <div className="flip-card-container" onClick={() => setIsFlipped(!isFlipped)}>
+    <div className="flip-card-container aspect-square" onClick={() => setIsFlipped(!isFlipped)}>
       <div className={cn("flip-card-inner", isFlipped && "flipped")}>
         {/* Front Side */}
         <div className="flip-card-front">
@@ -41,8 +41,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-center items-center p-4">
-              <h3 className="text-xl font-headline font-semibold text-accent mb-2">{t(project.titleKey)}</h3>
-              <p className="text-sm text-muted-foreground">{t('projectClickForDetails')}</p>
+              <h3 className="text-xl font-headline font-semibold text-accent mb-1.5">{t(project.titleKey)}</h3>
+              <p className="text-xs text-muted-foreground">{t('projectClickForDetails')}</p>
             </CardContent>
              {project.statusKey && (
               <CardFooter className="p-2 justify-center">
@@ -57,13 +57,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Back Side */}
         <div className="flip-card-back">
           <Card className="w-full h-full flex flex-col bg-transparent border-0 shadow-none text-left p-1">
-            <CardHeader className="pb-2 pt-2">
+            <CardHeader className="pb-1 pt-1">
               <CardTitle className="text-lg font-headline text-accent">{t(project.titleKey)}</CardTitle>
             </CardHeader>
-            <CardContent className="text-xs text-foreground/80 flex-grow space-y-2 overflow-y-auto pr-1">
+            <CardContent className="text-sm text-foreground/80 flex-grow space-y-1 overflow-y-auto pr-2"> {/* Adjusted pr for scrollbar */}
               <p>{t(project.longDescriptionKey)}</p>
               <div className="pt-1">
-                <h4 className="text-sm font-semibold text-muted-foreground mb-1">{t('projectTechStack')}</h4>
+                <h4 className="text-xs font-semibold text-muted-foreground mb-1">{t('projectTechStack')}</h4>
                 <div className="flex flex-wrap gap-1">
                   {project.techStackRaw.map((tech) => (
                     <Badge key={tech} variant="outline" className="text-xs border-primary/50 text-primary/80 bg-primary/10">
@@ -73,7 +73,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 pt-2 pb-1 justify-start">
+            <CardFooter className="flex flex-wrap gap-2 pt-1 pb-1 justify-start">
               {project.repoUrl && (
                 <Button variant="outline" size="sm" asChild className="border-accent text-accent hover:bg-accent/20 hover:text-accent-foreground text-xs">
                   <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
@@ -102,5 +102,3 @@ export function ProjectCard({ project }: ProjectCardProps) {
     </div>
   );
 }
-
-    

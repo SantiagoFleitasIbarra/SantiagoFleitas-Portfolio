@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -45,7 +46,7 @@ export function CredentialSummary({ credentialText, title }: CredentialSummaryPr
 
   return (
     <>
-      <Button onClick={handleSummarize} variant="outline" size="sm" className="mt-2 bg-transparent hover:bg-accent/20 border-accent text-accent hover:text-accent-foreground">
+      <Button onClick={handleSummarize} variant="outline" size="sm" className="bg-transparent hover:bg-accent/20 border-accent text-accent hover:text-accent-foreground">
         <Brain className="mr-2 h-4 w-4" />
         {t('aiSummaryButton')}
       </Button>
