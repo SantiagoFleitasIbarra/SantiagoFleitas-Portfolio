@@ -195,9 +195,10 @@
   @apply text-sm font-medium text-foreground/90;
 }
 
-/* Project Card Flip Animation */
+/* REMOVED Flip Card Animation Styles */
+/*
 .flip-card-container {
-  @apply w-full aspect-[3/4] cursor-pointer; /* Adjust aspect ratio as needed, e.g. aspect-video */
+  @apply w-full aspect-square cursor-pointer; 
   perspective: 1000px;
 }
 
@@ -213,7 +214,7 @@
 .flip-card-front,
 .flip-card-back {
   @apply absolute w-full h-full rounded-lg shadow-xl border border-border/50;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
 
@@ -238,5 +239,5 @@
 .flip-card-back::-webkit-scrollbar-thumb:hover {
   @apply bg-accent;
 }
-
+*/
     
