@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SectionWrapper } from '@/components/common/SectionWrapper';
 import { TypingAnimation } from '@/components/common/TypingAnimation';
-import { SpaceBlobAnimation } from '@/components/common/SpaceBlobAnimation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowRight, Rocket } from 'lucide-react';
 
@@ -42,9 +41,13 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Right Column: Space Blob Animation */}
+        {/* Right Column: Impact Phrase */}
         <div className="flex justify-center items-center order-1 md:order-2 px-4 md:px-0 min-h-[250px] sm:min-h-[300px] md:min-h-0">
-          <SpaceBlobAnimation className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg" />
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-headline font-bold text-center">
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
+              {t('heroImpactPhrase')}
+            </span>
+          </h2>
         </div>
       </div>
     </SectionWrapper>

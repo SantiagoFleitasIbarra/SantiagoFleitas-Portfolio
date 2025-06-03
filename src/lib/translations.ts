@@ -54,9 +54,9 @@ export const translations = {
     es: "Contacto",
     en: "Contact",
   },
-  heroSpaceImageAlt: {
-    es: "Animación abstracta de una nebulosa o mancha espacial colorida y en movimiento.",
-    en: "Abstract animation of a colorful, moving nebula or space blob.",
+  heroImpactPhrase: {
+    es: "Innovar. Crear. Lanzar.",
+    en: "Innovate. Create. Launch.",
   },
   aboutMeTitle: {
     es: "Sobre Mí",
@@ -435,4 +435,5 @@ export const educationDataRaw = {
   }
 };
 
+    
     
