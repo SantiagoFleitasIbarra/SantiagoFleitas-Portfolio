@@ -1,0 +1,156 @@
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--dark-bg), var(--darker-bg));
+    position: relative;
+    overflow: hidden;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(93, 50, 165, 0.15), transparent 60%);
+    pointer-events: none;
+}
+
+.home-container {
+    padding-top: 80px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.home-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, var(--light-text), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-text h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--grey-text);
+}
+
+.home-description {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.home-tagline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagline {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.2;
+    color: var(--primary-color);
+    max-width: 500px;
+}
+
+.rocket-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-top: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home-text {
+        margin-bottom: 50px;
+    }
+    
+    .home-buttons {
+        justify-content: center;
+    }
+    
+    .home-tagline {
+        margin-top: 30px;
+    }
+    
+    .tagline {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-text h1 {
+        font-size: 2.8rem;
+    }
+    
+    .home-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tagline {
+        font-size: 2.5rem;
+    }
+    
+    .rocket-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .home-text h2 {
+        font-size: 1.2rem;
+    }
+    
+    .home-description {
+        font-size: 1rem;
+    }
+    
+    .tagline {
+        font-size: 2rem;
+    }
+}
+

@@ -1,26 +1,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Fleitas | Portfolio</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="src/styles/main.css">
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.151.3/examples/jsm/",
-            "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/index.js",
-            "typed.js": "https://cdn.skypack.dev/typed.js"
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8d4fe7',
+                        secondary: '#5d32a5',
+                        dark: '#121212',
+                        darker: '#0a0a0a',
+                        light: '#f5f5f5',
+                        grey: '#b0b0b0'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
         }
-    }
+    </script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Added responsive styles for mobile */
+        @media (max-width: 768px) {
+            .project-card {
+                height: 400px;
+            }
+            
+            .social-icon {
+                margin: 0 5px;
+            }
+        }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "components/": "./components/",
+          "utils/": "./utils/"
+        }
+      }
     </script>
 </head>
-<body class="bg-gray-900 text-white">
-    <div id="background-canvas"></div>
-    <div id="app"></div>
-    <script type="module" src="src/js/main.js"></script>
+<body class="bg-dark text-light font-poppins overflow-x-hidden">
+    <header id="header-container"></header>
+    
+    <main id="content-container"></main>
+    
+    <footer id="footer-container"></footer>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

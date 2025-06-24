@@ -1,0 +1,128 @@
+.education-section {
+    background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg));
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(141, 79, 231, 0.3);
+}
+
+.timeline-content {
+    background-color: rgba(18, 18, 18, 0.8);
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    width: calc(50% - 40px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-left: 3px solid var(--primary-color);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: calc(50% + 40px);
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+.timeline-content p {
+    margin-bottom: 10px;
+    color: var(--grey-text);
+}
+
+.timeline-content p:first-of-type {
+    font-weight: 500;
+    color: var(--light-text);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 40px;
+    }
+    
+    .timeline-dot {
+        left: 40px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 80px);
+        left: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 50px);
+        left: 50px !important;
+        padding: 15px;
+    }
+    
+    .timeline-date {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
