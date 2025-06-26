@@ -20,7 +20,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in">
                     <div class="relative h-56">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="/images/IbaEduca/ibaedu.png" alt="IbaEduca" class="w-full h-full object-cover">
+                        <img src="./images/IbaEduca/ibaedu.png" alt="IbaEduca" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4 z-20">
                             <span class="bg-primary/90 text-white text-xs px-3 py-1 rounded-full uppercase">
                                 ${translate('projects.currentlyWorking')}
@@ -47,7 +47,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in">
                     <div class="relative h-56">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="/images/CazaPalabras/CP.png" alt="CazaPalabras" class="w-full h-full object-cover">
+                        <img src="./images/CazaPalabras/CP.png" alt="CazaPalabras" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">CazaPalabras</h3>
@@ -77,7 +77,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in">
                     <div class="relative h-56">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="/images/ingles-divertido/Ingles.png" alt="Inglés Divertido" class="w-full h-full object-cover">
+                        <img src="./images/ingles-divertido/Ingles.png" alt="Inglés Divertido" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">${translate('projects.project3.title')}</h3>
@@ -107,7 +107,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in">
                     <div class="relative h-56">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="/images/Gestor-tareas/Tareas.png" alt="Organiza tu día" class="w-full h-full object-cover">
+                        <img src="./images/Gestor-tareas/Tareas.png" alt="Organiza tu día" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">${translate('projects.project4.title')}</h3>
@@ -137,7 +137,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in md:col-span-2">
                     <div class="relative h-56 md:h-64">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="/images/Warded/warded.jpg" alt="Warded" class="w-full h-full object-cover">
+                        <img src="./images/Warded/warded.jpg" alt="Warded" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">Warded</h3>
