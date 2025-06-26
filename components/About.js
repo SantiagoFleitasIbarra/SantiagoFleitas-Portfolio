@@ -23,7 +23,7 @@ export default function About() {
                         </h3>
                         <p class="mb-4 leading-relaxed bg-dark/30 p-3 rounded-lg">${translate('about.paragraph1')}</p>
                         
-                        <a href="/pdf/Santiago Fleitas Curriculum.pdf" class="inline-block bg-primary hover:bg-secondary text-light px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-primary/30 mb-6">
+                        <a href="https://github.com/SantiagoFleitasIbarra/SantiagoFleitas-Portfolio/blob/main/pdf/Santiago%20Fleitas%20Curriculum.pdf" class="inline-block bg-primary hover:bg-secondary text-light px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-primary/30 mb-6">
                             <i class="fas fa-download mr-2"></i> ${translate('about.downloadCV')}
                         </a>
                     </div>
