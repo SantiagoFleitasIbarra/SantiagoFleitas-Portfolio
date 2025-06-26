@@ -19,13 +19,13 @@ export default function Footer() {
                 </div>
                 
                 <div class="flex gap-4 mt-6 md:mt-0">
-                    <a href="https://github.com/yourusername" target="_blank" class="w-10 h-10 flex items-center justify-center bg-dark rounded-full hover:bg-primary transition-all duration-300">
+                    <a href="https://github.com/SantiagoFleitasIbarra" target="_blank" class="w-10 h-10 flex items-center justify-center bg-dark rounded-full hover:bg-primary transition-all duration-300">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="w-10 h-10 flex items-center justify-center bg-dark rounded-full hover:bg-primary transition-all duration-300">
+                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-dark rounded-full hover:bg-primary transition-all duration-300">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://instagram.com/yourusername" target="_blank" class="w-10 h-10 flex items-center justify-center bg-dark rounded-full hover:bg-primary transition-all duration-300">
+                    <a href="https://instagram.com/sancolett_" target="_blank" class="w-10 h-10 flex items-center justify-center bg-dark rounded-full hover:bg-primary transition-all duration-300">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>

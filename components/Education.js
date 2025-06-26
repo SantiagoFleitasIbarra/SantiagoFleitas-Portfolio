@@ -65,7 +65,7 @@ export default function Education() {
                             <li>${translate('education.degree3.bullet2')}</li>
                             <li>${translate('education.degree3.bullet3')}</li>
                         </ul>
-                        <a href="/pdf/MVD-0224_Foundations of Computer Science_FLEITAS_Santiago.pdf" class="inline-block bg-primary hover:bg-secondary text-light px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:-translate-y-1">
+                        <a href="/pdf/MVD-0224_Foundations of Computer Science_FLEITAS_SantiagoFleitas.pdf" class="inline-block bg-primary hover:bg-secondary text-light px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:-translate-y-1">
                             <i class="fas fa-certificate mr-2"></i> ${translate('education.viewCertificate')}
                         </a>
                     </div>

@@ -59,13 +59,13 @@ export default function Contact() {
                             <div>
                                 <h3 class="text-xl font-semibold mb-2">${translate('contact.social')}</h3>
                                 <div class="flex gap-4 mt-2">
-                                    <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+                                    <a href="https://github.com/SantiagoFleitasIbarra" target="_blank" class="social-icon">
                                         <i class="fab fa-github text-2xl text-light hover:text-primary transition-colors duration-300"></i>
                                     </a>
-                                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank" class="social-icon">
                                         <i class="fab fa-linkedin text-2xl text-light hover:text-primary transition-colors duration-300"></i>
                                     </a>
-                                    <a href="https://instagram.com/yourusername" target="_blank" class="social-icon">
+                                    <a href="https://instagram.com/sancolett_" target="_blank" class="social-icon">
                                         <i class="fab fa-instagram text-2xl text-light hover:text-primary transition-colors duration-300"></i>
                                     </a>
                                 </div>
