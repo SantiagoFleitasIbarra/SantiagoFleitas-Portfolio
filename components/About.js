@@ -68,7 +68,7 @@ export default function About() {
                     <!-- Comic style image frames -->
                     <div class="relative">
                         <div class="w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-lg shadow-primary/30 border-4 border-white">
-                            <img src="/images/SantiagoF.jpg" alt="Santiago Fleitas" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            <img src="./images/SantiagoF.jpg" alt="Santiago Fleitas" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="absolute -bottom-4 -right-4 bg-primary text-white p-2 rounded-lg transform rotate-6 shadow-lg">
                             <i class="fas fa-code mr-1"></i> Developer
@@ -77,7 +77,7 @@ export default function About() {
                     
                     <div class="relative mt-8">
                         <div class="w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-lg shadow-primary/30 border-4 border-white transform -rotate-3">
-                            <img src="/images/SantiagoF2.jpg" alt="Santiago Fleitas" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            <img src="./images/SantiagoF2.jpg" alt="Santiago Fleitas" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="absolute -top-4 -left-4 bg-primary text-white p-2 rounded-lg transform -rotate-6 shadow-lg">
                             <i class="fas fa-rocket mr-1"></i> Innovator
