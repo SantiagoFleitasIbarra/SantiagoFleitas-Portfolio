@@ -20,7 +20,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in">
                     <div class="relative h-56">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="/images/IbaEduca/ibaeduca-iba.png" alt="IbaEduca" class="w-full h-full object-cover">
+                        <img src="./images/IbaEduca/ibaeduca-iba.png" alt="IbaEduca" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4 z-20">
                             <span class="bg-primary/90 text-white text-xs px-3 py-1 rounded-full uppercase">
                                 ${translate('projects.currentlyWorking')}
