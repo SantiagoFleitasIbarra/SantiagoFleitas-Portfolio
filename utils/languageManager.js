@@ -13,7 +13,7 @@ const translations = {
             contact: 'Contacto'
         },
         home: {
-            title: 'Desarrollador Full Stack - Ingeniero en Computación',
+            title: 'Desarrollador Full Stack - Ingeniero en Computación - Administración de Empresas',
             description: 'Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades técnicas y los proyectos en los que he trabajado. Te invito a conocer más sobre mi perfil y explorar cómo puedo contribuir a tu equipo o proyecto.',
             projectsBtn: 'Ver Proyectos',
             contactBtn: 'Contacto',
@@ -63,7 +63,11 @@ const translations = {
             degree2: {
                 title: 'Administración de Empresas',
                 institution: 'Facultad de Ciencias Económicas y de Administración - UdelaR',
-                description: 'Estudiante de Administración de empresas.'
+                description: 'Estudiante de Administración de empresas, desarrollando conocimiento en:',
+                bullet1: 'Gestión y Administración de Organizaciones',
+                bullet2: 'Finanzas y Contabilidad Empresarial',
+                bullet3: 'Marketing y Estrategias Comerciales',
+                bullet4: 'Recursos Humanos y Liderazgo'
             },
             degree3: {
                 title: 'Desarrollo Full Stack',
@@ -123,27 +127,32 @@ const translations = {
             project1: {
                 title: 'IbaEduca',
                 shortDescription: 'Plataforma educativa para la venta de cursos en línea.',
-                description: 'Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos.'
+                description: 'Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos.',
+                date: 'Diciembre 2024 - Actualidad'
             },
             project2: {
                 title: 'CazaPalabras',
                 shortDescription: 'Juego para adivinar palabras de diferente longitud.',
-                description: 'CazaPalabra es un juego en el que tienes que adivinar una palabra misteriosa, pero lo emocionante es que la longitud de las palabras varía. Puedes enfrentarte a una palabra de 3, 4, 5, 6 letras o más, y tendrás 6 intentos para adivinarla. Con cada intento, te daremos pistas visuales para que puedas acercarte a la respuesta. ¡Entre más rápido lo logres, mejor!'
+                description: 'CazaPalabra es un juego en el que tienes que adivinar una palabra misteriosa, pero lo emocionante es que la longitud de las palabras varía. Puedes enfrentarte a una palabra de 3, 4, 5, 6 letras o más, y tendrás 6 intentos para adivinarla. Con cada intento, te daremos pistas visuales para que puedas acercarte a la respuesta. ¡Entre más rápido lo logres, mejor!',
+                date: 'Enero 2025 - Marzo 2025'
             },
             project3: {
                 title: 'Inglés Divertido',
                 shortDescription: 'Plataforma para aprender inglés de forma interactiva.',
-                description: 'Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo.'
+                description: 'Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo.',
+                date: 'Enero 2025 - Marzo 2025'
             },
             project4: {
                 title: 'Organiza tu día con alegría',
                 shortDescription: 'Aplicación para la gestión de tareas diarias.',
-                description: 'Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!'
+                description: 'Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!',
+                date: 'Febrero 2025 - Abril 2025'
             },
             project5: {
                 title: 'Warded',
                 shortDescription: 'App para crear comunidades seguras con grupos privados.',
-                description: 'Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.'
+                description: 'Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.',
+                date: 'Abril 2024 - Julio 2024'
             }
         },
         contact: {
@@ -185,7 +194,7 @@ const translations = {
             contact: 'Contact'
         },
         home: {
-            title: 'Full Stack Developer - Computer Engineer',
+            title: 'Full Stack Developer - Computer Engineer - Business Administration',
             description: 'Welcome to my professional space. Here you will find my background, technical skills, and the projects I have worked on. I invite you to learn more about my profile and explore how I can contribute to your team or project.',
             projectsBtn: 'View Projects',
             contactBtn: 'Contact',
@@ -235,7 +244,11 @@ const translations = {
             degree2: {
                 title: 'Business Administration',
                 institution: 'Faculty of Economic Sciences and Administration - UdelaR',
-                description: 'Student of Business Administration.'
+                description: 'Student of Business Administration, developing knowledge in:',
+                bullet1: 'Management and Administration of Organizations',
+                bullet2: 'Finance and Business Accounting',
+                bullet3: 'Marketing and Commercial Strategies',
+                bullet4: 'Human Resources and Leadership'
             },
             degree3: {
                 title: 'Full Stack Development',
@@ -295,27 +308,32 @@ const translations = {
             project1: {
                 title: 'IbaEduca',
                 shortDescription: 'Educational platform for selling online courses.',
-                description: 'Educational platform for selling online courses. Includes content management system, video playback, and payment processing.'
+                description: 'Educational platform for selling online courses. Includes content management system, video playback, and payment processing.',
+                date: 'December 2024 - Present'
             },
             project2: {
                 title: 'WordHunt',
                 shortDescription: 'Game to guess words of different lengths.',
-                description: 'WordHunt is a game where you have to guess a mysterious word, but the exciting part is that the length of the words varies. You can face a word of 3, 4, 5, 6 letters or more, and you will have 6 attempts to guess it. With each attempt, we will give you visual clues so you can get closer to the answer. The faster you achieve it, the better!'
+                description: 'WordHunt is a game where you have to guess a mysterious word, but the exciting part is that the length of the words varies. You can face a word of 3, 4, 5, 6 letters or more, and you will have 6 attempts to guess it. With each attempt, we will give you visual clues so you can get closer to the answer. The faster you achieve it, the better!',
+                date: 'January 2025 - March 2025'
             },
             project3: {
                 title: 'Fun English',
                 shortDescription: 'Platform to learn English interactively.',
-                description: 'An interactive platform designed to make learning English more enjoyable and effective.'
+                description: 'An interactive platform designed to make learning English more enjoyable and effective.',
+                date: 'January 2025 - March 2025'
             },
             project4: {
                 title: 'Organize your day with joy',
                 shortDescription: 'Application for managing daily tasks.',
-                description: "It's your space to organize your daily tasks in an easy and entertaining way. With our manager, you can add, complete, edit and delete tasks. Start organizing your day with a smile!"
+                description: "It's your space to organize your daily tasks in an easy and entertaining way. With our manager, you can add, complete, edit and delete tasks. Start organizing your day with a smile!",
+                date: 'February 2025 - April 2025'
             },
             project5: {
                 title: 'Warded',
                 shortDescription: 'App to create safe communities with private groups.',
-                description: 'Mobile application that creates safe communities through private groups. I developed the complete backend, including notification system and database management. The app allows sharing locations, sending real-time alerts, and assisting people with disabilities.'
+                description: 'Mobile application that creates safe communities through private groups. I developed the complete backend, including notification system and database management. The app allows sharing locations, sending real-time alerts, and assisting people with disabilities.',
+                date: 'April 2024 - July 2024'
             }
         },
         contact: {

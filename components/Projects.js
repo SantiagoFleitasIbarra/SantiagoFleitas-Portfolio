@@ -20,7 +20,7 @@ export default function Projects() {
                 <div class="bg-darker/80 rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition-all duration-500 border border-primary/30 fade-in">
                     <div class="relative h-56">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                        <img src="./images/IbaEduca/ibaedu.png" alt="IbaEduca" class="w-full h-full object-cover">
+                        <img src="/images/IbaEduca/ibaeduca-iba.png" alt="IbaEduca" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4 z-20">
                             <span class="bg-primary/90 text-white text-xs px-3 py-1 rounded-full uppercase">
                                 ${translate('projects.currentlyWorking')}
@@ -34,10 +34,13 @@ export default function Projects() {
                         <div class="mb-5">
                             <h4 class="text-sm font-semibold mb-2 text-gray-400">${translate('projects.technologies')}:</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">React.js</span>
-                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Node.js</span>
-                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">MongoDB</span>
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Next.js</span>
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">React</span>
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">TypeScript</span>
                                 <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Tailwind CSS</span>
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Firebase</span>
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Zod</span>
+                                <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Framer Motion</span>
                             </div>
                         </div>
                     </div>
@@ -51,6 +54,7 @@ export default function Projects() {
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">CazaPalabras</h3>
+                        <p class="text-sm text-gray-400 mb-3">${translate('projects.project2.date')}</p>
                         <p class="text-gray-300 mb-4">${translate('projects.project2.description')}</p>
                         
                         <div class="mb-5">
@@ -81,6 +85,7 @@ export default function Projects() {
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">${translate('projects.project3.title')}</h3>
+                        <p class="text-sm text-gray-400 mb-3">${translate('projects.project3.date')}</p>
                         <p class="text-gray-300 mb-4">${translate('projects.project3.description')}</p>
                         
                         <div class="mb-5">
@@ -111,6 +116,7 @@ export default function Projects() {
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">${translate('projects.project4.title')}</h3>
+                        <p class="text-sm text-gray-400 mb-3">${translate('projects.project4.date')}</p>
                         <p class="text-gray-300 mb-4">${translate('projects.project4.description')}</p>
                         
                         <div class="mb-5">
@@ -141,6 +147,7 @@ export default function Projects() {
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3 text-white">Warded</h3>
+                        <p class="text-sm text-gray-400 mb-3">${translate('projects.project5.date')}</p>
                         <p class="text-gray-300 mb-4">${translate('projects.project5.description')}</p>
                         
                         <div class="mb-5">

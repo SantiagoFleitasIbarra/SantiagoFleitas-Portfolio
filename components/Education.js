@@ -45,7 +45,13 @@ export default function Education() {
                         <span class="inline-block px-4 py-1 bg-primary text-light rounded-full text-sm font-medium mb-4">2025 - ${translate('education.present')}</span>
                         <h3 class="text-xl font-medium mb-2.5 text-light">${translate('education.degree2.title')}</h3>
                         <p class="font-medium mb-2.5">${translate('education.degree2.institution')}</p>
-                        <p class="text-grey">${translate('education.degree2.description')}</p>
+                        <p class="text-grey mb-3">${translate('education.degree2.description')}</p>
+                        <ul class="text-grey list-disc pl-5">
+                            <li>${translate('education.degree2.bullet1')}</li>
+                            <li>${translate('education.degree2.bullet2')}</li>
+                            <li>${translate('education.degree2.bullet3')}</li>
+                            <li>${translate('education.degree2.bullet4')}</li>
+                        </ul>
                     </div>
                 </div>
                 
