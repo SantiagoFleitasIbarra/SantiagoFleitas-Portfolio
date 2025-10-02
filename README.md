@@ -1,83 +1,279 @@
-# 👨‍💻 Santiago Fleitas - Professional Portfolio
+# 🚀 Portfolio Espacial - Santiago Fleitas
 
 <p align="center">
-  <img src="./images/Santiago.jpg" alt="Santiago Fleitas" width="300" style="border-radius: 10px;" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
 </p>
 
-## 👋 About Me
+<p align="center">
+  <strong>Un portfolio profesional con temática espacial, completamente responsive y bilingüe (ES/EN)</strong>
+</p>
 
-I am a Computer Engineering student at UdelaR and a Holberton School graduate with experience in full-stack development. My passion lies in creating robust and user-friendly applications that solve real-world problems. I previously studied Mathematics at Instituto de Profesores Artigas (IPA), which has enhanced my analytical and problem-solving skills.
+---
 
-## 🎓 Education
+## ✨ Características Principales
 
-- **Computer Engineering** - Faculty of Engineering, UdelaR (2025 - Present)
-- **Full Stack Development** - Holberton School (2023 - 2024)
-- **Mathematics Specialization** - Instituto de Profesores Artigas (IPA) (2021 - 2022)
+### 🎨 **Diseño Futurista**
+- **Temática espacial** con efectos de estrellas animadas
+- **Gradientes dinámicos** y efectos de blur
+- **Animaciones suaves** y transiciones fluidas
+- **Hexágonos interactivos** para habilidades técnicas
+- **Robot espacial** con datos curiosos de tecnologías
 
-## 💻 Technical Skills
+### 📱 **Completamente Responsive**
+- **Diseño adaptativo** para móvil, tablet y desktop
+- **Grid flexible** que se reorganiza según el dispositivo
+- **Timeline educativa** que se convierte en tarjetas en móvil
+- **Navegación optimizada** para pantallas táctiles
 
-### Frontend
-- HTML5, CSS3, JavaScript
-- React.js, Tailwind CSS
+### 🌐 **Sistema Bilingüe**
+- **Cambio dinámico** entre Español e Inglés
+- **Contenido traducido** en tiempo real
+- **Datos curiosos del robot** en ambos idiomas
+- **Animaciones de código** que se adaptan al idioma
 
-### Backend
-- Node.js, Python
+### 🛠️ **Tecnologías Utilizadas**
+- **Frontend**: HTML5, CSS3, TypeScript
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Animaciones**: CSS Keyframes + JavaScript
+- **Responsive**: Mobile-first approach
 
-### Databases
-- MySQL, MongoDB
+---
 
-### Tools
-- Git, Docker, Figma, Jira
+## 🗂️ Estructura del Proyecto
 
-### Mobile
-- Flutter
+```
+space-portfolio/
+├── 📁 assets/
+│   ├── 📁 documents/          # PDFs (CV, certificados)
+│   └── 📁 images/
+│       ├── profile-photo-1.jpg    # Foto de perfil 1
+│       ├── profile-photo-2.jpg    # Foto de perfil 2
+│       └── 📁 projects/           # Imágenes de proyectos
+├── 📁 src/
+│   ├── main.ts               # Lógica principal
+│   └── style.css             # Estilos adicionales
+├── index.html                # Página principal
+├── package.json              # Dependencias
+└── README.md                 # Este archivo
+```
 
-## 🚀 Projects
+---
 
-This portfolio showcases some of my most significant projects:
+## 🚀 Instalación y Uso
 
-### [IbaEduca]() 🎓
-Educational platform for selling online courses with content management system, video playback, and payment processing.
-- **Status:** Currently working
+### 1. **Clonar el repositorio**
+```bash
+git clone https://github.com/SantiagoFleitasIbarra/space-portfolio.git
+cd space-portfolio
+```
 
-### [WordHunter (CazaPalabras)](https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/) 🎮
-Wordle-style game where users must find hidden words.
-- **Technologies:** JavaScript, HTML5, CSS3
-- **[Demo](https://santiagofleitasibarra.github.io/CazaPalabras-Juego-2025/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/CazaPalabras-Juego-2025)**
+### 2. **Instalar dependencias**
+```bash
+npm install
+```
 
-### [Fun English (Inglés Divertido)](https://santiagofleitasibarra.github.io/ingles-divertido/) 📚
-Interactive platform designed to make learning English more enjoyable and effective.
-- **Technologies:** HTML5, CSS3, JavaScript
-- **[Demo](https://santiagofleitasibarra.github.io/ingles-divertido/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/ingles-divertido)**
+### 3. **Ejecutar en desarrollo**
+```bash
+npm run dev
+```
 
-### [Organize Your Day with Joy](https://santiagofleitasibarra.github.io/Organiza-tu-dia/) 📝
-Task management application with a pleasant and intuitive interface.
-- **Technologies:** HTML5, CSS3, JavaScript
-- **[Demo](https://santiagofleitasibarra.github.io/Organiza-tu-dia/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/Organiza-tu-dia)**
+### 4. **Construir para producción**
+```bash
+npm run build
+```
 
-### [Warded](https://www.youtube.com/watch?v=Lfbt74-kG8c) 🔒
-Mobile application that creates safe communities through private groups. Developed the complete backend including notification system and database management.
-- **Technologies:** Flutter, Jira, Figma, Firebase
-- **[Demo Day Presentation](https://www.youtube.com/watch?v=Lfbt74-kG8c)**
+---
 
-### [Scientific Calculator](https://santiagofleitasibarra.github.io/calculadora-cientifica/) 🧮
-Advanced tool for complex mathematical calculations with adaptable and multilingual interface.
-- **Technologies:** JavaScript, HTML5, CSS3
-- **[Demo](https://santiagofleitasibarra.github.io/calculadora-cientifica/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/calculadora-cientifica)**
+## 📋 Configuración de Contenido
 
-### [Online Library](https://santiagofleitasibarra.github.io/Libreria-Online/) 📚
-Platform for publishing and downloading free ebooks across multiple categories.
-- **Technologies:** HTML5, CSS3, JavaScript
-- **[Demo](https://santiagofleitasibarra.github.io/Libreria-Online/)** | **[Repository](https://github.com/SantiagoFleitasIbarra/Libreria-Online)**
+### 🖼️ **Imágenes Requeridas**
+Coloca tus archivos en estas rutas:
 
-## 📬 Contact Me
+```
+/assets/images/
+├── profile-photo-1.jpg        # Foto personal 1
+├── profile-photo-2.jpg        # Foto personal 2
+└── projects/
+    ├── ibaeduca.jpg          # Proyecto IbaEduca
+    ├── cazapalabras.jpg      # Proyecto CazaPalabras
+    ├── ingles-divertido.jpg  # Proyecto Inglés Divertido
+    ├── organiza-tu-dia.jpg   # Proyecto Organiza tu día
+    └── warded.jpg            # Proyecto Warded
+```
 
-Feel free to reach out to me through any of these channels:
+### 📄 **Documentos PDF**
+```
+/assets/documents/
+├── CV-Santiago-Fleitas.pdf              # Tu CV
+└── Certificado-Holberton-School.pdf     # Certificado
+```
 
-- 📧 **Email**: [santiagofle8@gmail.com](mailto:santiagofle8@gmail.com)
-- 📱 **Phone**: +598 92 564 819
-- 🔗 **LinkedIn**: [linkedin.com/in/santiagofleitas](https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/)
-- 🐙 **GitHub**: [github.com/santiagofleitas](https://github.com/SantiagoFleitasIbarra)
-- 📄 **Resume**: [Download my CV](./pdf/Santiago%20Fleitas%20-%20Curriculum.pdf)
+### 🔗 **Enlaces de Proyectos**
+En el archivo `index.html`, busca estos comentarios y reemplaza `#` con tus enlaces:
 
-> "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle." — Steve Jobs
+```html
+<!-- COLOCA AQUÍ EL ENLACE DEL REPOSITORIO DE CAZAPALABRAS -->
+<a href="#" target="_blank">
+
+<!-- COLOCA AQUÍ EL ENLACE DEL DEMO DE CAZAPALABRAS -->
+<a href="#" target="_blank">
+
+<!-- Y así para cada proyecto... -->
+```
+
+---
+
+## 🎯 Secciones del Portfolio
+
+### 🏠 **Inicio**
+- Presentación profesional
+- Código dinámico con roles
+- Frase motivacional
+- Botones de acción
+
+### 👨‍💻 **Sobre Mí**
+- Dos fotos profesionales
+- Historia y trayectoria
+- Stats de experiencia
+- Fortalezas clave
+- Botón de descarga de CV
+
+### 💼 **Experiencias**
+- Experiencia laboral actual
+- Descripción detallada
+- Citas inspiradoras
+
+### 🎓 **Educación**
+- Timeline interactiva (desktop)
+- Tarjetas apiladas (móvil)
+- Certificados descargables
+- Múltiples formaciones
+
+### ⚡ **Habilidades Técnicas**
+- Grid hexagonal (desktop)
+- Grid simple (móvil)
+- Robot con datos curiosos
+- Tecnologías dominadas
+
+### 🚀 **Proyectos**
+- Tarjetas interactivas
+- Enlaces a repositorios
+- Demos en vivo
+- Tecnologías utilizadas
+
+### 📞 **Contacto**
+- Información de contacto
+- Redes sociales
+- Cita inspiradora
+
+---
+
+## 🎨 Personalización
+
+### **Colores Principales**
+- **Cyan**: `#22d3ee` - Elementos principales
+- **Blue**: `#3b82f6` - Elementos secundarios  
+- **Purple**: `#8b5cf6` - Acentos
+- **Gray**: `#1f2937` - Fondos
+
+### **Fuentes**
+- **Principal**: System fonts (optimizado)
+- **Código**: Monospace fonts
+
+### **Efectos Especiales**
+- Estrellas animadas de fondo
+- Partículas flotantes
+- Gradientes dinámicos
+- Hover effects suaves
+
+---
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: `< 768px`
+- **Tablet**: `768px - 1024px`
+- **Desktop**: `> 1024px`
+
+---
+
+## 🌟 Características Únicas
+
+### 🤖 **Robot Espacial Interactivo**
+- Aparece al hacer clic en habilidades técnicas
+- Muestra datos curiosos de cada tecnología
+- Cambia de idioma automáticamente
+- Animaciones flotantes
+
+### 💻 **Código Dinámico**
+- Efecto de escritura en tiempo real
+- Contenido que cambia según el idioma
+- Animaciones de aparición secuencial
+- Cursor parpadeante
+
+### 🎭 **Sistema de Traducciones**
+- Cambio instantáneo de idioma
+- Contenido HTML dinámico
+- Datos del robot traducidos
+- Navegación bilingüe
+
+---
+
+## 🚀 Deployment
+
+### **Netlify** (Recomendado)
+1. Conecta tu repositorio
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+
+### **Vercel**
+1. Importa el proyecto
+2. Configuración automática
+3. Deploy instantáneo
+
+### **GitHub Pages**
+1. Ejecuta `npm run build`
+2. Sube la carpeta `dist`
+3. Configura GitHub Pages
+
+---
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar el portfolio:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature
+3. Commit tus cambios
+4. Push a la rama
+5. Abre un Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Puedes usarlo libremente para tu propio portfolio.
+
+---
+
+## 📞 Contacto
+
+**Santiago Fleitas**
+- 📧 Email: [santiagofle8@gmail.com](mailto:santiagofle8@gmail.com)
+- 📱 Teléfono: +598 92 564 819
+- 🔗 LinkedIn: [Santiago Fleitas](https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/)
+- 🐙 GitHub: [@SantiagoFleitasIbarra](https://github.com/SantiagoFleitasIbarra)
+
+---
+
+<p align="center">
+  <strong>⭐ Si te gusta este proyecto, ¡dale una estrella! ⭐</strong>
+</p>
+
+<p align="center">
+  <em>"El código es poesía, la innovación es arte, y cada proyecto es una nueva aventura espacial."</em>
+</p>
