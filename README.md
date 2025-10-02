@@ -1,101 +1,76 @@
-# 🚀 Portfolio Espacial - Santiago Fleitas
+# 🚀 Portfolio Espacial - Versión HTML/CSS/JavaScript
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-</p>
+Esta es la versión convertida del portfolio original de TypeScript + Vite a **HTML, CSS y JavaScript puro**, manteniendo exactamente la misma funcionalidad y apariencia.
 
-<p align="center">
-  <strong>Un portfolio profesional con temática espacial, completamente responsive y bilingüe (ES/EN)</strong>
-</p>
-
----
-
-## ✨ Características Principales
+## ✨ Características Mantenidas
 
 ### 🎨 **Diseño Futurista**
-- **Temática espacial** con efectos de estrellas animadas
-- **Gradientes dinámicos** y efectos de blur
-- **Animaciones suaves** y transiciones fluidas
-- **Hexágonos interactivos** para habilidades técnicas
-- **Robot espacial** con datos curiosos de tecnologías
+- ✅ Temática espacial con efectos de estrellas animadas
+- ✅ Gradientes dinámicos y efectos de blur
+- ✅ Animaciones suaves y transiciones fluidas
+- ✅ Hexágonos interactivos para habilidades técnicas
+- ✅ Robot espacial con datos curiosos de tecnologías
 
 ### 📱 **Completamente Responsive**
-- **Diseño adaptativo** para móvil, tablet y desktop
-- **Grid flexible** que se reorganiza según el dispositivo
-- **Timeline educativa** que se convierte en tarjetas en móvil
-- **Navegación optimizada** para pantallas táctiles
+- ✅ Diseño adaptativo para móvil, tablet y desktop
+- ✅ Grid flexible que se reorganiza según el dispositivo
+- ✅ Timeline educativa que se convierte en tarjetas en móvil
+- ✅ Navegación optimizada para pantallas táctiles
 
 ### 🌐 **Sistema Bilingüe**
-- **Cambio dinámico** entre Español e Inglés
-- **Contenido traducido** en tiempo real
-- **Datos curiosos del robot** en ambos idiomas
-- **Animaciones de código** que se adaptan al idioma
+- ✅ Cambio dinámico entre Español e Inglés
+- ✅ Contenido traducido en tiempo real
+- ✅ Datos curiosos del robot en ambos idiomas
+- ✅ Animaciones de código que se adaptan al idioma
 
 ### 🛠️ **Tecnologías Utilizadas**
-- **Frontend**: HTML5, CSS3, TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **Animaciones**: CSS Keyframes + JavaScript
-- **Responsive**: Mobile-first approach
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Sin dependencias**: No requiere Node.js, npm, ni build tools
+- **Animaciones**: CSS Keyframes + JavaScript nativo
+- **Responsive**: Mobile-first approach con CSS Grid y Flexbox
 
----
-
-## 🗂️ Estructura del Proyecto
+## 📁 Estructura de Archivos
 
 ```
-space-portfolio/
-├── 📁 assets/
-│   ├── 📁 documents/          # PDFs (CV, certificados)
-│   └── 📁 images/
-│       ├── profile-photo-1.jpg    # Foto de perfil 1
-│       ├── profile-photo-2.jpg    # Foto de perfil 2
-│       └── 📁 projects/           # Imágenes de proyectos
-├── 📁 src/
-│   ├── main.ts               # Lógica principal
-│   └── style.css             # Estilos adicionales
-├── index.html                # Página principal
-├── package.json              # Dependencias
-└── README.md                 # Este archivo
+portfolio-html/
+├── index.html          # Página principal
+├── styles.css          # Todos los estilos
+├── script.js           # Toda la funcionalidad JavaScript
+└── README.md           # Este archivo
 ```
-
----
 
 ## 🚀 Instalación y Uso
 
-### 1. **Clonar el repositorio**
+### **Opción 1: Servidor Local Simple**
 ```bash
-git clone https://github.com/SantiagoFleitasIbarra/space-portfolio.git
-cd space-portfolio
+# Con Python 3
+python -m http.server 8000
+
+# Con Python 2
+python -m SimpleHTTPServer 8000
+
+# Con Node.js (si lo tienes instalado)
+npx serve .
+
+# Con PHP
+php -S localhost:8000
 ```
 
-### 2. **Instalar dependencias**
-```bash
-npm install
-```
+### **Opción 2: Abrir Directamente**
+Simplemente abre `index.html` en tu navegador web favorito.
 
-### 3. **Ejecutar en desarrollo**
-```bash
-npm run dev
-```
-
-### 4. **Construir para producción**
-```bash
-npm run build
-```
-
----
+### **Opción 3: Live Server (VS Code)**
+1. Instala la extensión "Live Server" en VS Code
+2. Haz clic derecho en `index.html`
+3. Selecciona "Open with Live Server"
 
 ## 📋 Configuración de Contenido
 
 ### 🖼️ **Imágenes Requeridas**
-Coloca tus archivos en estas rutas:
+Asegúrate de que las imágenes estén en estas rutas relativas:
 
 ```
-/assets/images/
+../assets/images/
 ├── profile-photo-1.jpg        # Foto personal 1
 ├── profile-photo-2.jpg        # Foto personal 2
 └── projects/
@@ -108,7 +83,7 @@ Coloca tus archivos en estas rutas:
 
 ### 📄 **Documentos PDF**
 ```
-/assets/documents/
+../assets/documents/
 ├── CV-Santiago-Fleitas.pdf              # Tu CV
 └── Certificado-Holberton-School.pdf     # Certificado
 ```
@@ -117,167 +92,134 @@ Coloca tus archivos en estas rutas:
 En el archivo `index.html`, busca estos comentarios y reemplaza `#` con tus enlaces:
 
 ```html
-<!-- COLOCA AQUÍ EL ENLACE DEL REPOSITORIO DE CAZAPALABRAS -->
-<a href="#" target="_blank">
-
-<!-- COLOCA AQUÍ EL ENLACE DEL DEMO DE CAZAPALABRAS -->
-<a href="#" target="_blank">
-
-<!-- Y así para cada proyecto... -->
+<!-- Busca las líneas con href="#" y reemplázalas -->
+<a href="#" target="_blank">  <!-- Cambiar por tu enlace -->
 ```
 
----
+## 🎯 Funcionalidades Implementadas
 
-## 🎯 Secciones del Portfolio
+### ✅ **Navegación**
+- Scroll suave entre secciones
+- Menú responsive para móvil
+- Indicadores visuales de hover
 
-### 🏠 **Inicio**
-- Presentación profesional
-- Código dinámico con roles
-- Frase motivacional
-- Botones de acción
+### ✅ **Animaciones**
+- Código dinámico con efecto de escritura
+- Partículas flotantes de fondo
+- Efectos de parallax en scroll
+- Transiciones suaves en hover
 
-### 👨‍💻 **Sobre Mí**
-- Dos fotos profesionales
-- Historia y trayectoria
-- Stats de experiencia
-- Fortalezas clave
-- Botón de descarga de CV
+### ✅ **Interactividad**
+- Modal de tecnologías con datos curiosos
+- Cambio de idioma en tiempo real
+- Contador de tiempo de trabajo dinámico
+- Efectos 3D en elementos interactivos
 
-### 💼 **Experiencias**
-- Experiencia laboral actual
-- Descripción detallada
-- Citas inspiradoras
+### ✅ **Responsive Design**
+- Breakpoints: móvil (<768px), tablet (768-1024px), desktop (>1024px)
+- Grid hexagonal se convierte en grid simple en móvil
+- Timeline se convierte en cards apiladas en móvil
+- Navegación se convierte en menú hamburguesa
 
-### 🎓 **Educación**
-- Timeline interactiva (desktop)
-- Tarjetas apiladas (móvil)
-- Certificados descargables
-- Múltiples formaciones
+## 🌟 Diferencias con la Versión Original
 
-### ⚡ **Habilidades Técnicas**
-- Grid hexagonal (desktop)
-- Grid simple (móvil)
-- Robot con datos curiosos
-- Tecnologías dominadas
+### **Lo que se mantiene igual:**
+- ✅ Diseño visual idéntico
+- ✅ Todas las animaciones y efectos
+- ✅ Funcionalidad completa del modal de tecnologías
+- ✅ Sistema bilingüe completo
+- ✅ Responsive design exacto
+- ✅ Efectos de hover y transiciones
 
-### 🚀 **Proyectos**
-- Tarjetas interactivas
-- Enlaces a repositorios
-- Demos en vivo
-- Tecnologías utilizadas
-
-### 📞 **Contacto**
-- Información de contacto
-- Redes sociales
-- Cita inspiradora
-
----
-
-## 🎨 Personalización
-
-### **Colores Principales**
-- **Cyan**: `#22d3ee` - Elementos principales
-- **Blue**: `#3b82f6` - Elementos secundarios  
-- **Purple**: `#8b5cf6` - Acentos
-- **Gray**: `#1f2937` - Fondos
-
-### **Fuentes**
-- **Principal**: System fonts (optimizado)
-- **Código**: Monospace fonts
-
-### **Efectos Especiales**
-- Estrellas animadas de fondo
-- Partículas flotantes
-- Gradientes dinámicos
-- Hover effects suaves
-
----
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: `< 768px`
-- **Tablet**: `768px - 1024px`
-- **Desktop**: `> 1024px`
-
----
-
-## 🌟 Características Únicas
-
-### 🤖 **Robot Espacial Interactivo**
-- Aparece al hacer clic en habilidades técnicas
-- Muestra datos curiosos de cada tecnología
-- Cambia de idioma automáticamente
-- Animaciones flotantes
-
-### 💻 **Código Dinámico**
-- Efecto de escritura en tiempo real
-- Contenido que cambia según el idioma
-- Animaciones de aparición secuencial
-- Cursor parpadeante
-
-### 🎭 **Sistema de Traducciones**
-- Cambio instantáneo de idioma
-- Contenido HTML dinámico
-- Datos del robot traducidos
-- Navegación bilingüe
-
----
+### **Lo que cambió:**
+- ❌ No requiere build process (Vite)
+- ❌ No requiere TypeScript compilation
+- ❌ No requiere npm install
+- ❌ No requiere servidor de desarrollo
+- ✅ Funciona directamente en cualquier navegador
+- ✅ Más fácil de deployar en cualquier hosting
 
 ## 🚀 Deployment
 
-### **Netlify** (Recomendado)
-1. Conecta tu repositorio
-2. Build command: `npm run build`
-3. Publish directory: `dist`
+### **GitHub Pages**
+1. Sube todos los archivos a tu repositorio
+2. Ve a Settings > Pages
+3. Selecciona la rama main
+4. Tu sitio estará en `https://tu-usuario.github.io/nombre-repositorio/`
+
+### **Netlify**
+1. Arrastra la carpeta `portfolio-html` a Netlify
+2. ¡Listo! Se despliega automáticamente
 
 ### **Vercel**
-1. Importa el proyecto
-2. Configuración automática
-3. Deploy instantáneo
+1. Conecta tu repositorio
+2. Configura la carpeta `portfolio-html` como root
+3. Deploy automático
 
-### **GitHub Pages**
-1. **Configura vite.config.ts**: Cambia `base: '/space-portfolio/'` por el nombre de tu repositorio
-2. **Haz el build**: `npm run build`
-3. **Sube todo**: Commitea y pushea todo el código
-4. **Configura GitHub Pages**: Ve a Settings > Pages > Source: "Deploy from a branch" > Branch: "main" > Folder: "/ (root)"
-5. **Accede**: Tu sitio estará en `https://tu-usuario.github.io/nombre-repositorio/`
+### **Cualquier Hosting Web**
+1. Sube los archivos por FTP
+2. Asegúrate de que `index.html` esté en la raíz
+3. ¡Funciona inmediatamente!
 
-**Importante**: GitHub Pages necesita el código fuente Y la carpeta `dist` en el repositorio.
+## 🔧 Personalización
+
+### **Cambiar Colores**
+Edita las variables CSS en `styles.css`:
+```css
+/* Busca estas clases para cambiar colores */
+.text-gradient { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
+.btn-primary { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
+```
+
+### **Modificar Contenido**
+1. **Textos**: Edita los atributos `data-es` y `data-en` en `index.html`
+2. **Imágenes**: Reemplaza las imágenes en las carpetas correspondientes
+3. **Enlaces**: Cambia los `href="#"` por tus enlaces reales
+
+### **Agregar Nuevas Tecnologías**
+En `script.js`, busca `techDataES` y `techDataEN` para agregar nuevas tecnologías al modal.
+
+## 📱 Compatibilidad
+
+### **Navegadores Soportados:**
+- ✅ Chrome 60+
+- ✅ Firefox 55+
+- ✅ Safari 12+
+- ✅ Edge 79+
+- ✅ Opera 47+
+
+### **Características Modernas Utilizadas:**
+- CSS Grid y Flexbox
+- CSS Custom Properties (variables)
+- Intersection Observer API
+- ES6+ JavaScript (const, let, arrow functions, etc.)
+
+## 🐛 Solución de Problemas
+
+### **Las imágenes no se cargan:**
+- Verifica que las rutas en `index.html` coincidan con la ubicación real de las imágenes
+- Si usas un servidor local, asegúrate de que las rutas relativas sean correctas
+
+### **El modal de tecnologías no funciona:**
+- Abre la consola del navegador (F12) para ver errores de JavaScript
+- Verifica que `script.js` se esté cargando correctamente
+
+### **El cambio de idioma no funciona:**
+- Asegúrate de que todos los elementos tengan los atributos `data-es` y `data-en`
+- Verifica que no haya errores de JavaScript en la consola
+
+## 📞 Soporte
+
+Si encuentras algún problema o necesitas ayuda:
+
+1. Revisa la consola del navegador (F12) para errores
+2. Verifica que todas las rutas de archivos sean correctas
+3. Asegúrate de que estés usando un servidor local si es necesario
+
+## 🎉 ¡Listo para Usar!
+
+Esta versión HTML/CSS/JavaScript es completamente funcional y mantiene todas las características del portfolio original. ¡Solo necesitas personalizar el contenido con tu información y estará listo para impresionar!
 
 ---
 
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar el portfolio:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature
-3. Commit tus cambios
-4. Push a la rama
-5. Abre un Pull Request
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Puedes usarlo libremente para tu propio portfolio.
-
----
-
-## 📞 Contacto
-
-**Santiago Fleitas**
-- 📧 Email: [santiagofle8@gmail.com](mailto:santiagofle8@gmail.com)
-- 📱 Teléfono: +598 92 564 819
-- 🔗 LinkedIn: [Santiago Fleitas](https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/)
-- 🐙 GitHub: [@SantiagoFleitasIbarra](https://github.com/SantiagoFleitasIbarra)
-
----
-
-<p align="center">
-  <strong>⭐ Si te gusta este proyecto, ¡dale una estrella! ⭐</strong>
-</p>
-
-<p align="center">
-  <em>"El código es poesía, la innovación es arte, y cada proyecto es una nueva aventura espacial."</em>
-</p>
+**Nota**: Esta conversión mantiene el 100% de la funcionalidad original mientras elimina la complejidad de las herramientas de build modernas, haciéndolo más accesible y fácil de deployar.

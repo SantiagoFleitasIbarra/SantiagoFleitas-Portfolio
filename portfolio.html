@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Fleitas - Portfolio Espacial</title>
+    <link rel="stylesheet" href="/portfolio-html/styles.css">
+</head>
+<body>
+    <!-- Fondo de estrellas -->
+    <div class="stars-background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">SF</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="#sobre-mi" class="nav-link" data-es="Sobre Mí" data-en="About Me">Sobre Mí</a>
+                <a href="#experiencias" class="nav-link" data-es="Experiencias" data-en="Experience">Experiencias</a>
+                <a href="#educacion" class="nav-link" data-es="Educación" data-en="Education">Educación</a>
+                <a href="#habilidades" class="nav-link" data-es="Habilidades" data-en="Skills">Habilidades</a>
+                <a href="#proyectos" class="nav-link" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button id="language-toggle" class="language-btn">
+                    <span class="flag">🇪🇸</span>
+                    <span class="lang-text">ES</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="section hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting" data-es="¡Hola! Soy" data-en="Hello! I'm">¡Hola! Soy</span>
+                        <span class="name">Santiago Fleitas</span>
+                    </h1>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">developer.js</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span> 
+                                <span class="code-variable">developer</span> 
+                                <span class="code-operator">=</span> 
+                                <span class="code-bracket">{</span>
+                            </div>
+                            <div id="typing-content" class="typing-content"></div>
+                            <div class="code-line">
+                                <span class="code-bracket">}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="hero-description" data-es="Transformo ideas en experiencias digitales extraordinarias. Especializado en desarrollo full stack con pasión por la educación y la innovación tecnológica." data-en="I transform ideas into extraordinary digital experiences. Specialized in full stack development with a passion for education and technological innovation.">
+                        Transformo ideas en experiencias digitales extraordinarias. Especializado en desarrollo full stack con pasión por la educación y la innovación tecnológica.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary" data-es="Ver Proyectos" data-en="View Projects">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary" data-es="Contactar" data-en="Contact">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-es="Conoce mi historia, experiencia y pasión por la tecnología" data-en="Learn about my story, experience and passion for technology">Conoce mi historia, experiencia y pasión por la tecnología</p>
+                <p class="section-description" data-es="Un desarrollador comprometido con la excelencia técnica y el impacto positivo a través de la innovación." data-en="A developer committed to technical excellence and positive impact through innovation.">Un desarrollador comprometido con la excelencia técnica y el impacto positivo a través de la innovación.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-images">
+                    <div class="image-card">
+                        <img src="../assets/images/profile-photo-1.jpg" alt="Santiago Fleitas" class="profile-image">
+                    </div>
+                    <div class="image-card">
+                        <img src="../assets/images/profile-photo-2.jpg" alt="Santiago Fleitas" class="profile-image">
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <div class="about-story">
+                        <p data-es="Soy un desarrollador full stack apasionado por crear soluciones tecnológicas que generen un impacto positivo. Mi trayectoria combina la ingeniería en computación con la administración de empresas, lo que me permite abordar los proyectos desde una perspectiva tanto técnica como estratégica." data-en="I'm a full stack developer passionate about creating technological solutions that generate positive impact. My background combines computer engineering with business administration, allowing me to approach projects from both technical and strategic perspectives.">
+                            Soy un desarrollador full stack apasionado por crear soluciones tecnológicas que generen un impacto positivo. Mi trayectoria combina la ingeniería en computación con la administración de empresas, lo que me permite abordar los proyectos desde una perspectiva tanto técnica como estratégica.
+                        </p>
+                        
+                        <p data-es="Mi experiencia abarca desde el desarrollo de aplicaciones web modernas hasta la creación de plataformas educativas innovadoras. Me especializo en tecnologías como React, Node.js, Python y bases de datos tanto relacionales como NoSQL." data-en="My experience spans from developing modern web applications to creating innovative educational platforms. I specialize in technologies like React, Node.js, Python and both relational and NoSQL databases.">
+                            Mi experiencia abarca desde el desarrollo de aplicaciones web modernas hasta la creación de plataformas educativas innovadoras. Me especializo en tecnologías como React, Node.js, Python y bases de datos tanto relacionales como NoSQL.
+                        </p>
+                        
+                        <p data-es="Como educador, he tenido el privilegio de enseñar programación y desarrollo web, lo que me ha permitido mantenerme actualizado con las últimas tendencias tecnológicas mientras ayudo a formar a la próxima generación de desarrolladores." data-en="As an educator, I've had the privilege of teaching programming and web development, which has allowed me to stay updated with the latest technological trends while helping to train the next generation of developers.">
+                            Como educador, he tenido el privilegio de enseñar programación y desarrollo web, lo que me ha permitido mantenerme actualizado con las últimas tendencias tecnológicas mientras ayudo a formar a la próxima generación de desarrolladores.
+                        </p>
+                    </div>
+                    
+
+                    
+                    <div class="strengths">
+                        <h3 class="strengths-title" data-es="Fortalezas Clave" data-en="Key Strengths">Fortalezas Clave</h3>
+                        <div class="strengths-list">
+                            <div class="strength-item">
+                                <span class="strength-icon">🚀</span>
+                                <span data-es="Desarrollo Full Stack" data-en="Full Stack Development">Desarrollo Full Stack</span>
+                            </div>
+                            <div class="strength-item">
+                                <span class="strength-icon">🎓</span>
+                                <span data-es="Educación Tecnológica" data-en="Technology Education">Educación Tecnológica</span>
+                            </div>
+                            <div class="strength-item">
+                                <span class="strength-icon">💡</span>
+                                <span data-es="Pensamiento Innovador" data-en="Innovative Thinking">Pensamiento Innovador</span>
+                            </div>
+                            <div class="strength-item">
+                                <span class="strength-icon">🤝</span>
+                                <span data-es="Trabajo en Equipo" data-en="Teamwork">Trabajo en Equipo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-download">
+                        <a href="../assets/documents/CV-Santiago-Fleitas.pdf" target="_blank" class="btn btn-primary">
+                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span data-es="Descargar CV" data-en="Download CV">Descargar CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Experiencias -->
+    <section id="experiencias" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-es="Experiencias" data-en="Experience">Experiencias</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-es="Mi trayectoria profesional en el desarrollo de software" data-en="My professional journey in software development">Mi trayectoria profesional en el desarrollo de software</p>
+                <p class="section-description" data-es="Experiencias que han moldeado mi carrera como desarrollador full stack y educador tecnológico." data-en="Experiences that have shaped my career as a full stack developer and technology educator.">Experiencias que han moldeado mi carrera como desarrollador full stack y educador tecnológico.</p>
+            </div>
+            
+            <div class="experience-content">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <h3 class="job-title" data-es="Desarrollador Full Stack" data-en="Full Stack Developer">Desarrollador Full Stack</h3>
+                            <div class="company-name">WeCode</div>
+                            <div class="job-period">
+                                <span data-es="Julio 2024 - Presente" data-en="July 2024 - Present">Julio 2024 - Presente</span>
+                            </div>
+                        </div>
+                        <div class="company-logo">
+                            <img src="../assets/images/wecode-logo.png" alt="WeCode Logo" class="logo-image">
+                        </div>
+                    </div>
+                    
+                    <div class="experience-description">
+                        <p data-es="En WeCode, lidero el desarrollo de plataformas educativas innovadoras que transforman la manera en que las personas aprenden programación. Mi rol abarca desde la arquitectura de sistemas hasta la implementación de funcionalidades avanzadas." data-en="At WeCode, I lead the development of innovative educational platforms that transform the way people learn programming. My role spans from system architecture to implementing advanced functionalities.">
+                            En WeCode, lidero el desarrollo de plataformas educativas innovadoras que transforman la manera en que las personas aprenden programación. Mi rol abarca desde la arquitectura de sistemas hasta la implementación de funcionalidades avanzadas.
+                        </p>
+                        
+                        <div class="responsibilities">
+                            <h4 data-es="Responsabilidades principales:" data-en="Main responsibilities:">Responsabilidades principales:</h4>
+                            <ul>
+                                <li data-es="Desarrollo de aplicaciones web con React.js y Node.js" data-en="Web application development with React.js and Node.js">Desarrollo de aplicaciones web con React.js y Node.js</li>
+                                <li data-es="Diseño e implementación de APIs RESTful escalables" data-en="Design and implementation of scalable RESTful APIs">Diseño e implementación de APIs RESTful escalables</li>
+                                <li data-es="Gestión de bases de datos MySQL y MongoDB" data-en="MySQL and MongoDB database management">Gestión de bases de datos MySQL y MongoDB</li>
+                                <li data-es="Colaboración en metodologías ágiles con Jira" data-en="Collaboration in agile methodologies with Jira">Colaboración en metodologías ágiles con Jira</li>
+                                <li data-es="Mentoría técnica a desarrolladores junior" data-en="Technical mentoring to junior developers">Mentoría técnica a desarrolladores junior</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-section">
+                    <blockquote class="inspirational-quote">
+                        <p data-es="&quot;La tecnología es mejor cuando acerca a las personas.&quot;" data-en="&quot;Technology is best when it brings people together.&quot;">"La tecnología es mejor cuando acerca a las personas."</p>
+                        <cite data-es="- Matt Mullenweg" data-en="- Matt Mullenweg">- Matt Mullenweg</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Educación -->
+    <section id="educacion" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-es="Educación" data-en="Education">Educación</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-es="Mi trayectoria académica refleja mi compromiso con el aprendizaje continuo y el desarrollo profesional" data-en="My academic journey reflects my commitment to continuous learning and professional development">Mi trayectoria académica refleja mi compromiso con el aprendizaje continuo y el desarrollo profesional</p>
+                <p class="section-description" data-es="Aquí encontrarás los detalles de mi formación en ingeniería, desarrollo de software y matemáticas." data-en="Here you will find details of my training in engineering, software development and mathematics.">Aquí encontrarás los detalles de mi formación en ingeniería, desarrollo de software y matemáticas.</p>
+            </div>
+            
+            <div class="education-content">
+                <!-- Timeline para desktop -->
+                <div class="timeline desktop-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="education-card">
+                                <div class="education-period">2025 - Presente</div>
+                                <h3 class="education-title" data-es="Ingeniería en Computación" data-en="Computer Engineering">Ingeniería en Computación</h3>
+                                <div class="education-institution" data-es="Facultad de Ingeniería - UdelaR" data-en="Faculty of Engineering - UdelaR">Facultad de Ingeniería - UdelaR</div>
+                                <p class="education-description" data-es="Estudiante activo en Ingeniería en Computación, desarrollando conocimiento en:" data-en="Active student in Computer Engineering, developing knowledge in:">
+                                    Estudiante activo en Ingeniería en Computación, desarrollando conocimiento en:
+                                </p>
+                                <ul class="education-skills">
+                                    <li data-es="Programación y Desarrollo de Software" data-en="Programming and Software Development">Programación y Desarrollo de Software</li>
+                                    <li data-es="Algoritmos y Estructuras de Datos" data-en="Algorithms and Data Structures">Algoritmos y Estructuras de Datos</li>
+                                    <li data-es="Sistemas Operativos y Redes" data-en="Operating Systems and Networks">Sistemas Operativos y Redes</li>
+                                    <li data-es="Matemáticas Aplicadas a la Ingeniería" data-en="Mathematics Applied to Engineering">Matemáticas Aplicadas a la Ingeniería</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="education-card">
+                                <div class="education-period">2025 - Presente</div>
+                                <h3 class="education-title" data-es="Administración de Empresas" data-en="Business Administration">Administración de Empresas</h3>
+                                <div class="education-institution" data-es="Facultad de Ciencias Económicas y de Administración - UdelaR" data-en="Faculty of Economic Sciences and Administration - UdelaR">Facultad de Ciencias Económicas y de Administración - UdelaR</div>
+                                <p class="education-description" data-es="Estudiante de Administración de empresas, desarrollando conocimiento en:" data-en="Business Administration student, developing knowledge in:">
+                                    Estudiante de Administración de empresas, desarrollando conocimiento en:
+                                </p>
+                                <ul class="education-skills">
+                                    <li data-es="Gestión y Administración de Organizaciones" data-en="Management and Administration of Organizations">Gestión y Administración de Organizaciones</li>
+                                    <li data-es="Finanzas y Contabilidad Empresarial" data-en="Finance and Business Accounting">Finanzas y Contabilidad Empresarial</li>
+                                    <li data-es="Marketing y Estrategias Comerciales" data-en="Marketing and Commercial Strategies">Marketing y Estrategias Comerciales</li>
+                                    <li data-es="Recursos Humanos y Liderazgo" data-en="Human Resources and Leadership">Recursos Humanos y Liderazgo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker completed"></div>
+                        <div class="timeline-content">
+                            <div class="education-card completed">
+                                <div class="education-period">2023 - 2024</div>
+                                <div class="education-status" data-es="Completado" data-en="Completed">Completado</div>
+                                <h3 class="education-title" data-es="Desarrollo Full Stack" data-en="Full Stack Development">Desarrollo Full Stack</h3>
+                                <div class="education-institution">Holberton School</div>
+                                <p class="education-description" data-es="Formación intensiva en desarrollo de software especializada en:" data-en="Intensive software development training specialized in:">
+                                    Formación intensiva en desarrollo de software especializada en:
+                                </p>
+                                <ul class="education-skills">
+                                    <li data-es="Desarrollo Frontend (HTML, CSS, JavaScript)" data-en="Frontend Development (HTML, CSS, JavaScript)">Desarrollo Frontend (HTML, CSS, JavaScript)</li>
+                                    <li data-es="Desarrollo Backend (Python, SQL)" data-en="Backend Development (Python, SQL)">Desarrollo Backend (Python, SQL)</li>
+                                    <li data-es="DevOps y Control de Versiones" data-en="DevOps and Version Control">DevOps y Control de Versiones</li>
+                                </ul>
+                                <div class="education-actions">
+                                    <a href="../assets/documents/Certificado-Holberton-School.pdf" target="_blank" class="btn btn-outline">
+                                        <span data-es="Ver Certificado" data-en="View Certificate">Ver Certificado</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="education-card">
+                                <div class="education-period">2021 - 2022</div>
+                                <h3 class="education-title" data-es="Especialización en Matemáticas" data-en="Mathematics Specialization">Especialización en Matemáticas</h3>
+                                <div class="education-institution" data-es="Instituto de Profesores Artigas (IPA)" data-en="Artigas Teachers Institute (IPA)">Instituto de Profesores Artigas (IPA)</div>
+                                <p class="education-description" data-es="Formación en pedagogía y didáctica de las matemáticas:" data-en="Training in pedagogy and didactics of mathematics:">
+                                    Formación en pedagogía y didáctica de las matemáticas:
+                                </p>
+                                <ul class="education-skills">
+                                    <li data-es="Pedagogía y Didáctica de las Matemáticas" data-en="Pedagogy and Didactics of Mathematics">Pedagogía y Didáctica de las Matemáticas</li>
+                                    <li data-es="Análisis Matemático" data-en="Mathematical Analysis">Análisis Matemático</li>
+                                    <li data-es="Álgebra y Geometría" data-en="Algebra and Geometry">Álgebra y Geometría</li>
+                                    <li data-es="Prácticas de Enseñanza de Matemáticas" data-en="Mathematics Teaching Practices">Prácticas de Enseñanza de Matemáticas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cards para móvil -->
+                <div class="mobile-education">
+                    <div class="education-card mobile-card">
+                        <div class="education-period">2024</div>
+                        <h3 class="education-title" data-es="Especialización en Desarrollo de Software" data-en="Software Development Specialization">Especialización en Desarrollo de Software</h3>
+                        <div class="education-institution">Holberton School</div>
+                        <p class="education-description" data-es="Programa intensivo de 12 meses enfocado en desarrollo full stack, algoritmos, estructuras de datos y mejores prácticas de programación." data-en="Intensive 12-month program focused on full stack development, algorithms, data structures and programming best practices.">
+                            Programa intensivo de 12 meses enfocado en desarrollo full stack, algoritmos, estructuras de datos y mejores prácticas de programación.
+                        </p>
+                        <div class="education-actions">
+                            <a href="../assets/documents/Certificado-Holberton-School.pdf" target="_blank" class="btn btn-outline">
+                                <span data-es="Ver Certificado" data-en="View Certificate">Ver Certificado</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card mobile-card">
+                        <div class="education-period">2019 - 2024</div>
+                        <h3 class="education-title" data-es="Ingeniería en Computación" data-en="Computer Engineering">Ingeniería en Computación</h3>
+                        <div class="education-institution" data-es="Universidad de la República" data-en="University of the Republic">Universidad de la República</div>
+                        <p class="education-description" data-es="Formación integral en ciencias de la computación, programación avanzada, arquitectura de software y gestión de proyectos tecnológicos." data-en="Comprehensive training in computer science, advanced programming, software architecture and technology project management.">
+                            Formación integral en ciencias de la computación, programación avanzada, arquitectura de software y gestión de proyectos tecnológicos.
+                        </p>
+                    </div>
+                    
+                    <div class="education-card mobile-card">
+                        <div class="education-period">2017 - 2021</div>
+                        <h3 class="education-title" data-es="Administración de Empresas" data-en="Business Administration">Administración de Empresas</h3>
+                        <div class="education-institution" data-es="Universidad de la República" data-en="University of the Republic">Universidad de la República</div>
+                        <p class="education-description" data-es="Conocimientos en gestión empresarial, estrategia, finanzas y liderazgo que complementan mi perfil técnico con visión de negocio." data-en="Knowledge in business management, strategy, finance and leadership that complement my technical profile with business vision.">
+                            Conocimientos en gestión empresarial, estrategia, finanzas y liderazgo que complementan mi perfil técnico con visión de negocio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-es="Tecnologías y herramientas que domino para crear soluciones innovadoras" data-en="Technologies and tools I master to create innovative solutions">Tecnologías y herramientas que domino para crear soluciones innovadoras</p>
+                <p class="section-description" data-es="Cada hexágono representa una tecnología con la que trabajo. Haz clic para descubrir datos curiosos." data-en="Each hexagon represents a technology I work with. Click to discover fun facts.">Cada hexágono representa una tecnología con la que trabajo. Haz clic para descubrir datos curiosos.</p>
+            </div>
+            
+            <div class="skills-content">
+                <!-- Grid hexagonal para desktop -->
+                <div class="skills-grid desktop-skills">
+                    <div class="skill-planet" data-skill="HTML5">HTML5</div>
+                    <div class="skill-planet" data-skill="CSS3">CSS3</div>
+                    <div class="skill-planet" data-skill="JavaScript">JS</div>
+                    <div class="skill-planet" data-skill="React.js">React</div>
+                    <div class="skill-planet" data-skill="Node.js">Node</div>
+                    <div class="skill-planet" data-skill="Python">Python</div>
+                    <div class="skill-planet" data-skill="MySQL">MySQL</div>
+                    <div class="skill-planet" data-skill="MongoDB">Mongo</div>
+                    <div class="skill-planet" data-skill="Git">Git</div>
+                    <div class="skill-planet" data-skill="Tailwind">Tailwind</div>
+                    <div class="skill-planet" data-skill="Docker">Docker</div>
+                    <div class="skill-planet" data-skill="Figma">Figma</div>
+                    <div class="skill-planet" data-skill="Jira">Jira</div>
+                    <div class="skill-planet" data-skill="Firebase">Firebase</div>
+                    <div class="skill-planet" data-skill="Flutter">Flutter</div>
+                    <div class="skill-planet" data-skill="Unity">Unity</div>
+                </div>
+                
+                <!-- Grid simple para móvil -->
+                <div class="skills-grid mobile-skills">
+                    <div class="skill-card" data-skill="HTML5">
+                        <div class="skill-icon">🌐</div>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-card" data-skill="CSS3">
+                        <div class="skill-icon">🎨</div>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-card" data-skill="JavaScript">
+                        <div class="skill-icon">⚡</div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-card" data-skill="React.js">
+                        <div class="skill-icon">⚛️</div>
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-card" data-skill="Node.js">
+                        <div class="skill-icon">🟢</div>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-card" data-skill="Python">
+                        <div class="skill-icon">🐍</div>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-card" data-skill="MySQL">
+                        <div class="skill-icon">🗄️</div>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-card" data-skill="MongoDB">
+                        <div class="skill-icon">🍃</div>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-card" data-skill="Git">
+                        <div class="skill-icon">📝</div>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-card" data-skill="Tailwind">
+                        <div class="skill-icon">💨</div>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="skill-card" data-skill="Docker">
+                        <div class="skill-icon">🐳</div>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-card" data-skill="Figma">
+                        <div class="skill-icon">🎯</div>
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-card" data-skill="Jira">
+                        <div class="skill-icon">📋</div>
+                        <span>Jira</span>
+                    </div>
+                    <div class="skill-card" data-skill="Firebase">
+                        <div class="skill-icon">🔥</div>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="skill-card" data-skill="Flutter">
+                        <div class="skill-icon">📱</div>
+                        <span>Flutter</span>
+                    </div>
+                    <div class="skill-card" data-skill="Unity">
+                        <div class="skill-icon">🎮</div>
+                        <span>Unity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-es="Una muestra de los proyectos más significativos en los que he trabajado" data-en="A showcase of the most significant projects I have worked on">Una muestra de los proyectos más significativos en los que he trabajado</p>
+                <p class="section-description" data-es="Demostrando mis habilidades técnicas y capacidad de resolución de problemas. Cada tarjeta es un portal a una solución innovadora." data-en="Demonstrating my technical skills and problem-solving ability. Each card is a portal to an innovative solution.">Demostrando mis habilidades técnicas y capacidad de resolución de problemas. Cada tarjeta es un portal a una solución innovadora.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- IbaEduca -->
+                <div class="project-card project-featured">
+                    <div class="project-image">
+                        <img src="../assets/images/projects/ibaeduca.jpg" alt="IbaEduca Project">
+                        <div class="project-overlay">
+                            <div class="project-title">IbaEduca</div>
+                            <div class="project-status" data-es="Actualmente trabajando" data-en="Currently working">Actualmente trabajando</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name">IbaEduca</h3>
+                        <p class="project-description" data-es="Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos." data-en="Educational platform for selling online courses. Includes content management system, video playback and payment processing.">
+                            Plataforma educativa para la venta de cursos en línea. Incluye sistema de gestión de contenido, reproducción de videos y procesamiento de pagos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Zod</span>
+                            <span class="tech-tag">Framer Motion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CazaPalabras -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../assets/images/projects/cazapalabras.jpg" alt="CazaPalabras Project">
+                        <div class="project-overlay">
+                            <div class="project-title">CazaPalabras</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-period" data-es="Enero 2025 - Marzo 2025" data-en="January 2025 - March 2025">Enero 2025 - Marzo 2025</div>
+                        <h3 class="project-name">CazaPalabras</h3>
+                        <p class="project-description" data-es="CazaPalabra es un juego en el que tienes que adivinar una palabra misteriosa, pero lo emocionante es que la longitud de las palabras varía. Puedes enfrentarte a una palabra de 3, 4, 5, 6 letras o más, y tendrás 6 intentos para adivinarla. Con cada intento, te daremos pistas visuales para que puedas acercarte a la respuesta. ¡Entre más rápido lo logres, mejor!" data-en="CazaPalabra is a game where you have to guess a mysterious word, but the exciting thing is that the length of the words varies. You can face a word of 3, 4, 5, 6 letters or more, and you will have 6 attempts to guess it. With each attempt, we will give you visual clues so you can get closer to the answer. The faster you achieve it, the better!">
+                            CazaPalabra es un juego en el que tienes que adivinar una palabra misteriosa, pero lo emocionante es que la longitud de las palabras varía. Puedes enfrentarte a una palabra de 3, 4, 5, 6 letras o más, y tendrás 6 intentos para adivinarla. Con cada intento, te daremos pistas visuales para que puedas acercarte a la respuesta. ¡Entre más rápido lo logres, mejor!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span data-es="Repositorio" data-en="Repository">Repositorio</span>
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                                <span data-es="Demo" data-en="Demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inglés Divertido -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../assets/images/projects/ingles-divertido.jpg" alt="Inglés Divertido Project">
+                        <div class="project-overlay">
+                            <div class="project-title" data-es="Inglés Divertido" data-en="Fun English">Inglés Divertido</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-period" data-es="Enero 2025 - Marzo 2025" data-en="January 2025 - March 2025">Enero 2025 - Marzo 2025</div>
+                        <h3 class="project-name" data-es="Inglés Divertido" data-en="Fun English">Inglés Divertido</h3>
+                        <p class="project-description" data-es="Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo." data-en="An interactive platform designed to make English learning more enjoyable and effective.">
+                            Una plataforma interactiva diseñada para hacer el aprendizaje del inglés más ameno y efectivo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span data-es="Repositorio" data-en="Repository">Repositorio</span>
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                                <span data-es="Demo" data-en="Demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organiza tu día -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../assets/images/projects/organiza-tu-dia.jpg" alt="Organiza tu día Project">
+                        <div class="project-overlay">
+                            <div class="project-title" data-es="Organiza tu día" data-en="Organize your day">Organiza tu día</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-period" data-es="Febrero 2025 - Abril 2025" data-en="February 2025 - April 2025">Febrero 2025 - Abril 2025</div>
+                        <h3 class="project-name" data-es="Organiza tu día" data-en="Organize your day">Organiza tu día</h3>
+                        <p class="project-description" data-es="Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!" data-en="It's your space to organize your daily tasks in an easy and entertaining way. With our manager, you can add, complete, edit and delete tasks. Start organizing your day with a smile!">
+                            Es tu espacio para organizar tus tareas diarias de una manera fácil y entretenida. Con nuestro gestor, podrás añadir, completar, editar y eliminar tareas. ¡Comienza a organizar tu día con una sonrisa!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span data-es="Repositorio" data-en="Repository">Repositorio</span>
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                                <span data-es="Demo" data-en="Demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warded -->
+                <div class="project-card project-featured">
+                    <div class="project-image">
+                        <img src="../assets/images/projects/warded.jpg" alt="Warded Project">
+                        <div class="project-overlay">
+                            <div class="project-title">Warded</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-period" data-es="Abril 2024 - Julio 2024" data-en="April 2024 - July 2024">Abril 2024 - Julio 2024</div>
+                        <h3 class="project-name">Warded</h3>
+                        <p class="project-description" data-es="Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad." data-en="Mobile application that creates safe communities through private groups. I developed the complete backend, including notification system and database management. The app allows sharing locations, sending real-time alerts and assisting people with disabilities.">
+                            Aplicación móvil que crea comunidades seguras a través de grupos privados. Desarrollé el backend completo, incluyendo sistema de notificaciones y gestión de base de datos. La app permite compartir ubicaciones, enviar alertas en tiempo real y asistir a personas con discapacidad.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Jira</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                                </svg>
+                                <span data-es="Demo Day" data-en="Demo Day">Demo Day</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-es="¿Interesado en trabajar juntos?" data-en="Interested in working together?">¿Interesado en trabajar juntos?</p>
+                <p class="section-description" data-es="Estoy disponible para colaboraciones y oportunidades laborales." data-en="I'm available for collaborations and job opportunities.">Estoy disponible para colaboraciones y oportunidades laborales.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon email-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-es="Email" data-en="Email">Email</h3>
+                            <a href="mailto:santiagofle8@gmail.com">santiagofle8@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon phone-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-es="Teléfono" data-en="Phone">Teléfono</h3>
+                            <a href="tel:+59892564819">+598 92 564 819</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon location-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-es="Ubicación" data-en="Location">Ubicación</h3>
+                            <span data-es="Montevideo, Uruguay" data-en="Montevideo, Uruguay">Montevideo, Uruguay</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank" class="social-link linkedin">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://github.com/SantiagoFleitasIbarra" target="_blank" class="social-link github">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/sancolett_" target="_blank" class="social-link instagram">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 0C7.284 0 6.944.012 5.877.06 2.246.227.227 2.246.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.167 3.631 2.186 5.65 5.817 5.817C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c3.631-.167 5.65-2.186 5.817-5.817C19.988 13.056 20 12.716 20 10s-.012-3.056-.06-4.123C19.773 2.246 17.754.227 14.123.06 13.056.012 12.716 0 10 0zm0 1.802c2.67 0 2.987.01 4.041.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.053.048-1.37.058-4.04.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.976 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+                
+                <div class="contact-quote">
+                    <blockquote>
+                        <p data-es="&quot;El código es poesía, la innovación es arte, y cada proyecto es una nueva aventura espacial.&quot;" data-en="&quot;Code is poetry, innovation is art, and every project is a new space adventure.&quot;">"El código es poesía, la innovación es arte, y cada proyecto es una nueva aventura espacial."</p>
+                        <cite data-es="- Santiago Fleitas" data-en="- Santiago Fleitas">- Santiago Fleitas</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Tecnologías -->
+    <div id="tech-modal" class="tech-modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div id="modal-icon" class="modal-icon"></div>
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-description" class="modal-description"></p>
+                <div id="modal-fun-fact" class="modal-fun-fact">
+                    <h4 data-es="¿Sabías que...?" data-en="Did you know...?">¿Sabías que...?</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-text">SF</span>
+                        </div>
+                        <p class="footer-description" data-es="Desarrollador Full Stack especializado en crear experiencias digitales extraordinarias con tecnologías modernas." data-en="Full Stack Developer specialized in creating extraordinary digital experiences with modern technologies.">
+                            Desarrollador Full Stack especializado en crear experiencias digitales extraordinarias con tecnologías modernas.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4 data-es="Navegación" data-en="Navigation">Navegación</h4>
+                            <ul>
+                                <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                                <li><a href="#sobre-mi" data-es="Sobre Mí" data-en="About Me">Sobre Mí</a></li>
+                                <li><a href="#experiencias" data-es="Experiencias" data-en="Experience">Experiencias</a></li>
+                                <li><a href="#educacion" data-es="Educación" data-en="Education">Educación</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 data-es="Proyectos" data-en="Projects">Proyectos</h4>
+                            <ul>
+                                <li><a href="#proyectos" data-es="Ver Todos" data-en="View All">Ver Todos</a></li>
+                                <li><a href="#habilidades" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+                                <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 data-es="Recursos" data-en="Resources">Recursos</h4>
+                            <ul>
+                                <li><a href="../assets/documents/CV-Santiago-Fleitas.pdf" target="_blank" data-es="Descargar CV" data-en="Download CV">Descargar CV</a></li>
+                                <li><a href="../assets/documents/Certificado-Holberton-School.pdf" target="_blank" data-es="Certificados" data-en="Certificates">Certificados</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/santiago-mauricio-fleitas-ibarra-852075280/" target="_blank" class="social-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/SantiagoFleitasIbarra" target="_blank" class="social-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sancolett_" target="_blank" class="social-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C7.284 0 6.944.012 5.877.06 2.246.227.227 2.246.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.167 3.631 2.186 5.65 5.817 5.817C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c3.631-.167 5.65-2.186 5.817-5.817C19.988 13.056 20 12.716 20 10s-.012-3.056-.06-4.123C19.773 2.246 17.754.227 14.123.06 13.056.012 12.716 0 10 0zm0 1.802c2.67 0 2.987.01 4.041.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.053.048-1.37.058-4.04.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.976 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Santiago Fleitas. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+                        <p class="footer-tech" data-es="Desarrollado con HTML, CSS y JavaScript" data-en="Built with HTML, CSS and JavaScript">Desarrollado con HTML, CSS y JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/portfolio-html/script.js"></script>
+</body>
+</html>
