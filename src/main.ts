@@ -97,11 +97,13 @@ function startTypingLoop() {
   function runCycle() {
     const content = getCurrentContent();
     
+    if (!typingElement) return;
+    
     // Limpiar contenido actual
     typingElement.innerHTML = '';
     
     // Crear nuevas líneas con el contenido actualizado
-    content.forEach((line, index) => {
+    content.forEach((line) => {
       const div = document.createElement('div');
       div.className = 'text-gray-300';
       div.innerHTML = line;
@@ -149,6 +151,8 @@ function startWorkTimeCounter() {
   if (!counterElement) return;
   
   function updateCounter() {
+    if (!counterElement) return;
+    
     const now = new Date();
     const diffTime = Math.abs(now.getTime() - startDate.getTime());
     

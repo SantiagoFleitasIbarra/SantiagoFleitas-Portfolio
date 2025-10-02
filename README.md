@@ -236,9 +236,13 @@ En el archivo `index.html`, busca estos comentarios y reemplaza `#` con tus enla
 3. Deploy instantáneo
 
 ### **GitHub Pages**
-1. Ejecuta `npm run build`
-2. Sube la carpeta `dist`
-3. Configura GitHub Pages
+1. **Configura vite.config.ts**: Cambia `base: '/space-portfolio/'` por el nombre de tu repositorio
+2. **Haz el build**: `npm run build`
+3. **Sube todo**: Commitea y pushea todo el código
+4. **Configura GitHub Pages**: Ve a Settings > Pages > Source: "Deploy from a branch" > Branch: "main" > Folder: "/ (root)"
+5. **Accede**: Tu sitio estará en `https://tu-usuario.github.io/nombre-repositorio/`
+
+**Importante**: GitHub Pages necesita el código fuente Y la carpeta `dist` en el repositorio.
 
 ---
 
