@@ -194,6 +194,19 @@ body {
     height: 3px;
     background: #cbd5e1;
     transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Contenedor principal */
@@ -710,6 +723,27 @@ body {
     margin-bottom: 2rem;
 }
 
+.education-skills {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.education-skills li {
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.education-skills li::before {
+    content: '▶';
+    color: #22d3ee;
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+}
+
 /* Sección Habilidades */
 .skills-content {
     max-width: 1000px;
@@ -1160,11 +1194,43 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .nav-menu {
-        display: none;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-top: 1px solid rgba(148, 163, 184, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-link {
+        font-size: 1.125rem;
+        padding: 0.5rem 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
     }
     
     .mobile-menu-btn {
         display: flex;
+        z-index: 1001;
     }
     
     .section-title {
@@ -1185,7 +1251,7 @@ body {
         justify-content: center;
     }
     
-    .desktop-timeline {
+    .timeline {
         display: none;
     }
     
@@ -1219,8 +1285,13 @@ body {
         padding: 1rem;
     }
     
+    .nav-menu {
+        padding: 1.5rem;
+    }
+    
     .section {
         padding: 3rem 0;
+        min-height: auto;
     }
     
     .section-title {
@@ -1267,6 +1338,17 @@ body {
         margin: 1rem;
         padding: 1.5rem;
     }
+    
+    /* Asegurar que la educación móvil se vea completa */
+    .mobile-education {
+        width: 100%;
+        display: block !important;
+    }
+    
+    .mobile-education .education-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1294,6 +1376,18 @@ body {
     
     .mobile-skills {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nav-menu {
+        padding: 1rem;
+    }
+    
+    .mobile-education .education-card {
+        padding: 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
     }
 }
 
@@ -1339,6 +1433,37 @@ html {
 .loading {
     opacity: 0.5;
     pointer-events: none;
+}
+
+/* Estilos adicionales para el menú móvil */
+.nav-menu.active {
+    display: flex !important;
+}
+
+/* Prevenir scroll cuando el menú está abierto */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Mejorar la visibilidad del estado completado en móvil */
+.mobile-education .education-status {
+    display: inline-block;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Asegurar que las listas se vean bien en móvil */
+.mobile-education .education-skills {
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
 /* Footer */
@@ -1473,26 +1598,70 @@ html {
     font-size: 0.75rem;
 }
 
-/* Estilos adicionales para educación */
-.education-skills {
+/* Estilos mejorados para educación móvil */
+.mobile-education .education-card {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.mobile-education .education-card:hover {
+    transform: translateY(-5px);
+}
+
+.mobile-education .education-period {
+    color: #22d3ee;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-education .education-title {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-education .education-institution {
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.mobile-education .education-description {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.mobile-education .education-skills {
     list-style: none;
     padding: 0;
     margin: 1rem 0;
 }
 
-.education-skills li {
+.mobile-education .education-skills li {
     color: #cbd5e1;
     margin-bottom: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
 }
 
-.education-skills li::before {
+.mobile-education .education-skills li::before {
     content: '▶';
     color: #22d3ee;
     position: absolute;
     left: 0;
     font-size: 0.75rem;
+}
+
+.mobile-education .education-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .education-status {
@@ -1566,6 +1735,18 @@ html {
     
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Asegurar que el overlay del menú funcione */
+    .nav-menu.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
     }
 }
 
