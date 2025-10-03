@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Crear partículas flotantes
 function createFloatingParticles() {
-    const particleCount = 15;
+    const particleCount = 20;
     const container = document.body;
     
     for (let i = 0; i < particleCount; i++) {
@@ -43,6 +43,25 @@ function createFloatingParticles() {
         particle.style.animationDelay = Math.random() * 6 + 's';
         particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
         container.appendChild(particle);
+    }
+    
+    // Crear partículas adicionales para la sección de habilidades
+    const skillsSection = document.getElementById('habilidades');
+    if (skillsSection) {
+        for (let i = 0; i < 10; i++) {
+            const cosmicParticle = document.createElement('div');
+            cosmicParticle.className = 'cosmic-particle';
+            cosmicParticle.style.position = 'absolute';
+            cosmicParticle.style.width = Math.random() * 3 + 1 + 'px';
+            cosmicParticle.style.height = cosmicParticle.style.width;
+            cosmicParticle.style.background = 'rgba(34, 211, 238, 0.6)';
+            cosmicParticle.style.borderRadius = '50%';
+            cosmicParticle.style.left = Math.random() * 100 + '%';
+            cosmicParticle.style.top = Math.random() * 100 + '%';
+            cosmicParticle.style.animation = `particleTwinkle ${Math.random() * 4 + 3}s ease-in-out infinite`;
+            cosmicParticle.style.animationDelay = Math.random() * 4 + 's';
+            skillsSection.appendChild(cosmicParticle);
+        }
     }
 }
 
@@ -387,11 +406,12 @@ function setupTechModal() {
         }
     };
     
-    // Agregar event listeners a todos los planetas y cards
+    // Agregar event listeners a todos los planetas, asteroides y cards
     document.addEventListener('click', (e) => {
         const target = e.target;
-        if (target.classList.contains('skill-planet') || target.classList.contains('skill-card') || target.closest('.skill-card')) {
-            const skillElement = target.classList.contains('skill-card') ? target : target.closest('.skill-card') || target;
+        const skillElement = target.closest('[data-skill]');
+        
+        if (skillElement) {
             const skillName = skillElement.getAttribute('data-skill');
             
             if (skillName) {
@@ -401,10 +421,46 @@ function setupTechModal() {
                 
                 if (data) {
                     // Animación del elemento
-                    skillElement.style.transform = 'scale(1.1)';
-                    setTimeout(() => {
-                        skillElement.style.transform = '';
-                    }, 300);
+                    if (skillElement.classList.contains('tech-bubble')) {
+                        skillElement.style.transform = 'scale(1.4) rotate(10deg)';
+                        skillElement.style.zIndex = '20';
+                        skillElement.style.filter = 'brightness(1.3)';
+                        
+                        // Crear efecto de ondas
+                        const ripple = document.createElement('div');
+                        ripple.style.position = 'absolute';
+                        ripple.style.width = '200px';
+                        ripple.style.height = '200px';
+                        ripple.style.borderRadius = '50%';
+                        ripple.style.border = '2px solid rgba(34, 211, 238, 0.6)';
+                        ripple.style.top = '50%';
+                        ripple.style.left = '50%';
+                        ripple.style.transform = 'translate(-50%, -50%) scale(0)';
+                        ripple.style.pointerEvents = 'none';
+                        ripple.style.zIndex = '15';
+                        skillElement.appendChild(ripple);
+                        
+                        ripple.animate([
+                            { transform: 'translate(-50%, -50%) scale(0)', opacity: 1 },
+                            { transform: 'translate(-50%, -50%) scale(1)', opacity: 0 }
+                        ], {
+                            duration: 600,
+                            easing: 'ease-out'
+                        }).onfinish = () => {
+                            ripple.remove();
+                        };
+                        
+                        setTimeout(() => {
+                            skillElement.style.transform = '';
+                            skillElement.style.zIndex = '';
+                            skillElement.style.filter = '';
+                        }, 500);
+                    } else {
+                        skillElement.style.transform = 'scale(1.1)';
+                        setTimeout(() => {
+                            skillElement.style.transform = '';
+                        }, 300);
+                    }
                     
                     // Actualizar contenido del modal
                     const modalIcon = document.getElementById('modal-icon');
@@ -416,7 +472,15 @@ function setupTechModal() {
                         // Configurar gradiente del icono
                         const gradientClass = data.gradient;
                         modalIcon.style.background = `linear-gradient(135deg, ${getGradientColors(gradientClass)})`;
-                        modalIcon.textContent = skillElement.textContent.trim() || skillName;
+                        
+                        // Obtener texto del elemento
+                        let elementText = skillName;
+                        const textElement = skillElement.querySelector('.bubble-text, span, h3');
+                        if (textElement) {
+                            elementText = textElement.textContent.trim();
+                        }
+                        
+                        modalIcon.textContent = elementText;
                         modalTitle.textContent = data.title;
                         modalDescription.textContent = data.description;
                         modalFunFact.querySelector('p').textContent = data.funFact;
@@ -610,7 +674,7 @@ window.startTypingLoop = startTypingLoop;
 // Efectos adicionales
 document.addEventListener('mousemove', (e) => {
     // Efecto de cursor para elementos interactivos
-    const interactiveElements = document.querySelectorAll('.skill-planet, .project-card, .contact-card');
+    const interactiveElements = document.querySelectorAll('.tech-bubble, .mobile-tech-card, .project-card, .contact-card');
     
     interactiveElements.forEach(element => {
         const rect = element.getBoundingClientRect();
@@ -618,17 +682,65 @@ document.addEventListener('mousemove', (e) => {
         const y = e.clientY - rect.top;
         
         if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-            
-            element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            if (element.classList.contains('tech-bubble')) {
+                // Efecto sutil para burbujas
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 15;
+                const rotateY = (centerX - x) / 15;
+                
+                element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            } else {
+                // Efecto normal para otros elementos
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            }
         } else {
             element.style.transform = '';
         }
     });
+    
+    // Efecto de partículas siguiendo el cursor en la sección de habilidades
+    const skillsSection = document.getElementById('habilidades');
+    if (skillsSection) {
+        const rect = skillsSection.getBoundingClientRect();
+        if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+            createCursorParticle(e.clientX, e.clientY);
+        }
+    }
 });
+
+// Crear partículas que siguen el cursor
+function createCursorParticle(x, y) {
+    const particle = document.createElement('div');
+    particle.style.position = 'fixed';
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+    particle.style.width = '4px';
+    particle.style.height = '4px';
+    particle.style.background = 'rgba(34, 211, 238, 0.8)';
+    particle.style.borderRadius = '50%';
+    particle.style.pointerEvents = 'none';
+    particle.style.zIndex = '1000';
+    particle.style.boxShadow = '0 0 10px rgba(34, 211, 238, 0.8)';
+    
+    document.body.appendChild(particle);
+    
+    // Animar y remover la partícula
+    particle.animate([
+        { transform: 'scale(1) translateY(0px)', opacity: 1 },
+        { transform: 'scale(0) translateY(-20px)', opacity: 0 }
+    ], {
+        duration: 1000,
+        easing: 'ease-out'
+    }).onfinish = () => {
+        particle.remove();
+    };
+}
 
 // Optimización de rendimiento
 let ticking = false;

@@ -744,89 +744,628 @@ body {
     font-size: 0.75rem;
 }
 
-/* Sección Habilidades */
-.skills-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.desktop-skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    justify-items: center;
-}
-
-.skill-planet {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.2));
-    border: 2px solid rgba(34, 211, 238, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #22d3ee;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* Sección Habilidades - Universo de Burbujas */
+.skills-universe {
+    background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
     position: relative;
     overflow: hidden;
 }
 
-.skill-planet::before {
-    content: '';
+.tech-universe {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Burbujas Tecnológicas */
+.tech-bubble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    animation: bubbleFloat 8s ease-in-out infinite;
+    z-index: 5;
+}
+
+.bubble-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.bubble-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    text-align: center;
+}
+
+.bubble-glow {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    filter: blur(20px);
+    z-index: 1;
+}
+
+/* Burbujas específicas con colores únicos */
+.tech-bubble.html {
+    top: 15%; left: 20%;
+    animation-delay: 0s;
+}
+.tech-bubble.html .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(227, 76, 38, 0.8), rgba(240, 101, 41, 0.6));
+    box-shadow: 0 0 30px rgba(227, 76, 38, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.html .bubble-glow {
+    background: radial-gradient(circle, rgba(227, 76, 38, 0.6), transparent);
+}
+
+.tech-bubble.css {
+    top: 25%; right: 15%;
+    animation-delay: 1s;
+}
+.tech-bubble.css .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(21, 114, 182, 0.8), rgba(51, 169, 220, 0.6));
+    box-shadow: 0 0 30px rgba(21, 114, 182, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.css .bubble-glow {
+    background: radial-gradient(circle, rgba(21, 114, 182, 0.6), transparent);
+}
+
+.tech-bubble.javascript {
+    top: 10%; left: 50%;
+    animation-delay: 2s;
+    width: 120px;
+    height: 120px;
+}
+.tech-bubble.javascript .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.7));
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.6), inset 0 0 25px rgba(255, 255, 255, 0.2);
+}
+.tech-bubble.javascript .bubble-glow {
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.8), transparent);
+}
+
+.tech-bubble.react {
+    top: 45%; left: 10%;
+    animation-delay: 3s;
+}
+.tech-bubble.react .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(97, 218, 251, 0.8), rgba(33, 212, 253, 0.6));
+    box-shadow: 0 0 30px rgba(97, 218, 251, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.react .bubble-glow {
+    background: radial-gradient(circle, rgba(97, 218, 251, 0.6), transparent);
+}
+
+.tech-bubble.node {
+    top: 60%; left: 35%;
+    animation-delay: 4s;
+}
+.tech-bubble.node .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(104, 160, 99, 0.8), rgba(140, 200, 75, 0.6));
+    box-shadow: 0 0 30px rgba(104, 160, 99, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.node .bubble-glow {
+    background: radial-gradient(circle, rgba(104, 160, 99, 0.6), transparent);
+}
+
+.tech-bubble.python {
+    top: 35%; right: 25%;
+    animation-delay: 5s;
+}
+.tech-bubble.python .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(55, 118, 171, 0.8), rgba(255, 212, 59, 0.6));
+    box-shadow: 0 0 30px rgba(55, 118, 171, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.python .bubble-glow {
+    background: radial-gradient(circle, rgba(55, 118, 171, 0.6), transparent);
+}
+
+.tech-bubble.mysql {
+    bottom: 30%; left: 25%;
+    animation-delay: 6s;
+}
+.tech-bubble.mysql .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(0, 117, 143, 0.8), rgba(242, 145, 17, 0.6));
+    box-shadow: 0 0 30px rgba(0, 117, 143, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.mysql .bubble-glow {
+    background: radial-gradient(circle, rgba(0, 117, 143, 0.6), transparent);
+}
+
+.tech-bubble.mongo {
+    bottom: 15%; right: 30%;
+    animation-delay: 7s;
+}
+.tech-bubble.mongo .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(77, 179, 61, 0.8), rgba(63, 160, 55, 0.6));
+    box-shadow: 0 0 30px rgba(77, 179, 61, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.mongo .bubble-glow {
+    background: radial-gradient(circle, rgba(77, 179, 61, 0.6), transparent);
+}
+
+.tech-bubble.git {
+    top: 70%; right: 10%;
+    animation-delay: 8s;
+}
+.tech-bubble.git .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(240, 80, 50, 0.8), rgba(54, 45, 39, 0.6));
+    box-shadow: 0 0 30px rgba(240, 80, 50, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.git .bubble-glow {
+    background: radial-gradient(circle, rgba(240, 80, 50, 0.6), transparent);
+}
+
+.tech-bubble.docker {
+    bottom: 45%; left: 5%;
+    animation-delay: 9s;
+}
+.tech-bubble.docker .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(13, 183, 237, 0.8), rgba(56, 77, 84, 0.6));
+    box-shadow: 0 0 30px rgba(13, 183, 237, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.docker .bubble-glow {
+    background: radial-gradient(circle, rgba(13, 183, 237, 0.6), transparent);
+}
+
+.tech-bubble.tailwind {
+    top: 50%; right: 5%;
+    animation-delay: 10s;
+}
+.tech-bubble.tailwind .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.8), rgba(8, 145, 178, 0.6));
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.tech-bubble.tailwind .bubble-glow {
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.6), transparent);
+}
+
+/* Burbujas más pequeñas para herramientas */
+.tech-bubble.figma,
+.tech-bubble.jira,
+.tech-bubble.firebase,
+.tech-bubble.flutter,
+.tech-bubble.unity {
+    width: 80px;
+    height: 80px;
+}
+
+.tech-bubble.figma {
+    top: 80%; left: 15%;
+    animation-delay: 11s;
+}
+.tech-bubble.figma .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(162, 89, 255, 0.8), rgba(255, 114, 98, 0.6));
+    box-shadow: 0 0 25px rgba(162, 89, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.tech-bubble.jira {
+    bottom: 5%; left: 45%;
+    animation-delay: 12s;
+}
+.tech-bubble.jira .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(0, 82, 204, 0.8), rgba(54, 179, 126, 0.6));
+    box-shadow: 0 0 25px rgba(0, 82, 204, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.tech-bubble.firebase {
+    top: 5%; right: 35%;
+    animation-delay: 13s;
+}
+.tech-bubble.firebase .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 193, 7, 0.8), rgba(255, 87, 34, 0.6));
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.tech-bubble.flutter {
+    bottom: 60%; right: 45%;
+    animation-delay: 14s;
+}
+.tech-bubble.flutter .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(2, 136, 209, 0.8), rgba(84, 110, 122, 0.6));
+    box-shadow: 0 0 25px rgba(2, 136, 209, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.tech-bubble.unity {
+    top: 85%; right: 20%;
+    animation-delay: 15s;
+}
+.tech-bubble.unity .bubble-content {
+    background: radial-gradient(circle at 30% 30%, rgba(34, 34, 34, 0.8), rgba(255, 255, 255, 0.6));
+    box-shadow: 0 0 25px rgba(34, 34, 34, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Efectos hover para burbujas */
+.tech-bubble:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.tech-bubble:hover .bubble-glow {
+    opacity: 1;
+}
+
+.tech-bubble:hover .bubble-content {
+    box-shadow: 0 0 50px rgba(34, 211, 238, 0.6), inset 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Estrellas fugaces */
+.shooting-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(45deg, #22d3ee, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #22d3ee;
+    animation: shootingStar 3s linear infinite;
+}
+
+.shooting-star:nth-child(1) {
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+
+.shooting-star:nth-child(2) {
+    top: 30%;
+    left: -10%;
+    animation-delay: 2s;
+    animation-duration: 2.5s;
+}
+
+.shooting-star:nth-child(3) {
+    top: 60%;
+    left: -10%;
+    animation-delay: 4s;
+    animation-duration: 3.5s;
+}
+
+.shooting-star:nth-child(4) {
+    top: 80%;
+    left: -10%;
+    animation-delay: 6s;
+    animation-duration: 2.8s;
+}
+
+.shooting-star:nth-child(5) {
+    top: 45%;
+    left: -10%;
+    animation-delay: 8s;
+    animation-duration: 3.2s;
+}
+
+/* Efectos de partículas dentro de las burbujas */
+.bubble-sparkles,
+.bubble-waves,
+.bubble-lightning,
+.bubble-atoms,
+.bubble-hexagons,
+.bubble-snake,
+.bubble-data,
+.bubble-leaves,
+.bubble-branches,
+.bubble-containers,
+.bubble-wind,
+.bubble-shapes,
+.bubble-tasks,
+.bubble-flames,
+.bubble-flutter,
+.bubble-cubes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.sparkle,
+.wave,
+.lightning,
+.atom,
+.hex,
+.snake-dot,
+.data-bit,
+.leaf-particle,
+.branch-line,
+.mini-container,
+.wind-particle,
+.shape-dot,
+.task-dot,
+.flame,
+.flutter-wing,
+.cube {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: particleFloat 2s ease-in-out infinite;
+}
+
+.sparkle:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 60%; right: 25%; animation-delay: 0.7s; }
+.sparkle:nth-child(3) { bottom: 30%; left: 40%; animation-delay: 1.4s; }
+
+.wave:nth-child(1) { top: 40%; left: 20%; animation-delay: 0s; }
+.wave:nth-child(2) { bottom: 40%; right: 20%; animation-delay: 1s; }
+
+.lightning:nth-child(1) { top: 25%; left: 25%; animation-delay: 0s; }
+.lightning:nth-child(2) { bottom: 25%; right: 25%; animation-delay: 0.5s; }
+
+.atom:nth-child(1) { top: 30%; left: 20%; animation-delay: 0s; }
+.atom:nth-child(2) { top: 50%; right: 20%; animation-delay: 0.8s; }
+.atom:nth-child(3) { bottom: 30%; left: 50%; animation-delay: 1.6s; }
+
+/* Partículas cósmicas mejoradas */
+.cosmic-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cosmic-particles .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(34, 211, 238, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+    animation: particleTwinkle 4s ease-in-out infinite;
+}
+
+.cosmic-particles .particle:nth-child(1) { top: 5%; left: 8%; animation-delay: 0s; }
+.cosmic-particles .particle:nth-child(2) { top: 15%; right: 12%; animation-delay: 0.4s; }
+.cosmic-particles .particle:nth-child(3) { top: 35%; left: 5%; animation-delay: 0.8s; }
+.cosmic-particles .particle:nth-child(4) { top: 55%; right: 8%; animation-delay: 1.2s; }
+.cosmic-particles .particle:nth-child(5) { bottom: 25%; left: 12%; animation-delay: 1.6s; }
+.cosmic-particles .particle:nth-child(6) { bottom: 15%; right: 15%; animation-delay: 2s; }
+.cosmic-particles .particle:nth-child(7) { top: 75%; left: 35%; animation-delay: 2.4s; }
+.cosmic-particles .particle:nth-child(8) { bottom: 35%; right: 35%; animation-delay: 2.8s; }
+.cosmic-particles .particle:nth-child(9) { top: 25%; left: 60%; animation-delay: 3.2s; }
+.cosmic-particles .particle:nth-child(10) { bottom: 55%; right: 60%; animation-delay: 3.6s; }
+
+/* Nebulosas */
+.nebula {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.3;
+    animation: nebulaFloat 20s ease-in-out infinite;
+}
+
+.nebula-1 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.nebula-2 {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.3), transparent);
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 7s;
+}
+
+.nebula-3 {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent);
+    top: 50%;
+    right: 10%;
+    animation-delay: 14s;
+}
+
+/* Efectos hover para planetas */
+.tech-planet:hover {
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+.tech-planet:hover .planet-glow {
+    opacity: 1;
+}
+
+.central-sun:hover {
+    transform: scale(1.1);
+}
+
+.central-sun:hover .sun-core {
+    box-shadow: 
+        0 0 40px rgba(251, 191, 36, 0.8),
+        0 0 80px rgba(251, 191, 36, 0.6),
+        0 0 120px rgba(251, 191, 36, 0.4);
+}
+
+/* Versión móvil */
+.mobile-tech-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.mobile-tech-card {
+    position: relative;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.mobile-tech-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(34, 211, 238, 0.5);
+}
+
+.card-glow {
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    transition: all 0.6s ease;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.1), transparent 70%);
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.skill-planet:hover::before {
+.mobile-tech-card:hover .card-glow {
     opacity: 1;
-    animation: shine 0.6s ease-in-out;
 }
 
-.skill-planet:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 10px 30px rgba(34, 211, 238, 0.3);
-    border-color: #22d3ee;
+.tech-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    animation: iconFloat 3s ease-in-out infinite;
 }
 
-@keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+.mobile-tech-card h3 {
+    color: #22d3ee;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
-.mobile-skills {
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+.tech-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
-.skill-card {
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    text-align: center;
-    border: 1px solid rgba(148, 163, 184, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.tech-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(34, 211, 238, 0.6);
+    border-radius: 50%;
+    animation: mobileParticleFloat 4s ease-in-out infinite;
 }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: #22d3ee;
+.tech-particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.tech-particle:nth-child(2) { top: 30%; right: 25%; animation-delay: 1.3s; }
+.tech-particle:nth-child(3) { bottom: 25%; left: 30%; animation-delay: 2.6s; }
+
+/* Animaciones para burbujas */
+@keyframes bubbleFloat {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% { 
+        transform: translateY(-15px) translateX(10px) rotate(2deg);
+    }
+    50% { 
+        transform: translateY(-8px) translateX(-5px) rotate(-1deg);
+    }
+    75% { 
+        transform: translateY(-20px) translateX(8px) rotate(1.5deg);
+    }
 }
 
-.skill-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+@keyframes shootingStar {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(120vw) translateY(60px);
+        opacity: 0;
+    }
+}
+
+@keyframes particleFloat {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-8px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes particleTwinkle {
+    0%, 100% { 
+        opacity: 0.4; 
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.5);
+        box-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
+    }
+}
+
+@keyframes nebulaFloat {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.3;
+    }
+    33% { 
+        transform: translateY(-25px) translateX(15px) scale(1.1);
+        opacity: 0.5;
+    }
+    66% { 
+        transform: translateY(15px) translateX(-20px) scale(0.9);
+        opacity: 0.4;
+    }
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes mobileParticleFloat {
+    0%, 100% { opacity: 0.3; transform: translateY(0px); }
+    50% { opacity: 1; transform: translateY(-10px); }
 }
 
 /* Sección Proyectos */
@@ -1259,11 +1798,11 @@ body {
         display: block;
     }
     
-    .desktop-skills {
+    .tech-universe {
         display: none;
     }
     
-    .mobile-skills {
+    .mobile-tech-grid {
         display: grid;
     }
     
@@ -1349,6 +1888,25 @@ body {
         width: 100%;
         box-sizing: border-box;
     }
+    
+    /* Responsive para habilidades */
+    .tech-universe {
+        height: 400px;
+        margin: 2rem 0;
+    }
+    
+    .mobile-tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .mobile-tech-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .tech-icon {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1374,10 +1932,6 @@ body {
         padding: 1.5rem;
     }
     
-    .mobile-skills {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
     .nav-menu {
         padding: 1rem;
     }
@@ -1388,6 +1942,29 @@ body {
     
     .section-header {
         margin-bottom: 2rem;
+    }
+    
+    /* Responsive para habilidades en pantallas muy pequeñas */
+    .tech-universe {
+        height: 300px;
+        margin: 1rem 0;
+    }
+    
+    .mobile-tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .mobile-tech-card {
+        padding: 1rem;
+    }
+    
+    .tech-icon {
+        font-size: 2rem;
+    }
+    
+    .mobile-tech-card h3 {
+        font-size: 1rem;
     }
 }
 
