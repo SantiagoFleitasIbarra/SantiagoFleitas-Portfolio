@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configurar modal de tecnologías
     setupTechModal();
     
+    // Configurar escritorio retro
+    setupRetroDesktop();
+    
+    // Configurar explorador móvil
+    setupMobileFileExplorer();
+    
     // Configurar cambio de idioma
     setupLanguageToggle();
     
@@ -580,10 +586,27 @@ function updateContent(lang) {
     
     // Actualizar título de la página
     if (lang === 'en') {
-        document.title = 'Santiago Fleitas - Space Portfolio';
+        document.title = 'Santiago Fleitas - Retro Portfolio';
     } else {
-        document.title = 'Santiago Fleitas - Portfolio Espacial';
+        document.title = 'Santiago Fleitas - Portfolio Retro';
     }
+    
+    // Actualizar nombres de carpetas si están visibles
+    const folderNames = document.querySelectorAll('.folder-name');
+    folderNames.forEach(folder => {
+        const folderElement = folder.closest('.desktop-folder');
+        if (folderElement) {
+            const folderType = folderElement.getAttribute('data-folder');
+            const folderData = folderStructure[folderType];
+            if (folderData) {
+                const currentLang = lang === 'en' ? 'EN' : 'ES';
+                folder.textContent = folderData[`name${currentLang}`];
+            }
+        }
+    });
+    
+    // Actualizar curiosidades móviles
+    updateMobileCuriosities();
 }
 
 // Menú móvil
@@ -832,3 +855,407 @@ if ('IntersectionObserver' in window) {
     const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach(img => imageObserver.observe(img));
 }
+
+// Funcionalidad del Escritorio Retro Moderno
+function setupRetroDesktop() {
+    const folderWindow = document.getElementById('folder-window');
+    const techWindow = document.getElementById('tech-window');
+    const closeFolderBtn = document.getElementById('close-folder-window');
+    const closeTechBtn = document.getElementById('close-tech-window');
+    const desktopFolders = document.querySelectorAll('.desktop-folder');
+    const taskbarTime = document.getElementById('retro-time');
+    
+    // Actualizar reloj de la barra de tareas (hora de Uruguay)
+    function updateTaskbarTime() {
+        if (taskbarTime) {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('es-UY', {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true,
+                timeZone: 'America/Montevideo'
+            });
+            taskbarTime.textContent = timeString;
+        }
+    }
+    
+    // Actualizar reloj cada minuto
+    updateTaskbarTime();
+    setInterval(updateTaskbarTime, 60000);
+    
+    // Organización de carpetas y archivos
+    const folderStructure = {
+        frontend: {
+            nameES: 'Frontend',
+            nameEN: 'Frontend',
+            files: [
+                { name: 'HTML5', icon: '📄', ext: '.html' },
+                { name: 'CSS3', icon: '🎨', ext: '.css' },
+                { name: 'JavaScript', icon: '⚡', ext: '.js' },
+                { name: 'React', icon: '⚛️', ext: '.jsx' },
+                { name: 'Tailwind', icon: '💨', ext: '.css' }
+            ]
+        },
+        backend: {
+            nameES: 'Backend',
+            nameEN: 'Backend',
+            files: [
+                { name: 'Node.js', icon: '🟢', ext: '.js' },
+                { name: 'Python', icon: '🐍', ext: '.py' },
+                { name: 'Express', icon: '🚀', ext: '.js' }
+            ]
+        },
+        mobile: {
+            nameES: 'Móvil',
+            nameEN: 'Mobile',
+            files: [
+                { name: 'Flutter', icon: '📱', ext: '.dart' },
+                { name: 'React Native', icon: '📱', ext: '.jsx' }
+            ]
+        },
+        tools: {
+            nameES: 'Herramientas',
+            nameEN: 'Tools',
+            files: [
+                { name: 'Git', icon: '📝', ext: '.git' },
+                { name: 'Docker', icon: '🐳', ext: '.dockerfile' },
+                { name: 'VS Code', icon: '💻', ext: '.json' }
+            ]
+        },
+        databases: {
+            nameES: 'Bases de Datos',
+            nameEN: 'Databases',
+            files: [
+                { name: 'MySQL', icon: '🗄️', ext: '.sql' },
+                { name: 'MongoDB', icon: '🍃', ext: '.json' },
+                { name: 'PostgreSQL', icon: '🐘', ext: '.sql' }
+            ]
+        },
+        design: {
+            nameES: 'Diseño',
+            nameEN: 'Design',
+            files: [
+                { name: 'Figma', icon: '🎯', ext: '.fig' },
+                { name: 'Photoshop', icon: '🎨', ext: '.psd' }
+            ]
+        }
+    };
+    
+
+    
+    // Manejar doble clic en carpetas del escritorio
+    desktopFolders.forEach(folder => {
+        let clickCount = 0;
+        let clickTimer = null;
+        
+        folder.addEventListener('click', (e) => {
+            clickCount++;
+            
+            if (clickCount === 1) {
+                // Primer clic - seleccionar carpeta
+                desktopFolders.forEach(f => f.classList.remove('selected'));
+                folder.classList.add('selected');
+                
+                clickTimer = setTimeout(() => {
+                    clickCount = 0;
+                }, 300);
+            } else if (clickCount === 2) {
+                // Doble clic - abrir carpeta
+                clearTimeout(clickTimer);
+                clickCount = 0;
+                
+                const folderName = folder.getAttribute('data-folder');
+                openFolderWindow(folderName);
+            }
+        });
+    });
+    
+    // Función para abrir ventana de carpeta
+    function openFolderWindow(folderName) {
+        const folderData = folderStructure[folderName];
+        if (!folderData) return;
+        
+        const currentLang = document.documentElement.lang === 'en' ? 'EN' : 'ES';
+        const folderDisplayName = folderData[`name${currentLang}`];
+        
+        // Actualizar título de la ventana
+        const folderWindowTitle = document.getElementById('folder-window-title');
+        if (folderWindowTitle) {
+            const titleText = currentLang === 'EN' ? `Folder: ${folderDisplayName}` : `Carpeta: ${folderDisplayName}`;
+            folderWindowTitle.textContent = titleText;
+        }
+        
+        // Generar archivos de la carpeta
+        const folderFilesContainer = document.getElementById('folder-files');
+        if (folderFilesContainer) {
+            folderFilesContainer.innerHTML = '';
+            
+            folderData.files.forEach(file => {
+                const fileElement = document.createElement('div');
+                fileElement.className = 'folder-file';
+                fileElement.setAttribute('data-tech', file.name);
+                
+                fileElement.innerHTML = `
+                    <div class="file-icon">${file.icon}</div>
+                    <div class="file-name">${file.name}${file.ext}</div>
+                `;
+                
+                // Agregar evento de clic para abrir curiosidad
+                fileElement.addEventListener('click', () => {
+                    openTechWindow(file.name);
+                });
+                
+                folderFilesContainer.appendChild(fileElement);
+            });
+        }
+        
+        // Mostrar ventana
+        folderWindow.classList.add('show');
+        playRetroSound();
+    }
+    
+    // Función para abrir ventana de tecnología
+    function openTechWindow(techName) {
+        const currentLang = document.documentElement.lang === 'en' ? 'en' : 'es';
+        const curiosity = techCuriosities[techName];
+        
+        if (!curiosity) return;
+        
+        // Actualizar contenido
+        const techWindowTitle = document.getElementById('tech-window-title');
+        const modalTechIcon = document.getElementById('modal-tech-icon');
+        const modalTechName = document.getElementById('modal-tech-name');
+        const modalTechCuriosity = document.getElementById('modal-tech-curiosity');
+        
+        if (techWindowTitle) {
+            const titleText = currentLang === 'en' ? 'Tech Curiosity' : 'Curiosidad Tecnológica';
+            techWindowTitle.textContent = titleText;
+        }
+        
+        if (modalTechIcon) modalTechIcon.textContent = getTechIcon(techName);
+        if (modalTechName) modalTechName.textContent = techName;
+        if (modalTechCuriosity) modalTechCuriosity.textContent = curiosity[currentLang];
+        
+        // Mostrar ventana
+        techWindow.classList.add('show');
+        playRetroSound();
+    }
+    
+    // Función para obtener el icono de la tecnología
+    function getTechIcon(techName) {
+        const icons = {
+            'HTML5': '📄',
+            'CSS3': '🎨',
+            'JavaScript': '⚡',
+            'React': '⚛️',
+            'Node.js': '🟢',
+            'Python': '🐍',
+            'MySQL': '🗄️',
+            'MongoDB': '🍃',
+            'Git': '📝',
+            'Docker': '🐳',
+            'Tailwind': '💨',
+            'Figma': '🎯',
+            'Flutter': '📱',
+            'React Native': '📱',
+            'Express': '🚀',
+            'VS Code': '💻',
+            'PostgreSQL': '🐘',
+            'Photoshop': '🎨'
+        };
+        return icons[techName] || '📄';
+    }
+    
+    // Cerrar ventanas
+    if (closeFolderBtn) {
+        closeFolderBtn.addEventListener('click', () => {
+            folderWindow.classList.remove('show');
+        });
+    }
+    
+    if (closeTechBtn) {
+        closeTechBtn.addEventListener('click', () => {
+            techWindow.classList.remove('show');
+        });
+    }
+    
+    // Cerrar ventanas al hacer clic fuera
+    if (folderWindow) {
+        folderWindow.addEventListener('click', (e) => {
+            if (e.target === folderWindow) {
+                folderWindow.classList.remove('show');
+            }
+        });
+    }
+    
+    if (techWindow) {
+        techWindow.addEventListener('click', (e) => {
+            if (e.target === techWindow) {
+                techWindow.classList.remove('show');
+            }
+        });
+    }
+    
+    // Cerrar ventanas con Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            folderWindow.classList.remove('show');
+            techWindow.classList.remove('show');
+        }
+    });
+    
+    // Efecto de sonido visual
+    function playRetroSound() {
+        // Crear efecto visual de "beep"
+        const beep = document.createElement('div');
+        beep.style.position = 'fixed';
+        beep.style.top = '20px';
+        beep.style.right = '20px';
+        beep.style.background = '#ffff00';
+        beep.style.color = '#000';
+        beep.style.padding = '5px 10px';
+        beep.style.fontFamily = 'monospace';
+        beep.style.fontSize = '12px';
+        beep.style.border = '2px outset #c0c0c0';
+        beep.style.zIndex = '9999';
+        beep.textContent = '♪ BEEP';
+        
+        document.body.appendChild(beep);
+        
+        setTimeout(() => {
+            beep.remove();
+        }, 500);
+    }
+}
+
+// Funcionalidad del explorador de archivos móvil
+function setupMobileFileExplorer() {
+    const mobileFiles = document.querySelectorAll('.mobile-file');
+    
+    // Cargar curiosidades iniciales
+    updateMobileCuriosities();
+    
+    mobileFiles.forEach(file => {
+        const header = file.querySelector('.file-header');
+        
+        header.addEventListener('click', () => {
+            const isExpanded = file.classList.contains('expanded');
+            
+            // Cerrar otros archivos abiertos
+            mobileFiles.forEach(f => f.classList.remove('expanded'));
+            
+            // Alternar el archivo actual
+            if (!isExpanded) {
+                file.classList.add('expanded');
+                
+                // Actualizar curiosidad al expandir
+                const techName = file.getAttribute('data-tech');
+                const curiosityText = file.querySelector('.curiosity-text');
+                const currentLang = document.documentElement.lang === 'en' ? 'en' : 'es';
+                const curiosity = techCuriosities[techName];
+                
+                if (curiosity && curiosityText) {
+                    curiosityText.textContent = curiosity[currentLang];
+                }
+            }
+        });
+    });
+}
+
+// Función para actualizar curiosidades móviles
+function updateMobileCuriosities() {
+    const mobileFiles = document.querySelectorAll('.mobile-file');
+    const currentLang = document.documentElement.lang === 'en' ? 'en' : 'es';
+    
+    mobileFiles.forEach(file => {
+        const techName = file.getAttribute('data-tech');
+        const curiosityText = file.querySelector('.curiosity-text');
+        const curiosity = techCuriosities[techName];
+        
+        if (curiosity && curiosityText) {
+            curiosityText.textContent = curiosity[currentLang];
+        }
+    });
+}
+
+// Mover las curiosidades tecnológicas fuera de la función para acceso global
+const techCuriosities = {
+    'HTML5': {
+        es: '¡HTML5 puede reproducir videos sin plugins! Antes necesitábamos Flash Player. Además, el primer sitio web de la historia aún existe: info.cern.ch',
+        en: 'HTML5 can play videos without plugins! Before we needed Flash Player. Also, the first website in history still exists: info.cern.ch'
+    },
+    'CSS3': {
+        es: 'CSS3 puede crear formas complejas sin imágenes. ¡Incluso puedes dibujar un corazón solo con CSS! Y tiene más de 500 propiedades diferentes.',
+        en: 'CSS3 can create complex shapes without images. You can even draw a heart with just CSS! And it has more than 500 different properties.'
+    },
+    'JavaScript': {
+        es: 'JavaScript fue creado en solo 10 días por Brendan Eich en 1995. ¡Y ahora domina el mundo web! Se ejecuta en más de 1.8 mil millones de sitios.',
+        en: 'JavaScript was created in just 10 days by Brendan Eich in 1995. And now it dominates the web world! It runs on more than 1.8 billion sites.'
+    },
+    'React': {
+        es: 'React fue creado por Facebook y se usa en Instagram, WhatsApp, Netflix. ¡Más de 10 millones de desarrolladores lo usan mundialmente!',
+        en: 'React was created by Facebook and is used in Instagram, WhatsApp, Netflix. More than 10 million developers use it worldwide!'
+    },
+    'Node.js': {
+        es: 'Node.js puede manejar miles de conexiones simultáneas con muy poca memoria. ¡Netflix, PayPal y Uber lo usan para sus APIs!',
+        en: 'Node.js can handle thousands of simultaneous connections with very little memory. Netflix, PayPal and Uber use it for their APIs!'
+    },
+    'Python': {
+        es: 'Python se llama así por "Monty Python", no por la serpiente. ¡Su creador era fan del grupo de comedia británico!',
+        en: 'Python is named after "Monty Python", not the snake. Its creator was a fan of the British comedy group!'
+    },
+    'MySQL': {
+        es: 'MySQL maneja las bases de datos de Facebook, Twitter, YouTube y Wikipedia. ¡Procesa billones de consultas diarias!',
+        en: 'MySQL handles databases for Facebook, Twitter, YouTube and Wikipedia. It processes billions of queries daily!'
+    },
+    'MongoDB': {
+        es: 'MongoDB puede almacenar documentos de hasta 16MB cada uno. ¡Eso es como 4000 páginas de texto! Y es usado por más de 29,000 empresas.',
+        en: 'MongoDB can store documents up to 16MB each. That\'s like 4000 pages of text! And it\'s used by more than 29,000 companies.'
+    },
+    'Git': {
+        es: 'Git fue creado por Linus Torvalds (creador de Linux) en solo 2 semanas. ¡Más de 100 millones de repositorios existen en GitHub!',
+        en: 'Git was created by Linus Torvalds (creator of Linux) in just 2 weeks. More than 100 million repositories exist on GitHub!'
+    },
+    'Docker': {
+        es: 'Docker puede ejecutar una aplicación Linux en Windows y viceversa. ¡Es como magia de compatibilidad! Se descarga más de 13 mil millones de veces al mes.',
+        en: 'Docker can run a Linux application on Windows and vice versa. It\'s like compatibility magic! It\'s downloaded more than 13 billion times per month.'
+    },
+    'Tailwind': {
+        es: 'Tailwind tiene más de 500 clases predefinidas. ¡Puedes crear casi cualquier diseño sin escribir una sola línea de CSS personalizado!',
+        en: 'Tailwind has over 500 predefined classes. You can create almost any design without writing a single line of custom CSS!'
+    },
+    'Figma': {
+        es: 'Figma funciona completamente en el navegador sin instalación. ¡Varios diseñadores pueden trabajar simultáneamente en tiempo real!',
+        en: 'Figma works completely in the browser without installation. Multiple designers can work simultaneously in real time!'
+    },
+    'Flutter': {
+        es: 'Flutter puede compilar a 6 plataformas diferentes: iOS, Android, Web, Windows, macOS y Linux. ¡Un código, todas partes!',
+        en: 'Flutter can compile to 6 different platforms: iOS, Android, Web, Windows, macOS and Linux. One code, everywhere!'
+    },
+    'React Native': {
+        es: 'React Native es usado por Facebook, Instagram, Airbnb y Tesla. ¡Permite crear apps nativas con JavaScript!',
+        en: 'React Native is used by Facebook, Instagram, Airbnb and Tesla. It allows creating native apps with JavaScript!'
+    },
+    'Express': {
+        es: 'Express es el framework web más popular de Node.js. ¡Es tan minimalista que su código base tiene menos de 1000 líneas!',
+        en: 'Express is the most popular web framework for Node.js. It\'s so minimalist that its codebase has less than 1000 lines!'
+    },
+    'VS Code': {
+        es: 'VS Code es el editor más popular del mundo con más de 50 millones de usuarios. ¡Tiene más de 45,000 extensiones disponibles!',
+        en: 'VS Code is the most popular editor in the world with more than 50 million users. It has more than 45,000 extensions available!'
+    },
+    'PostgreSQL': {
+        es: 'PostgreSQL es conocido como "la base de datos más avanzada del mundo". ¡Puede manejar desde JSON hasta datos geoespaciales!',
+        en: 'PostgreSQL is known as "the world\'s most advanced database". It can handle everything from JSON to geospatial data!'
+    },
+    'Photoshop': {
+        es: 'Photoshop fue creado en 1987 y su nombre original era "Display". ¡El verbo "photoshopear" está en el diccionario!',
+        en: 'Photoshop was created in 1987 and its original name was "Display". The verb "to photoshop" is in the dictionary!'
+    }
+};
+
+// Inicializar funcionalidades retro cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    setupRetroDesktop();
+    setupMobileFileExplorer();
+});
