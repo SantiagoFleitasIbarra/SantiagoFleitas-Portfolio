@@ -15,14 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iniciar contador de tiempo de trabajo
     startWorkTimeCounter();
     
-    // Configurar modal de tecnologías
-    setupTechModal();
+    // Configurar modal de habilidades
+    setupSkillModal();
     
-    // Configurar escritorio retro
-    setupRetroDesktop();
-    
-    // Configurar explorador móvil
-    setupMobileFileExplorer();
+
     
     // Configurar cambio de idioma
     setupLanguageToggle();
@@ -202,7 +198,245 @@ function startWorkTimeCounter() {
     setInterval(updateCounter, 3600000); // 1 hora
 }
 
-// Modal de tecnologías
+// Modal de habilidades
+function setupSkillModal() {
+    const modal = document.getElementById('skill-modal');
+    const closeBtn = modal?.querySelector('.close-modal');
+    
+    if (!modal || !closeBtn) return;
+    
+    const skillData = {
+        html: {
+            es: {
+                description: 'Lenguaje de marcado para estructurar contenido web. Lo uso en todos mis proyectos web.',
+                projects: ['CazaPalabras', 'Inglés Divertido', 'Organiza tu día', 'Calculadora Científica', 'Holberton School']
+            },
+            en: {
+                description: 'Markup language for structuring web content. I use it in all my web projects.',
+                projects: ['CazaPalabras', 'Fun English', 'Organize your day', 'Scientific Calculator', 'Holberton School']
+            }
+        },
+        css: {
+            es: {
+                description: 'Hojas de estilo para diseñar interfaces atractivas. Creo diseños responsivos y modernos.',
+                projects: ['CazaPalabras', 'Inglés Divertido', 'Organiza tu día', 'Calculadora Científica', 'Holberton School']
+            },
+            en: {
+                description: 'Style sheets for designing attractive interfaces. I create responsive and modern designs.',
+                projects: ['CazaPalabras', 'Fun English', 'Organize your day', 'Scientific Calculator', 'Holberton School']
+            }
+        },
+        javascript: {
+            es: {
+                description: 'Lenguaje de programación para interactividad web. Lo uso para lógica de aplicaciones y juegos.',
+                projects: ['CazaPalabras', 'Inglés Divertido', 'Organiza tu día', 'Calculadora Científica', 'Holberton School']
+            },
+            en: {
+                description: 'Programming language for web interactivity. I use it for application logic and games.',
+                projects: ['CazaPalabras', 'Fun English', 'Organize your day', 'Scientific Calculator', 'Holberton School']
+            }
+        },
+        react: {
+            es: {
+                description: 'Biblioteca para interfaces de usuario dinámicas. La uso en proyectos web modernos.',
+                projects: ['IbaEduca', 'Holberton School']
+            },
+            en: {
+                description: 'Library for dynamic user interfaces. I use it in modern web projects.',
+                projects: ['IbaEduca', 'Holberton School']
+            }
+        },
+        tailwind: {
+            es: {
+                description: 'Framework CSS utility-first para diseños rápidos y consistentes.',
+                projects: ['IbaEduca']
+            },
+            en: {
+                description: 'Utility-first CSS framework for fast and consistent designs.',
+                projects: ['IbaEduca']
+            }
+        },
+        nodejs: {
+            es: {
+                description: 'Entorno de ejecución JavaScript del lado del servidor. Lo uso para APIs y backends.',
+                projects: ['Holberton School']
+            },
+            en: {
+                description: 'JavaScript runtime environment on the server side. I use it for APIs and backends.',
+                projects: ['Holberton School']
+            }
+        },
+        python: {
+            es: {
+                description: 'Lenguaje versátil para desarrollo backend y scripts. Mi lenguaje principal en Holberton.',
+                projects: ['Holberton School', 'Scripts de automatización']
+            },
+            en: {
+                description: 'Versatile language for backend development and scripts. My main language at Holberton.',
+                projects: ['Holberton School', 'Automation scripts']
+            }
+        },
+        firebase: {
+            es: {
+                description: 'Plataforma de Google para desarrollo rápido. La uso para autenticación y bases de datos.',
+                projects: ['IbaEduca', 'Warded']
+            },
+            en: {
+                description: 'Google platform for rapid development. I use it for authentication and databases.',
+                projects: ['IbaEduca', 'Warded']
+            }
+        },
+        mysql: {
+            es: {
+                description: 'Base de datos relacional robusta. La aprendí y usé extensivamente en Holberton.',
+                projects: ['Holberton School']
+            },
+            en: {
+                description: 'Robust relational database. I learned and used it extensively at Holberton.',
+                projects: ['Holberton School']
+            }
+        },
+        mongodb: {
+            es: {
+                description: 'Base de datos NoSQL flexible. La uso para proyectos que requieren escalabilidad.',
+                projects: ['Holberton School']
+            },
+            en: {
+                description: 'Flexible NoSQL database. I use it for projects that require scalability.',
+                projects: ['Holberton School']
+            }
+        },
+        git: {
+            es: {
+                description: 'Control de versiones esencial. Lo uso en todos mis proyectos para colaboración.',
+                projects: ['Todos mis proyectos', 'Holberton School']
+            },
+            en: {
+                description: 'Essential version control. I use it in all my projects for collaboration.',
+                projects: ['All my projects', 'Holberton School']
+            }
+        },
+        docker: {
+            es: {
+                description: 'Contenedores para desarrollo consistente. Lo aprendí en Holberton para DevOps.',
+                projects: ['Holberton School']
+            },
+            en: {
+                description: 'Containers for consistent development. I learned it at Holberton for DevOps.',
+                projects: ['Holberton School']
+            }
+        },
+        figma: {
+            es: {
+                description: 'Herramienta de diseño colaborativo. La uso para prototipos y diseño de interfaces.',
+                projects: ['Warded', 'IbaEduca']
+            },
+            en: {
+                description: 'Collaborative design tool. I use it for prototypes and interface design.',
+                projects: ['Warded', 'IbaEduca']
+            }
+        },
+        flutter: {
+            es: {
+                description: 'Framework para apps móviles multiplataforma. Lo usé para desarrollar Warded.',
+                projects: ['Warded']
+            },
+            en: {
+                description: 'Framework for cross-platform mobile apps. I used it to develop Warded.',
+                projects: ['Warded']
+            }
+        },
+        unity: {
+            es: {
+                description: 'Motor de videojuegos potente. Lo uso para crear juegos como Flappy Bird y Geometry Dash.',
+                projects: ['Flappy Bird', 'Geometry Dash', 'Juegos educativos']
+            },
+            en: {
+                description: 'Powerful game engine. I use it to create games like Flappy Bird and Geometry Dash.',
+                projects: ['Flappy Bird', 'Geometry Dash', 'Educational games']
+            }
+        },
+        csharp: {
+            es: {
+                description: 'Lenguaje de programación de Microsoft. Lo uso con Unity para scripting de videojuegos.',
+                projects: ['Flappy Bird', 'Geometry Dash', 'Juegos educativos']
+            },
+            en: {
+                description: 'Microsoft programming language. I use it with Unity for video game scripting.',
+                projects: ['Flappy Bird', 'Geometry Dash', 'Educational games']
+            }
+        },
+        jira: {
+            es: {
+                description: 'Herramienta de gestión de proyectos ágiles. La usé para organizar el desarrollo de Warded.',
+                projects: ['Warded']
+            },
+            en: {
+                description: 'Agile project management tool. I used it to organize Warded development.',
+                projects: ['Warded']
+            }
+        }
+    };
+    
+    // Event listener para habilidades
+    document.addEventListener('click', (e) => {
+        const skillItem = e.target.closest('.skill-item[data-skill]');
+        if (skillItem) {
+            const skillKey = skillItem.getAttribute('data-skill');
+            const data = skillData[skillKey];
+            
+            if (data) {
+                const currentLang = document.documentElement.lang === 'en' ? 'en' : 'es';
+                const skillInfo = data[currentLang];
+                
+                // Obtener elementos del modal
+                const modalIcon = document.getElementById('modal-icon');
+                const modalTitle = document.getElementById('modal-title');
+                const modalDescription = document.getElementById('modal-description');
+                const modalProjectsList = document.getElementById('modal-projects-list');
+                
+                // Actualizar contenido
+                if (modalIcon) modalIcon.textContent = skillItem.querySelector('.skill-icon').textContent;
+                if (modalTitle) modalTitle.textContent = skillItem.querySelector('.skill-name').textContent;
+                if (modalDescription) modalDescription.textContent = skillInfo.description;
+                
+                // Actualizar lista de proyectos
+                if (modalProjectsList) {
+                    modalProjectsList.innerHTML = '';
+                    skillInfo.projects.forEach(project => {
+                        const li = document.createElement('li');
+                        li.textContent = project;
+                        modalProjectsList.appendChild(li);
+                    });
+                }
+                
+                // Mostrar modal
+                modal.classList.add('show');
+            }
+        }
+    });
+    
+    // Cerrar modal
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+    });
+    
+    // Cerrar modal al hacer clic fuera
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+    
+    // Cerrar modal con Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+        }
+    });
+}
+
+// Modal de tecnologías (legacy)
 function setupTechModal() {
     const modal = document.getElementById('tech-modal');
     const closeBtn = document.getElementById('close-modal');

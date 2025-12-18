@@ -744,648 +744,171 @@ body {
     font-size: 0.75rem;
 }
 
-/* Sección Habilidades - Retro Desktop */
-.retro-skills .section-header {
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-
-.retro-skills .section-title {
-    background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 20px rgba(255,255,255,0.5);
-    animation: titleGlow 3s ease-in-out infinite;
-}
-
-.retro-skills .section-subtitle,
-.retro-skills .section-description {
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-}
-
-@keyframes titleGlow {
-    0%, 100% { filter: drop-shadow(0 0 10px rgba(255,255,255,0.3)); }
-    50% { filter: drop-shadow(0 0 20px rgba(255,255,255,0.6)); }
-}
-
-.tech-universe {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    margin: 4rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Burbujas Tecnológicas */
-.tech-bubble {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    animation: bubbleFloat 8s ease-in-out infinite;
-    z-index: 5;
-}
-
-.bubble-content {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-}
-
-.bubble-text {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 3;
-    text-align: center;
-}
-
-.bubble-glow {
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.4s ease;
-    filter: blur(20px);
-    z-index: 1;
-}
-
-/* Burbujas específicas con colores únicos */
-.tech-bubble.html {
-    top: 15%; left: 20%;
-    animation-delay: 0s;
-}
-.tech-bubble.html .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(227, 76, 38, 0.8), rgba(240, 101, 41, 0.6));
-    box-shadow: 0 0 30px rgba(227, 76, 38, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.html .bubble-glow {
-    background: radial-gradient(circle, rgba(227, 76, 38, 0.6), transparent);
-}
-
-.tech-bubble.css {
-    top: 25%; right: 15%;
-    animation-delay: 1s;
-}
-.tech-bubble.css .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(21, 114, 182, 0.8), rgba(51, 169, 220, 0.6));
-    box-shadow: 0 0 30px rgba(21, 114, 182, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.css .bubble-glow {
-    background: radial-gradient(circle, rgba(21, 114, 182, 0.6), transparent);
-}
-
-.tech-bubble.javascript {
-    top: 10%; left: 50%;
-    animation-delay: 2s;
-    width: 120px;
-    height: 120px;
-}
-.tech-bubble.javascript .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.7));
-    box-shadow: 0 0 40px rgba(251, 191, 36, 0.6), inset 0 0 25px rgba(255, 255, 255, 0.2);
-}
-.tech-bubble.javascript .bubble-glow {
-    background: radial-gradient(circle, rgba(251, 191, 36, 0.8), transparent);
-}
-
-.tech-bubble.react {
-    top: 45%; left: 10%;
-    animation-delay: 3s;
-}
-.tech-bubble.react .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(97, 218, 251, 0.8), rgba(33, 212, 253, 0.6));
-    box-shadow: 0 0 30px rgba(97, 218, 251, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.react .bubble-glow {
-    background: radial-gradient(circle, rgba(97, 218, 251, 0.6), transparent);
-}
-
-.tech-bubble.node {
-    top: 60%; left: 35%;
-    animation-delay: 4s;
-}
-.tech-bubble.node .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(104, 160, 99, 0.8), rgba(140, 200, 75, 0.6));
-    box-shadow: 0 0 30px rgba(104, 160, 99, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.node .bubble-glow {
-    background: radial-gradient(circle, rgba(104, 160, 99, 0.6), transparent);
-}
-
-.tech-bubble.python {
-    top: 35%; right: 25%;
-    animation-delay: 5s;
-}
-.tech-bubble.python .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(55, 118, 171, 0.8), rgba(255, 212, 59, 0.6));
-    box-shadow: 0 0 30px rgba(55, 118, 171, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.python .bubble-glow {
-    background: radial-gradient(circle, rgba(55, 118, 171, 0.6), transparent);
-}
-
-.tech-bubble.mysql {
-    bottom: 30%; left: 25%;
-    animation-delay: 6s;
-}
-.tech-bubble.mysql .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(0, 117, 143, 0.8), rgba(242, 145, 17, 0.6));
-    box-shadow: 0 0 30px rgba(0, 117, 143, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.mysql .bubble-glow {
-    background: radial-gradient(circle, rgba(0, 117, 143, 0.6), transparent);
-}
-
-.tech-bubble.mongo {
-    bottom: 15%; right: 30%;
-    animation-delay: 7s;
-}
-.tech-bubble.mongo .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(77, 179, 61, 0.8), rgba(63, 160, 55, 0.6));
-    box-shadow: 0 0 30px rgba(77, 179, 61, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.mongo .bubble-glow {
-    background: radial-gradient(circle, rgba(77, 179, 61, 0.6), transparent);
-}
-
-.tech-bubble.git {
-    top: 70%; right: 10%;
-    animation-delay: 8s;
-}
-.tech-bubble.git .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(240, 80, 50, 0.8), rgba(54, 45, 39, 0.6));
-    box-shadow: 0 0 30px rgba(240, 80, 50, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.git .bubble-glow {
-    background: radial-gradient(circle, rgba(240, 80, 50, 0.6), transparent);
-}
-
-.tech-bubble.docker {
-    bottom: 45%; left: 5%;
-    animation-delay: 9s;
-}
-.tech-bubble.docker .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(13, 183, 237, 0.8), rgba(56, 77, 84, 0.6));
-    box-shadow: 0 0 30px rgba(13, 183, 237, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.docker .bubble-glow {
-    background: radial-gradient(circle, rgba(13, 183, 237, 0.6), transparent);
-}
-
-.tech-bubble.tailwind {
-    top: 50%; right: 5%;
-    animation-delay: 10s;
-}
-.tech-bubble.tailwind .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.8), rgba(8, 145, 178, 0.6));
-    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.tech-bubble.tailwind .bubble-glow {
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.6), transparent);
-}
-
-/* Burbujas más pequeñas para herramientas */
-.tech-bubble.figma,
-.tech-bubble.jira,
-.tech-bubble.firebase,
-.tech-bubble.flutter,
-.tech-bubble.unity {
-    width: 80px;
-    height: 80px;
-}
-
-.tech-bubble.figma {
-    top: 80%; left: 15%;
-    animation-delay: 11s;
-}
-.tech-bubble.figma .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(162, 89, 255, 0.8), rgba(255, 114, 98, 0.6));
-    box-shadow: 0 0 25px rgba(162, 89, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.tech-bubble.jira {
-    bottom: 5%; left: 45%;
-    animation-delay: 12s;
-}
-.tech-bubble.jira .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(0, 82, 204, 0.8), rgba(54, 179, 126, 0.6));
-    box-shadow: 0 0 25px rgba(0, 82, 204, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.tech-bubble.firebase {
-    top: 5%; right: 35%;
-    animation-delay: 13s;
-}
-.tech-bubble.firebase .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(255, 193, 7, 0.8), rgba(255, 87, 34, 0.6));
-    box-shadow: 0 0 25px rgba(255, 193, 7, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.tech-bubble.flutter {
-    bottom: 60%; right: 45%;
-    animation-delay: 14s;
-}
-.tech-bubble.flutter .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(2, 136, 209, 0.8), rgba(84, 110, 122, 0.6));
-    box-shadow: 0 0 25px rgba(2, 136, 209, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.tech-bubble.unity {
-    top: 85%; right: 20%;
-    animation-delay: 15s;
-}
-.tech-bubble.unity .bubble-content {
-    background: radial-gradient(circle at 30% 30%, rgba(34, 34, 34, 0.8), rgba(255, 255, 255, 0.6));
-    box-shadow: 0 0 25px rgba(34, 34, 34, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-/* Efectos hover para burbujas */
-.tech-bubble:hover {
-    transform: scale(1.2);
-    z-index: 10;
-}
-
-.tech-bubble:hover .bubble-glow {
-    opacity: 1;
-}
-
-.tech-bubble:hover .bubble-content {
-    box-shadow: 0 0 50px rgba(34, 211, 238, 0.6), inset 0 0 30px rgba(255, 255, 255, 0.2);
-}
-
-/* Estrellas fugaces */
-.shooting-stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.shooting-star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: linear-gradient(45deg, #22d3ee, transparent);
-    border-radius: 50%;
-    box-shadow: 0 0 10px #22d3ee;
-    animation: shootingStar 3s linear infinite;
-}
-
-.shooting-star:nth-child(1) {
-    top: 10%;
-    left: -10%;
-    animation-delay: 0s;
-    animation-duration: 3s;
-}
-
-.shooting-star:nth-child(2) {
-    top: 30%;
-    left: -10%;
-    animation-delay: 2s;
-    animation-duration: 2.5s;
-}
-
-.shooting-star:nth-child(3) {
-    top: 60%;
-    left: -10%;
-    animation-delay: 4s;
-    animation-duration: 3.5s;
-}
-
-.shooting-star:nth-child(4) {
-    top: 80%;
-    left: -10%;
-    animation-delay: 6s;
-    animation-duration: 2.8s;
-}
-
-.shooting-star:nth-child(5) {
-    top: 45%;
-    left: -10%;
-    animation-delay: 8s;
-    animation-duration: 3.2s;
-}
-
-/* Efectos de partículas dentro de las burbujas */
-.bubble-sparkles,
-.bubble-waves,
-.bubble-lightning,
-.bubble-atoms,
-.bubble-hexagons,
-.bubble-snake,
-.bubble-data,
-.bubble-leaves,
-.bubble-branches,
-.bubble-containers,
-.bubble-wind,
-.bubble-shapes,
-.bubble-tasks,
-.bubble-flames,
-.bubble-flutter,
-.bubble-cubes {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.sparkle,
-.wave,
-.lightning,
-.atom,
-.hex,
-.snake-dot,
-.data-bit,
-.leaf-particle,
-.branch-line,
-.mini-container,
-.wind-particle,
-.shape-dot,
-.task-dot,
-.flame,
-.flutter-wing,
-.cube {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    animation: particleFloat 2s ease-in-out infinite;
-}
-
-.sparkle:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
-.sparkle:nth-child(2) { top: 60%; right: 25%; animation-delay: 0.7s; }
-.sparkle:nth-child(3) { bottom: 30%; left: 40%; animation-delay: 1.4s; }
-
-.wave:nth-child(1) { top: 40%; left: 20%; animation-delay: 0s; }
-.wave:nth-child(2) { bottom: 40%; right: 20%; animation-delay: 1s; }
-
-.lightning:nth-child(1) { top: 25%; left: 25%; animation-delay: 0s; }
-.lightning:nth-child(2) { bottom: 25%; right: 25%; animation-delay: 0.5s; }
-
-.atom:nth-child(1) { top: 30%; left: 20%; animation-delay: 0s; }
-.atom:nth-child(2) { top: 50%; right: 20%; animation-delay: 0.8s; }
-.atom:nth-child(3) { bottom: 30%; left: 50%; animation-delay: 1.6s; }
-
-/* Partículas cósmicas mejoradas */
-.cosmic-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.cosmic-particles .particle {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: rgba(34, 211, 238, 0.8);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
-    animation: particleTwinkle 4s ease-in-out infinite;
-}
-
-.cosmic-particles .particle:nth-child(1) { top: 5%; left: 8%; animation-delay: 0s; }
-.cosmic-particles .particle:nth-child(2) { top: 15%; right: 12%; animation-delay: 0.4s; }
-.cosmic-particles .particle:nth-child(3) { top: 35%; left: 5%; animation-delay: 0.8s; }
-.cosmic-particles .particle:nth-child(4) { top: 55%; right: 8%; animation-delay: 1.2s; }
-.cosmic-particles .particle:nth-child(5) { bottom: 25%; left: 12%; animation-delay: 1.6s; }
-.cosmic-particles .particle:nth-child(6) { bottom: 15%; right: 15%; animation-delay: 2s; }
-.cosmic-particles .particle:nth-child(7) { top: 75%; left: 35%; animation-delay: 2.4s; }
-.cosmic-particles .particle:nth-child(8) { bottom: 35%; right: 35%; animation-delay: 2.8s; }
-.cosmic-particles .particle:nth-child(9) { top: 25%; left: 60%; animation-delay: 3.2s; }
-.cosmic-particles .particle:nth-child(10) { bottom: 55%; right: 60%; animation-delay: 3.6s; }
-
-/* Nebulosas */
-.nebula {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.3;
-    animation: nebulaFloat 20s ease-in-out infinite;
-}
-
-.nebula-1 {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent);
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.nebula-2 {
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.3), transparent);
-    bottom: 20%;
-    right: 15%;
-    animation-delay: 7s;
-}
-
-.nebula-3 {
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent);
-    top: 50%;
-    right: 10%;
-    animation-delay: 14s;
-}
-
-/* Efectos hover para planetas */
-.tech-planet:hover {
-    transform: scale(1.1);
-    z-index: 5;
-}
-
-.tech-planet:hover .planet-glow {
-    opacity: 1;
-}
-
-.central-sun:hover {
-    transform: scale(1.1);
-}
-
-.central-sun:hover .sun-core {
-    box-shadow: 
-        0 0 40px rgba(251, 191, 36, 0.8),
-        0 0 80px rgba(251, 191, 36, 0.6),
-        0 0 120px rgba(251, 191, 36, 0.4);
-}
-
-/* Versión móvil */
-.mobile-tech-grid {
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
+/* Sección Habilidades Simplificada */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin: 2rem 0;
 }
 
-.mobile-tech-card {
-    position: relative;
+.skill-category {
     background: rgba(30, 41, 59, 0.5);
     border-radius: 1rem;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 2rem;
     border: 1px solid rgba(148, 163, 184, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.mobile-tech-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(34, 211, 238, 0.5);
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: rgba(34, 211, 238, 0.3);
 }
 
-.card-glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(34, 211, 238, 0.1), transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.mobile-tech-card:hover .card-glow {
-    opacity: 1;
-}
-
-.tech-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    display: block;
-    animation: iconFloat 3s ease-in-out infinite;
-}
-
-.mobile-tech-card h3 {
+.category-title {
     color: #22d3ee;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(34, 211, 238, 0.3);
+    padding-bottom: 0.5rem;
 }
 
-.tech-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    background: rgba(34, 211, 238, 0.1);
+    border-color: rgba(34, 211, 238, 0.5);
+    transform: translateY(-3px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.skill-name {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.skill-item:hover .skill-name {
+    color: #22d3ee;
+}
+
+/* Modal de Habilidades */
+.skill-modal {
+    position: fixed;
     top: 0;
     left: 0;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
 }
 
-.tech-particle {
+.skill-modal.show {
+    display: flex;
+}
+
+.skill-modal .modal-content {
+    background: rgba(30, 41, 59, 0.95);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.close-modal {
     position: absolute;
-    width: 3px;
-    height: 3px;
-    background: rgba(34, 211, 238, 0.6);
-    border-radius: 50%;
-    animation: mobileParticleFloat 4s ease-in-out infinite;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.tech-particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
-.tech-particle:nth-child(2) { top: 30%; right: 25%; animation-delay: 1.3s; }
-.tech-particle:nth-child(3) { bottom: 25%; left: 30%; animation-delay: 2.6s; }
-
-/* Animaciones para burbujas */
-@keyframes bubbleFloat {
-    0%, 100% { 
-        transform: translateY(0px) translateX(0px) rotate(0deg);
-    }
-    25% { 
-        transform: translateY(-15px) translateX(10px) rotate(2deg);
-    }
-    50% { 
-        transform: translateY(-8px) translateX(-5px) rotate(-1deg);
-    }
-    75% { 
-        transform: translateY(-20px) translateX(8px) rotate(1.5deg);
-    }
+.close-modal:hover {
+    color: #22d3ee;
 }
 
-@keyframes shootingStar {
-    0% {
-        transform: translateX(0px) translateY(0px);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(120vw) translateY(60px);
-        opacity: 0;
-    }
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-@keyframes particleFloat {
-    0%, 100% { 
-        transform: translateY(0px) scale(1);
-        opacity: 0.8;
-    }
-    50% { 
-        transform: translateY(-8px) scale(1.2);
-        opacity: 1;
-    }
+.modal-icon {
+    font-size: 3rem;
 }
 
-@keyframes particleTwinkle {
-    0%, 100% { 
-        opacity: 0.4; 
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
-    }
-    50% { 
-        opacity: 1; 
-        transform: scale(1.5);
-        box-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
-    }
+.modal-header h3 {
+    color: #22d3ee;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-@keyframes nebulaFloat {
-    0%, 100% { 
-        transform: translateY(0px) translateX(0px) scale(1);
-        opacity: 0.3;
-    }
-    33% { 
-        transform: translateY(-25px) translateX(15px) scale(1.1);
-        opacity: 0.5;
-    }
-    66% { 
-        transform: translateY(15px) translateX(-20px) scale(0.9);
-        opacity: 0.4;
-    }
+.modal-body p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
-@keyframes iconFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
+.modal-projects h4 {
+    color: #22d3ee;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
 }
 
-@keyframes mobileParticleFloat {
-    0%, 100% { opacity: 0.3; transform: translateY(0px); }
-    50% { opacity: 1; transform: translateY(-10px); }
+.modal-projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-projects li {
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.modal-projects li::before {
+    content: '▶';
+    color: #22d3ee;
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
 }
 
 /* Sección Proyectos */
@@ -1818,12 +1341,9 @@ body {
         display: block;
     }
     
-    .tech-universe {
-        display: none;
-    }
-    
-    .mobile-tech-grid {
-        display: grid;
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
     }
     
     .projects-grid {
@@ -1893,7 +1413,7 @@ body {
         align-items: center;
     }
     
-    .modal-content {
+    .skill-modal .modal-content {
         margin: 1rem;
         padding: 1.5rem;
     }
@@ -1910,22 +1430,26 @@ body {
     }
     
     /* Responsive para habilidades */
-    .tech-universe {
-        height: 400px;
-        margin: 2rem 0;
-    }
-    
-    .mobile-tech-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .skills-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
     
-    .mobile-tech-card {
-        padding: 1.5rem 1rem;
+    .skill-category {
+        padding: 1.5rem;
     }
     
-    .tech-icon {
-        font-size: 2.5rem;
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .skill-item {
+        padding: 0.75rem;
+    }
+    
+    .skill-icon {
+        font-size: 1.5rem;
     }
 }
 
@@ -1965,26 +1489,35 @@ body {
     }
     
     /* Responsive para habilidades en pantallas muy pequeñas */
-    .tech-universe {
-        height: 300px;
-        margin: 1rem 0;
-    }
-    
-    .mobile-tech-grid {
+    .skills-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     
-    .mobile-tech-card {
+    .skill-category {
         padding: 1rem;
     }
     
-    .tech-icon {
-        font-size: 2rem;
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
     }
     
-    .mobile-tech-card h3 {
-        font-size: 1rem;
+    .skill-item {
+        padding: 0.5rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .skill-icon {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    }
+    
+    .category-title {
+        font-size: 1.25rem;
     }
 }
 
@@ -2386,580 +1919,3 @@ body.menu-open {
     border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
-/* Estilos para Escritorio Retro Moderno */
-.retro-skills {
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.retro-desktop {
-    border: 3px inset #c0c0c0;
-    border-radius: 0;
-    height: 600px;
-    position: relative;
-    margin: 2rem auto;
-    max-width: 900px;
-    box-shadow: 
-        inset 2px 2px 4px rgba(255,255,255,0.8),
-        inset -2px -2px 4px rgba(0,0,0,0.3),
-        4px 4px 8px rgba(0,0,0,0.3);
-    overflow: hidden;
-}
-
-/* Fondo Retro Animado */
-.retro-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #06ffa5);
-    background-size: 400% 400%;
-    animation: retroGradient 8s ease infinite;
-}
-
-.retro-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 30px 30px;
-    animation: retroGrid 20s linear infinite;
-}
-
-.retro-waves {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, rgba(255,0,110,0.3), transparent);
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
-    animation: retroWave 6s ease-in-out infinite;
-}
-
-.retro-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.retro-particles::before,
-.retro-particles::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(255,255,255,0.8);
-    border-radius: 50%;
-    box-shadow: 
-        20px 30px 0 rgba(255,0,110,0.8),
-        40px 70px 0 rgba(131,56,236,0.8),
-        60px 40px 0 rgba(58,134,255,0.8),
-        80px 90px 0 rgba(6,255,165,0.8),
-        100px 20px 0 rgba(255,255,255,0.6);
-    animation: retroParticles 10s linear infinite;
-}
-
-.retro-particles::after {
-    animation-delay: 5s;
-    left: 50%;
-}
-
-@keyframes retroGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes retroGrid {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(30px); }
-}
-
-@keyframes retroWave {
-    0%, 100% { clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%); }
-    50% { clip-path: polygon(0 100%, 100% 100%, 100% 20%, 0 70%); }
-}
-
-@keyframes retroParticles {
-    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
-}
-
-.desktop-background {
-    width: 100%;
-    height: calc(100% - 40px);
-    position: relative;
-    padding: 10px;
-}
-
-/* Carpetas del escritorio */
-.desktop-folder {
-    position: absolute;
-    width: 90px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    padding: 8px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.desktop-folder:hover {
-    background-color: rgba(255,255,255,0.2);
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.desktop-folder.selected {
-    background-color: rgba(255,255,255,0.3);
-    transform: scale(1.1);
-}
-
-.folder-icon {
-    font-size: 48px;
-    margin-bottom: 6px;
-    display: block;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
-    animation: folderGlow 3s ease-in-out infinite;
-}
-
-.folder-name {
-    color: white;
-    font-size: 12px;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    word-wrap: break-word;
-    line-height: 1.2;
-    background: rgba(0,0,0,0.3);
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-
-@keyframes folderGlow {
-    0%, 100% { filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
-    50% { filter: drop-shadow(0 0 20px rgba(255,255,255,0.8)); }
-}
-
-/* Archivos dentro de carpetas */
-.folder-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 15px;
-    padding: 15px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.folder-file {
-    text-align: center;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    background: rgba(240,240,240,0.1);
-    border: 1px solid rgba(200,200,200,0.3);
-}
-
-.folder-file:hover {
-    background: rgba(0,0,255,0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.file-icon {
-    font-size: 32px;
-    margin-bottom: 4px;
-    display: block;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-.file-name {
-    color: #000;
-    font-size: 10px;
-    font-family: 'MS Sans Serif', sans-serif;
-    word-wrap: break-word;
-    line-height: 1.2;
-}
-
-.taskbar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: linear-gradient(to bottom, #c0c0c0, #808080);
-    border-top: 2px outset #c0c0c0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-}
-
-.start-button {
-    background: linear-gradient(to bottom, #c0c0c0, #a0a0a0);
-    border: 2px outset #c0c0c0;
-    padding: 4px 12px;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 11px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 0;
-}
-
-.start-button:active {
-    border: 2px inset #c0c0c0;
-    background: linear-gradient(to bottom, #a0a0a0, #c0c0c0);
-}
-
-.taskbar-time {
-    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-    border: 1px inset #c0c0c0;
-    padding: 4px 8px;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 11px;
-    color: #000;
-}
-
-/* Ventanas Retro Mejoradas */
-.retro-window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    backdrop-filter: blur(2px);
-}
-
-.retro-window.show {
-    display: flex;
-    animation: windowFadeIn 0.3s ease;
-}
-
-.window-frame {
-    background: #c0c0c0;
-    border: 2px outset #c0c0c0;
-    border-radius: 0;
-    min-width: 450px;
-    max-width: 600px;
-    box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
-    font-family: 'MS Sans Serif', sans-serif;
-    animation: windowSlideIn 0.3s ease;
-}
-
-@keyframes windowFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes windowSlideIn {
-    from { transform: scale(0.8) translateY(-20px); }
-    to { transform: scale(1) translateY(0); }
-}
-
-.window-header {
-    background: linear-gradient(to right, #0000ff, #000080);
-    color: white;
-    padding: 4px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.window-controls {
-    display: flex;
-    gap: 2px;
-}
-
-.window-btn {
-    width: 16px;
-    height: 14px;
-    background: #c0c0c0;
-    border: 1px outset #c0c0c0;
-    font-size: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    border-radius: 0;
-}
-
-.window-btn:active {
-    border: 1px inset #c0c0c0;
-}
-
-.window-content {
-    padding: 16px;
-    background: #c0c0c0;
-}
-
-/* Contenido de ventanas */
-.tech-info {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    padding: 10px;
-}
-
-.tech-icon-large {
-    font-size: 64px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    animation: iconPulse 2s ease-in-out infinite;
-}
-
-.tech-details h3 {
-    color: #000;
-    font-size: 16px;
-    margin-bottom: 12px;
-    font-weight: bold;
-    border-bottom: 1px solid #808080;
-    padding-bottom: 4px;
-}
-
-.tech-details p {
-    color: #000;
-    font-size: 12px;
-    line-height: 1.5;
-    background: #f0f0f0;
-    padding: 10px;
-    border: 1px inset #c0c0c0;
-    border-radius: 2px;
-}
-
-@keyframes iconPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-/* Versión Móvil - Explorador de Archivos */
-.mobile-file-explorer {
-    display: none;
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 1rem;
-    border: 1px solid rgba(148, 163, 184, 0.1);
-    overflow: hidden;
-    margin: 2rem 0;
-}
-
-.explorer-header {
-    background: rgba(15, 23, 42, 0.8);
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-}
-
-.explorer-title {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: #22d3ee;
-    font-weight: 600;
-    font-size: 1.125rem;
-}
-
-.folder-icon {
-    font-size: 1.25rem;
-}
-
-.file-list {
-    padding: 0;
-}
-
-.mobile-file {
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-    transition: all 0.3s ease;
-}
-
-.mobile-file:last-child {
-    border-bottom: none;
-}
-
-.file-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.file-header:hover {
-    background: rgba(34, 211, 238, 0.1);
-}
-
-.mobile-file.expanded .file-header {
-    background: rgba(34, 211, 238, 0.1);
-}
-
-.file-header .file-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
-.file-header .file-name {
-    color: #cbd5e1;
-    font-weight: 500;
-    flex-grow: 1;
-    font-size: 1rem;
-}
-
-.expand-arrow {
-    color: #94a3b8;
-    font-size: 0.875rem;
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-}
-
-.mobile-file.expanded .expand-arrow {
-    transform: rotate(90deg);
-}
-
-.file-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background: rgba(15, 23, 42, 0.3);
-}
-
-.mobile-file.expanded .file-content {
-    max-height: 200px;
-}
-
-.file-content p {
-    padding: 1rem 1.5rem;
-    margin: 0;
-    color: #94a3b8;
-    line-height: 1.6;
-    font-size: 0.875rem;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .retro-desktop {
-        display: none;
-    }
-    
-    .mobile-file-explorer {
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .retro-desktop {
-        height: 400px;
-        margin: 1rem;
-    }
-    
-    .desktop-folder {
-        width: 70px;
-    }
-    
-    .folder-icon {
-        font-size: 36px;
-    }
-    
-    .folder-name {
-        font-size: 10px;
-    }
-    
-    .window-frame {
-        min-width: 300px;
-        margin: 1rem;
-    }
-    
-    .tech-info {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .folder-content {
-        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-        gap: 10px;
-        padding: 10px;
-    }
-    
-    .explorer-header {
-        padding: 0.75rem 1rem;
-    }
-    
-    .file-header {
-        padding: 0.75rem 1rem;
-    }
-    
-    .file-content p {
-        padding: 0.75rem 1rem;
-    }
-}
-
-/* Animaciones retro mejoradas */
-@keyframes retroBlink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0.5; }
-}
-
-.folder-file:active {
-    animation: retroBlink 0.1s;
-}
-
-/* Efectos de sonido visual */
-.folder-file:active::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255,255,255,0.3);
-    animation: flashEffect 0.1s;
-}
-
-@keyframes flashEffect {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-/* Efectos adicionales para el tema retro moderno */
-.retro-skills::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(255,0,110,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(131,56,236,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(58,134,255,0.1) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.desktop-folder:active {
-    animation: folderClick 0.1s ease;
-}
-
-@keyframes folderClick {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.95); }
-    100% { transform: scale(1); }
-}
